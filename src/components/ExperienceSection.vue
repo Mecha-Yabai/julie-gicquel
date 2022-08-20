@@ -1,30 +1,23 @@
 <template>
-  <section>
-    <div class="flex flex-col">
-      <div class="h-screen flex flex-col lg:flex-row">
-        <div class="w-full lg:w-8/12 text-left lg:pr-8">
-          <h1
-            class="font-jiho-bold lg:text-6xl sm:text-5xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
-          >
-            Mes expériences
-          </h1>
-          <div class="w-full imageContainer flex justify-center items-center">
-            <img
-              src="@/assets/images/hero2.png"
-              alt="Developer"
-              class="w-3/5 md:w-2/5 lg:w-full sm:max-w-xl"
-            />
-          </div>
-        </div>
-        <div class="w-full flex items-center lg:w-4/12 text-left">
+  <section class="h-screen">
+    <div class="flex flex-col h-full">
+      <div class="flex-none w-full text-left lg:pr-8">
+        <h1
+          class="font-jiho-bold lg:text-6xl sm:text-5xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
+        >
+          Mes expériences
+        </h1>
+      </div>
+      <div class="flex flex-1 justify-center">
+        <div class="flex items-center w-full lg:w-4/12 text-left">
           <ol class="relative border-l border-primary-dark dark:border-white">
             <template v-for="experience in experiences" :key="experience.id">
-              <li class="mb-1 md:mb-3 lg:mb-6 ml-4">
+              <li class="mb-1 md:mb-3 lg:mb-4 ml-6">
                 <div
                   class="absolute w-3 h-3 bg-primary-dark rounded-full mt-1.5 -left-1.5 border border-white dark:border-primay-dark dark:bg-gray-700"
                 ></div>
                 <time
-                  class="text-sm font-jiho-light leading-none text-gray-500 dark:text-gray-200"
+                  class="text-sm font-jiho-regular leading-none text-gray-500 dark:text-gray-200"
                   >{{ experience.date }}</time
                 >
                 <h3
@@ -33,7 +26,7 @@
                   {{ experience.name }}
                 </h3>
                 <h5
-                  class="lg:mt-1 text-sm font-jiho-regular text-primay-dark dark:text-white"
+                  class="lg:mt-1 text-sm font-jiho-medium text-primay-dark dark:text-white"
                 >
                   {{ experience.company }}
                 </h5>
@@ -46,6 +39,13 @@
               </li>
             </template>
           </ol>
+        </div>
+        <div class="flex w-full lg:w-8/12 justify-center items-center">
+          <img
+            src="@/assets/images/hero2.png"
+            alt="Developer"
+            class="w-2/5 lg:w-full sm:max-w-xl lg:max-w-2xl"
+          />
         </div>
       </div>
     </div>
@@ -103,12 +103,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.imageContainer {
-  @media (min-width: 1024px) {
-    min-height: calc(100vh - 60px);
-    max-height: calc(100vh - 60px);
-  }
-}
 button {
   border: 1px solid theme("colors.primary-dark");
   &:hover {
