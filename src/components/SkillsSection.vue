@@ -1,8 +1,8 @@
 <template>
-  <section id="Skills">
-    <div class="flex flex-col">
-      <div class="h-screen flex flex-col lg:flex-row items-center">
-        <div class="w-full h-1/2 sm:h-fit lg:w-6/12 text-left lg:pr-8">
+  <section id="Skills" class="h-screen">
+    <div class="flex flex-col h-full justify-center">
+      <div class="flex flex-col lg:flex-row">
+        <div class="w-full lg:w-6/12 text-left lg:pr-8">
           <h1
             class="h-1/3 lg:h-fit lg:mb-10 font-jiho-bold lg:text-6xl sm:text-5xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
           >
@@ -41,7 +41,7 @@
           </div>
         </div>
 
-        <div class="w-full h:1/2 sm:h-fit lg:w-6/12">
+        <div class="w-full lg:w-6/12">
           <div class="space-y-4 sm:space-y-10">
             <div class="mt-6 sm:mt-0">
               <hr class="mb-4 sm:mb-10" />
