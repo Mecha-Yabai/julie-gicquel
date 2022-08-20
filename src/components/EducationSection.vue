@@ -13,7 +13,7 @@
           <img
             src="@/assets/images/heronumber2.png"
             alt="Developer"
-            class="w-2/5 lg:w-full sm:max-w-xl lg:max-w-2xl"
+            class="w-3/5 md:w-2/5 lg:w-full lg:max-w-2xl"
           />
         </div>
         <div class="flex items-center w-full lg:w-4/12 text-left">

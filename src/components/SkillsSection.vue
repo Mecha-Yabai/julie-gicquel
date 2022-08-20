@@ -11,7 +11,7 @@
         <div class="h-2/3 lg:h-fit space-y-4 lg:space-y-8">
           <div>
             <p
-              class="text-center md:text-left font-jiho-regular text-md md:text-lg xl:text-xl leading-none text-gray-500"
+              class="text-center md:text-left font-jiho-regular text-lg xl:text-xl leading-none text-gray-500"
             >
               J’ai commencé ma carrière dans le web marketing et la
               communication numérique où j’ai pu mettre à profit ma créativité
@@ -21,7 +21,7 @@
           </div>
           <div>
             <p
-              class="text-center md:text-left font-jiho-regular text-md md:text-lg xl:text-xl leading-none text-gray-500"
+              class="text-center md:text-left font-jiho-regular text-lg xl:text-xl leading-none text-gray-500"
             >
               Après quelques expériences, j’ai décidé de me ré-orienter dans le
               développement web pour apprendre la technique nécessaire pour me
@@ -30,7 +30,7 @@
           </div>
           <div>
             <p
-              class="text-center md:text-left font-jiho-regular text-md md:text-lg xl:text-xl leading-none text-gray-500"
+              class="text-center md:text-left font-jiho-regular text-lg xl:text-xl leading-none text-gray-500"
             >
               Curieuse et force de proposition, j’apporte une attention
               particulière à l’UI/UX pour offrir la meilleure expérience
