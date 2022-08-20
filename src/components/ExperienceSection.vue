@@ -1,14 +1,14 @@
 <template>
   <section class="h-screen">
     <div class="flex flex-col h-full">
-      <div class="flex-none w-full text-left lg:pr-8">
+      <div class="lg:flex-none w-full text-left lg:pr-8">
         <h1
           class="font-jiho-bold lg:text-6xl sm:text-5xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
           Mes expériences
         </h1>
       </div>
-      <div class="flex flex-1 justify-center">
+      <div class="flex flex-col-reverse lg:flex-row lg:flex-1 justify-center">
         <div class="flex items-center w-full lg:w-4/12 text-left">
           <ol class="relative border-l border-primary-dark dark:border-white">
             <template v-for="experience in experiences" :key="experience.id">
@@ -44,7 +44,7 @@
           <img
             src="@/assets/images/hero2.png"
             alt="Developer"
-            class="w-2/5 lg:w-full sm:max-w-xl lg:max-w-2xl"
+            class="w-2/5 lg:w-full lg:max-w-2xl"
           />
         </div>
       </div>

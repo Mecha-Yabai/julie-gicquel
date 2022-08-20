@@ -1,14 +1,14 @@
 <template>
   <section class="h-screen">
     <div class="flex flex-col h-full">
-      <div class="flex-none w-full lg:w-8/12 text-left lg:pr-8">
+      <div class="lg:flex-none w-full lg:w-8/12 text-left lg:pr-8">
         <h1
           class="font-jiho-bold lg:text-6xl sm:text-5xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
           Mes formations
         </h1>
       </div>
-      <div class="flex flex-1 justify-center">
+      <div class="flex flex-col lg:flex-row lg:flex-1 justify-center">
         <div class="flex w-full lg:w-8/12 justify-center items-center">
           <img
             src="@/assets/images/heronumber2.png"
