@@ -41,7 +41,7 @@ export default {
 .heroSection {
   min-height: calc(100vh - 40px);
   max-height: calc(100vh - 40px);
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     min-height: calc(100vh - 64px);
     max-height: calc(100vh - 64px);
   }

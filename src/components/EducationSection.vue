@@ -11,7 +11,7 @@
       <div class="flex flex-col lg:flex-row lg:flex-1 justify-center">
         <div class="flex w-full lg:w-8/12 justify-center items-center">
           <img
-            src="@/assets/images/heronumber2.png"
+            src="@/assets/images/heronumber2_v2.png"
             alt="Developer"
             class="w-3/5 md:w-2/5 lg:w-full lg:max-w-2xl"
           />
