@@ -3,12 +3,12 @@
     <i
       v-if="theme === 'light'"
       data-feather="moon"
-      class="dark:text-ternary-light dark:hover:text-primary-light w-5"
+      class="w-5"
     ></i>
     <i
       v-else
       data-feather="sun"
-      class="text-gray-200 hover:text-gray-50 w-5"
+      class="text-gray-200 hover:text-red-dark w-5"
     ></i>
   </a>
 </template>

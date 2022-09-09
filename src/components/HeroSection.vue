@@ -11,19 +11,19 @@
             <span class="font-jiho-bold-italic">Hello there,</span>
             <br />
             Je suis
-            <span class="text-red-500">Julie</span> !
+            <span class="text-red-500 dark:text-red-dark">Julie</span> !
           </h1>
           <div class="mb-8 lg:mb-0 lg:mt-2">
             <p
-              class="text-justify sm:text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500"
+              class="text-justify sm:text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
-              Développeuse web, anciennement dans le marketing digital, j'ai un
-              gros attrait pour l'UI et l'UX et j'aime offrir la meilleure
-              expérience utilisateur. 👩🏻‍💻
+              Développeuse web, anciennement dans le marketing digital, avec un
+              gros attrait pour l'UI et l'UX et j'aime combiner toutes mes
+              compétences pour offrir la meilleure expérience utilisateur. 👩🏻‍💻
               <br />
-              Pour me résumer, prenez une bonne dose de créativité, une
-              curiosité accrue et de la spontanéité et ça donne un mélange
-              dynamique où se mêlent compétences techniques, linguistiques et de
+              Pour me résumer, prenez une bonne dose de créativité, de
+              l'initiative et de la spontanéité et ça donne un mélange dynamique
+              où se mêlent compétences techniques, linguistiques et de
               communication ! 🎯
             </p>
           </div>
@@ -31,16 +31,13 @@
             <a
               download="Julie-Gicquel-CV.pdf"
               href="/files/Stoman-Resume.pdf"
-              class="flex justify-center items-center px-4 w-auto py-3 shadow-lg rounded-lg bg-red-600 text-white duration-500"
+              class="flex justify-center items-center px-4 w-auto py-3 shadow-lg shadow-red-600/50 dark:shadow-red-dark/50 rounded-lg bg-red-600 dark:bg-red-dark text-white duration-500"
               aria-label="Télécharger mon CV"
             >
               <span class="text-md font-jiho-medium duration-100"
                 >Télécharger mon CV</span
               >
-              <i
-                data-feather="download"
-                class="ml-2 m:w-5 duration-100"
-              ></i>
+              <i data-feather="download" class="ml-2 m:w-5 duration-100"></i>
             </a>
           </div>
           <p
@@ -54,9 +51,9 @@
               :key="social.id"
               :href="social.url"
               target="__blank"
-              class="mx-2 bg-white dark:bg-primary-dark border-primary-dark dark:border-white border-2 hover:bg-primary-dark text-primary-dark dark:text-white hover:text-white text-center py-2 px-2 rounded-full h-9 w-9 sm:h-13 sm:w-13 inline-flex items-center"
+              class="mx-2 bg-white dark:bg-blue-dark shadow-lg border-primary-dark dark:border-blue-dark border-2 hover:bg-primary-dark text-primary-dark dark:text-white dark:hover:bg-blue-dark dark:hover:text-red-dark hover:text-white text-center py-2 px-2 rounded-full h-9 w-9 sm:h-13 sm:w-13 lg:h-16 lg:w-16 inline-flex items-center"
             >
-              <i :data-feather="social.icon" class="w-4 sm:w-5"></i>
+              <i :data-feather="social.icon" class="w-4 sm:w-5 lg:w-16"></i>
             </a>
           </div>
         </div>
@@ -66,7 +63,14 @@
           class="w-full lg:w-6/12 flex justify-center lg:justify-end mb-4 lg:mb-0"
         >
           <img
-            src="@/assets/images/herov2.png"
+            v-if="theme === 'light'"
+            src="@/assets/images/heroJG_v1.png"
+            alt="Developer"
+            class="w-3/5 md:w-2/5 lg:w-10/12 lg:max-w-lg"
+          />
+          <img
+            v-else
+            src="@/assets/images/heroJG_v1_BW.png"
             alt="Developer"
             class="w-3/5 md:w-2/5 lg:w-10/12 lg:max-w-lg"
           />
@@ -74,8 +78,11 @@
       </div>
       <!-- Scroll part -->
       <div class="flex lg:flex-none items-center justify-center">
-        <div class="font-jiho-light">Pour en découvrir plus</div>
-        <div @click="scrollToNexSection()" class="cursor-pointer">
+        <div class="font-jiho-light dark:text-ternary-light">
+          Pour en découvrir plus
+        </div>
+        <!-- <div @click="scrollToNexSection()" class="cursor-pointer"> -->
+        <a id="scrollButton" href="#skills">
           <lottie-player
             :src="scrolldown"
             background="transparent"
@@ -84,7 +91,8 @@
             loop
             autoplay
           ></lottie-player>
-        </div>
+        </a>
+        <!-- </div> -->
       </div>
     </div>
   </section>

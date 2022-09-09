@@ -14,11 +14,12 @@ module.exports = {
       colors: {
         "primary-light": "#F7F8FC",
         "secondary-light": "#FFFFFF",
-        "ternary-light": "#f6f7f8",
-
-        "primary-dark": "#404040",
+        "ternary-light": "#DBE2E6",
+        "primary-dark": "#030303",
         "secondary-dark": "#535353",
         "ternary-dark": "#666666",
+        "red-dark": "#C92A1D",
+        "blue-dark": "#233763",
       },
       container: {
         center: true,
