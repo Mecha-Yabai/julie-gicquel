@@ -43,7 +43,7 @@
       <div class="w-full lg:w-6/12 h-1/2">
         <div class="space-y-4 sm:space-y-10">
           <div class="mt-6 sm:mt-0">
-            <hr class="mb-4 sm:mb-10" />
+            <hr class="mb-4 sm:mb-10 dark:border-blue-dark" />
             <div class="flex items-top sm:mb-10">
               <p
                 class="mr-4 text-xl sm:text-3xl text-red-500 dark:text-red-dark font-jiho-regular"
@@ -59,7 +59,7 @@
             </div>
           </div>
           <div>
-            <hr class="mb-4 sm:mb-10" />
+            <hr class="mb-4 sm:mb-10 dark:border-blue-dark" />
             <div class="flex items-top sm:mb-10">
               <p
                 class="mr-4 text-xl sm:text-3xl text-red-500 dark:text-red-dark font-jiho-regular"
@@ -75,7 +75,7 @@
             </div>
           </div>
           <div>
-            <hr class="mb-4 sm:mb-10" />
+            <hr class="mb-4 sm:mb-10 dark:border-blue-dark" />
             <div class="flex items-top sm:mb-10">
               <p
                 class="mr-4 text-xl sm:text-3xl text-red-500 dark:text-red-dark font-jiho-regular"

@@ -38,7 +38,7 @@
               class="w-full border rounded-md border-primary-dark dark:border-primary-light"
             /> -->
             <div
-              class="flex items-baseline w-full justify-between h-[110px] lg:h-[140px] border-t border-primary-dark"
+              class="flex items-baseline w-full justify-between h-[110px] lg:h-[140px] border-t border-primary-dark dark:border-blue-dark"
             >
               <div class="my-auto min-w-[100px]">
                 <time
@@ -48,7 +48,7 @@
               </div>
               <div class="my-auto flex-1 pr-4">
                 <h3
-                  class="text-md lg:text-lg font-jiho-medium text-primay-dark dark:text-red-dark"
+                  class="text-md lg:text-lg font-jiho-medium text-primary-dark dark:text-red-dark"
                 >
                   {{ experience.name }}
                 </h3>
@@ -59,8 +59,15 @@
                 </h5>
               </div>
               <div class="my-auto">
-                <button type="button" @click="openExperienceInfosPanel(experience)">
-                  <i data-feather="plus-circle" stroke-width="1.5"></i>
+                <button
+                  type="button"
+                  @click="openExperienceInfosPanel(experience)"
+                >
+                  <i
+                    data-feather="plus-circle"
+                    stroke-width="1.5"
+                    class="text-red-dark"
+                  ></i>
                 </button>
               </div>
             </div>
@@ -74,15 +81,14 @@
       tabindex="-1"
       v-show="isExperienceInfosPanelOpen"
       @keydown.escape="closeExperienceInfosPanel()"
-      class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-white shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-none"
-      aria-labelledby="settinsPanelLabel"
+      class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-secondary-light dark:bg-primary-dark shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-none"
     >
       <div>
         <!-- Panel content -->
         <div class="flex flex-col h-screen">
           <!-- Panel header -->
           <div
-            class="flex tems-center justify-center px-4 py-6 border-b dark:border-red-dark"
+            class="flex tems-center justify-center px-4 py-6 border-b dark:border-blue-dark"
           >
             <h3
               class="flex-1 text-md lg:text-lg font-jiho-medium text-primay-dark dark:text-red-dark"
@@ -93,7 +99,7 @@
               @click="closeExperienceInfosPanel()"
               class="flex-none text-primay-dark ml-2"
             >
-              <i data-feather="x"></i>
+              <i data-feather="x" class="text-red-dark"></i>
             </button>
           </div>
           <!-- Content -->
@@ -105,19 +111,29 @@
                 {{ currentExperience.description }}
               </h5>
             </div>
-            <div v-if="currentExperience.duties" class="px-6 py-2 font-jiho-medium">
+            <div
+              v-if="currentExperience.duties"
+              class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
+            >
               Missions :
             </div>
             <template v-for="duty in currentExperience.duties" :key="duty.id">
-              <div class="px-6 py-2">
+              <div
+                class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
+              >
                 {{ duty }}
               </div>
             </template>
-            <div v-if="currentExperience.stacks" class="px-6 py-2 font-jiho-medium">
+            <div
+              v-if="currentExperience.stacks"
+              class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
+            >
               Stacks :
             </div>
             <template v-for="stack in currentExperience.stacks" :key="stack.id">
-              <div class="px-6 py-2">
+              <div
+                class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
+              >
                 {{ stack }}
               </div>
             </template>
@@ -142,14 +158,14 @@ export default {
     };
   },
   watch: {
-    isExperienceInfosPanelOpen: function() {
-      if(this.isExperienceInfosPanelOpen){
-        document.documentElement.style.overflow = 'hidden'
-        return
+    isExperienceInfosPanelOpen: function () {
+      if (this.isExperienceInfosPanelOpen) {
+        document.documentElement.style.overflow = "hidden";
+        return;
       }
 
-      document.documentElement.style.overflow = 'auto'
-    }
+      document.documentElement.style.overflow = "auto";
+    },
   },
   created() {
     this.theme = localStorage.getItem("theme") || "light";
