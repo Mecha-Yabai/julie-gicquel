@@ -1,10 +1,10 @@
 <template>
   <div class="container mx-auto px-4 sm:px-16 min-h-screen">
-    <HeroSection class="heroSection flex content-center" />
-    <SkillsSection />
-    <ExperienceSection />
-    <EducationSection />
-    <ProjectsGrid />
+    <HeroSection id="hero" class="flex content-center" />
+    <SkillsSection id="skills" />
+    <ExperienceSection id="experience" />
+    <EducationSection id="eductation" />
+    <!-- <ProjectsGrid class="snap-center"/> -->
   </div>
 
   <div class="mt-10 sm:mt-20 flex justify-center">
@@ -38,7 +38,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.heroSection {
+#hero {
   min-height: calc(100vh - 40px);
   max-height: calc(100vh - 40px);
   @media (min-width: 768px) {

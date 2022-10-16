@@ -1,17 +1,17 @@
 <template>
-  <section id="skills" class="h-screen">
+  <section class="h-screen">
     <div class="flex flex-col lg:flex-row h-full lg:items-center justify-center">
-      <div class="w-full lg:w-6/12 h-1/2 lg:text-left lg:pr-8 mt-4 lg:mt-0">
+      <div class="w-full lg:w-6/12 h-1/2 lg:h-fit lg:text-left lg:pr-8 mt-4 lg:mt-0">
         <h1
-          class="h-1/3 lg:h-fit lg:mb-10 font-jiho-bold lg:text-6xl sm:text-5xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
+          class="h-1/3 lg:h-fit lg:mb-10 font-jiho-bold xl:text-6xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
           Un <span class="text-red-500 dark:text-red-dark">profil</span>,<br />
           Triple <span class="text-red-500 dark:text-red-dark">compétences</span>.
         </h1>
-        <div class="h-2/3 lg:h-fit space-y-4 lg:space-y-8">
+        <div class="h-2/3 lg:h-fit space-y-4 lg:space-y-6 xl:space-y-8">
           <div>
             <p
-              class="text-center md:text-left font-jiho-regular text-lg xl:text-xl leading-none text-gray-500 dark:text-ternary-light"
+              class="text-center md:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
               J’ai commencé ma carrière dans le web marketing et la
               communication numérique où j’ai pu mettre à profit ma créativité
@@ -21,7 +21,7 @@
           </div>
           <div>
             <p
-              class="text-center md:text-left font-jiho-regular text-lg xl:text-xl leading-none text-gray-500 dark:text-ternary-light"
+              class="text-center md:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
               Après quelques expériences, j’ai décidé de me ré-orienter dans le
               développement web pour apprendre la technique nécessaire pour me
@@ -30,7 +30,7 @@
           </div>
           <div>
             <p
-              class="text-center md:text-left font-jiho-regular text-lg xl:text-xl leading-none text-gray-500 dark:text-ternary-light"
+              class="text-center md:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
               Curieuse et force de proposition, j’apporte une attention
               particulière à l’UI/UX pour offrir la meilleure expérience
@@ -51,7 +51,7 @@
                 01 /
               </p>
               <h1
-                class="text-left text-xl md:text-3xl lg:text-4xl font-jiho-medium text-primary-dark dark:text-primary-light"
+                class="text-left text-xl md:text-3xl xl:text-4xl font-jiho-medium text-primary-dark dark:text-primary-light"
               >
                 Développement<br />
                 Full-Stack
@@ -67,7 +67,7 @@
                 02 /
               </p>
               <h1
-                class="text-left text-xl md:text-3xl lg:text-4xl font-jiho-medium text-primary-dark dark:text-primary-light"
+                class="text-left text-xl md:text-3xl xl:text-4xl font-jiho-medium text-primary-dark dark:text-primary-light"
               >
                 Web UI/UX<br />
                 Design
@@ -83,7 +83,7 @@
                 03 /
               </p>
               <h1
-                class="text-left text-xl md:text-3xl lg:text-4xl font-jiho-medium text-primary-dark dark:text-primary-light"
+                class="text-left text-xl md:text-3xl xl:text-4xl font-jiho-medium text-primary-dark dark:text-primary-light"
               >
                 Web marketing &<br />
                 Communication numérique

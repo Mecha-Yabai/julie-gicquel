@@ -6,28 +6,28 @@
         <!-- Banner left contents -->
         <div class="w-full lg:w-6/12 text-left lg:pr-8">
           <h1
-            class="font-jiho-bold lg:text-6xl sm:text-5xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light mb-4 lg:mb-0"
+            class="font-jiho-medium xl:text-6xl sm:text-5xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light mb-4 lg:mb-0"
           >
-            <span class="font-jiho-bold-italic">Hello there,</span>
+            Hey ! Je suis
+            <span class="text-red-500 dark:text-red-dark font-jiho-bold"
+              >Julie</span
+            >,
             <br />
-            Je suis
-            <span class="text-red-500 dark:text-red-dark">Julie</span> !
+            Développeuse web
           </h1>
-          <div class="mb-8 lg:mb-0 lg:mt-2">
+          <div class="mb-8 lg:mb-0 lg:mt-10">
             <p
-              class="text-justify sm:text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+              class="text-justify sm:text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
-              Développeuse web, anciennement dans le marketing digital, avec un
-              gros attrait pour l'UI et l'UX et j'aime combiner toutes mes
-              compétences pour offrir la meilleure expérience utilisateur. 👩🏻‍💻
+              Anciennement dans le marketing digital, je me suis reconvertie
+              dans le développement web et me suis spécialisée dans la
+              conception et l'implémentation d'UI / UX 👩🏻‍💻
               <br />
-              Pour me résumer, prenez une bonne dose de créativité, de
-              l'initiative et de la spontanéité et ça donne un mélange dynamique
-              où se mêlent compétences techniques, linguistiques et de
-              communication ! 🎯
+              Mon but ? Offrir la meilleure expérience utilisateur en faisant
+              preuve de créativité, d'initiative et de spontanéité 🎯
             </p>
           </div>
-          <div class="flex justify-center lg:block mt-4 sm:mt-6">
+          <div class="w-auto flex justify-center mt-4 sm:mt-6 lg:mt-8">
             <a
               download="Julie-Gicquel-CV.pdf"
               href="/files/Stoman-Resume.pdf"
@@ -45,15 +45,15 @@
           >
             Retrouvez-moi sur :
           </p>
-          <div class="flex justify-center lg:block mt-4">
+          <div class="flex justify-center lg:justify-start mt-4">
             <a
               v-for="social in socials"
               :key="social.id"
               :href="social.url"
               target="__blank"
-              class="mx-2 bg-white dark:bg-blue-dark shadow-lg border-primary-dark dark:border-blue-dark border-2 hover:bg-primary-dark text-primary-dark dark:text-white dark:hover:bg-blue-dark dark:hover:text-red-dark hover:text-white text-center py-2 px-2 rounded-full h-9 w-9 sm:h-13 sm:w-13 lg:h-16 lg:w-16 inline-flex items-center"
+              class="rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-blue-dark shadow-lg border-primary-dark dark:border-blue-dark border-2 hover:bg-primary-dark text-primary-dark dark:text-white dark:hover:bg-blue-dark dark:hover:text-red-dark hover:text-white text-center"
             >
-              <i :data-feather="social.icon" class="w-4 sm:w-5 lg:w-16"></i>
+              <i :data-feather="social.icon" class="w-5 lg:w-16"></i>
             </a>
           </div>
         </div>
