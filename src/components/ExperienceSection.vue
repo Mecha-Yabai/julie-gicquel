@@ -12,7 +12,7 @@
             class="w-10 mr-2 border rounded-md border-primary-dark dark:border-primary-light"
           />
           <p
-            class="text-center md:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+            class="text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
           >
             Développeuse web full-stack spécialisée dans le design UI/UX.<br />
             J'aime challenger l'existant et imaginer le futur. 🚀
@@ -46,7 +46,7 @@
                   >{{ experience.date }}</time
                 >
               </div>
-              <div class="my-auto flex-1">
+              <div class="my-auto flex-1 pr-4">
                 <h3
                   class="text-md lg:text-lg font-jiho-medium text-primay-dark dark:text-red-dark"
                 >
@@ -59,8 +59,8 @@
                 </h5>
               </div>
               <div class="my-auto">
-                <button type="button" @click="openSettingsPanel(experience)">
-                  <i data-feather="plus-circle"></i>
+                <button type="button" @click="openExperienceInfosPanel(experience)">
+                  <i data-feather="plus-circle" stroke-width="1.5"></i>
                 </button>
               </div>
             </div>
@@ -70,10 +70,10 @@
     </div>
     <transition
       name="panel-fade"
-      ref="settingsPanel"
+      ref="experienceInfosPanel"
       tabindex="-1"
-      v-show="isSettingsPanelOpen"
-      @keydown.escape="closeSettingsPanel()"
+      v-show="isExperienceInfosPanelOpen"
+      @keydown.escape="closeExperienceInfosPanel()"
       class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-white shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-none"
       aria-labelledby="settinsPanelLabel"
     >
@@ -82,7 +82,7 @@
         <div class="flex flex-col h-screen">
           <!-- Panel header -->
           <div
-            class="flex tems-center justify-center px-4 py-8 border-b dark:border-red-dark"
+            class="flex tems-center justify-center px-4 py-6 border-b dark:border-red-dark"
           >
             <h3
               class="flex-1 text-md lg:text-lg font-jiho-medium text-primay-dark dark:text-red-dark"
@@ -90,7 +90,7 @@
               {{ currentExperience.name }}
             </h3>
             <button
-              @click="closeSettingsPanel()"
+              @click="closeExperienceInfosPanel()"
               class="flex-none text-primay-dark ml-2"
             >
               <i data-feather="x"></i>
@@ -105,7 +105,7 @@
                 {{ currentExperience.description }}
               </h5>
             </div>
-            <div v-if="currentExperience.duties" class="px-6 py-2">
+            <div v-if="currentExperience.duties" class="px-6 py-2 font-jiho-medium">
               Missions :
             </div>
             <template v-for="duty in currentExperience.duties" :key="duty.id">
@@ -113,7 +113,7 @@
                 {{ duty }}
               </div>
             </template>
-            <div v-if="currentExperience.stacks" class="px-6 py-2">
+            <div v-if="currentExperience.stacks" class="px-6 py-2 font-jiho-medium">
               Stacks :
             </div>
             <template v-for="stack in currentExperience.stacks" :key="stack.id">
@@ -138,8 +138,18 @@ export default {
       experiences,
       modal: false,
       currentExperience: {},
-      isSettingsPanelOpen: false,
+      isExperienceInfosPanelOpen: false,
     };
+  },
+  watch: {
+    isExperienceInfosPanelOpen: function() {
+      if(this.isExperienceInfosPanelOpen){
+        document.documentElement.style.overflow = 'hidden'
+        return
+      }
+
+      document.documentElement.style.overflow = 'auto'
+    }
   },
   created() {
     this.theme = localStorage.getItem("theme") || "light";
@@ -152,14 +162,14 @@ export default {
     feather.replace();
   },
   methods: {
-    closeSettingsPanel() {
-      this.isSettingsPanelOpen = false;
+    closeExperienceInfosPanel() {
+      this.isExperienceInfosPanelOpen = false;
     },
-    openSettingsPanel(experience) {
+    openExperienceInfosPanel(experience) {
       this.currentExperience = experience;
-      this.isSettingsPanelOpen = true;
+      this.isExperienceInfosPanelOpen = true;
       this.$nextTick(() => {
-        this.$refs.settingsPanel.focus();
+        this.$refs.experienceInfosPanel.focus();
       });
     },
   },
