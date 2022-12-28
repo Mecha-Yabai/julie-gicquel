@@ -18,11 +18,11 @@
               class="text-justify sm:text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
               Anciennement dans le marketing digital, je me suis reconvertie
-              dans le développement web et me suis spécialisée dans la
+              dans le développement web full-stack et me suis spécialisée dans la
               conception et l'implémentation d'UI / UX 👩🏻‍💻
               <br />
               Mon but ? Offrir la meilleure expérience utilisateur en faisant
-              preuve de créativité, d'initiative et de spontanéité 🎯
+              preuve de créativité, d'initiatives et de spontanéité 🎯
             </p>
           </div>
           <div class="w-auto flex justify-center mt-4 sm:mt-6 lg:mt-8">

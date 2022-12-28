@@ -1,15 +1,25 @@
 <template>
   <section class="h-screen">
     <div class="flex flex-col lg:justify-between lg:flex-row h-full">
-      <div
-        class="w-full lg:pr-8 lg:w-6/12 xl:pl-0 xl:w-5/12 flex flex-col"
-      >
+      <div class="w-full lg:pr-8 lg:w-6/12 xl:pl-0 xl:w-5/12 flex flex-col">
         <h1
           class="font-jiho-medium xl:text-6xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
           Éducation
           <span class="text-red-500 dark:text-red-dark">&</span> formations
         </h1>
+        <p
+          class="my-3 md:mt-6 md:mb-0 text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+        >
+          Après mon bac ES, j'ai obtenu une licence dans une filière
+          pluridisciplinaire afin d'accroître mes connaissances en économie, en
+          droit et en marketing tout en renforçant mes compétences linguistiques
+          en anglais et en débutant le japonais.
+          <br />
+          Attirée par le numérique, j'ai effectué un master dans la
+          communication digitale puis après quelques expériences
+          professionnelles, je me suis formée au développement web.
+        </p>
         <div class="hidden h-full lg:flex items-center">
           <img
             v-if="theme === 'light'"

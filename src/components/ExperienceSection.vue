@@ -8,17 +8,16 @@
           Compétences
           <span class="text-red-500 dark:text-red-dark">&</span> expériences
         </h1>
-        <div class="flex items-baseline justify-center md:justify-start mt-6">
-          <hr
-            class="hidden md:block w-10 mr-6 lg:m-2 border rounded-md border-primary-dark dark:border-primary-light"
-          />
-          <p
-            class="text-center md:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
-          >
-            Développeuse web full-stack spécialisée dans le design UI/UX.<br />
-            J'aime challenger l'existant et imaginer le futur. 🚀
-          </p>
-        </div>
+        <p
+          class="mt-6 text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+        >
+          Développeuse web spécialisée dans le design UI/UX, j'ai auparavant
+          travaillé dans le community management. <br />
+          De nature curieuse et polyvalente, j'ai à coeur de mettre à profit mes
+          diverses compétences.
+          <br />
+          J'aime challenger l'existant et imaginer le futur. 🚀
+        </p>
         <img
           v-if="theme === 'light'"
           src="@/assets/images/heroJG_v2.png"
@@ -82,9 +81,7 @@
       class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-secondary-light dark:bg-primary-dark shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-none"
     >
       <div>
-        <!-- Panel content -->
         <div class="flex flex-col h-screen">
-          <!-- Panel header -->
           <div
             class="flex tems-center justify-center px-4 py-6 border-b dark:border-blue-dark"
           >
@@ -100,7 +97,6 @@
               <i data-feather="x" class="text-red-dark"></i>
             </button>
           </div>
-          <!-- Content -->
           <div class="flex-1 overflow-hidden hover:overflow-y-auto">
             <div class="px-6 py-2">
               <h5

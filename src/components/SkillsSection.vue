@@ -18,36 +18,34 @@
         >
           <div>
             <p
-              class="text-center md:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+              class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
-              J’ai commencé ma carrière dans le web marketing et la
-              communication numérique où j’ai pu mettre à profit ma créativité
-              et découvrir comment mettre en place des stratégies en ligne
-              d’acquisition et fidélisation.
+              J’ai commencé ma carrière dans le web marketing et le community
+              management, ce qui m'a permis de mettre à profit ma créativité et
+              d'apprendre comment réaliser des stratégies d’acquisition et
+              fidélisation efficaces. <br />
+              J’ai décidé de me ré-orienter dans le développement web afin
+              d'acquérir la technique nécessaire pour concevoir de manière plus
+              concrète les idées que j'ai en tête.
             </p>
           </div>
           <div>
             <p
-              class="text-center md:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+              class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
-              Après quelques expériences, j’ai décidé de me ré-orienter dans le
-              développement web pour apprendre la technique nécessaire pour me
-              permettre de concevoir de manière plus concrète mes idées.
-            </p>
-          </div>
-          <div>
-            <p
-              class="text-center md:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
-            >
-              Curieuse et force de proposition, j’apporte une attention
-              particulière à l’UI/UX pour offrir la meilleure expérience
-              utilisateur à travers un design attractif et intuitif.
+              Force de proposition et enrichie de mes diverses compétences
+              professionnelles, je suis un profil front-end avec une appétence
+              pour le back et qui porte une attention particulière à l’UI/UX.
+              J'aime créer des maquettes et développer des sites attractifs,
+              performants et intuitifs.
             </p>
           </div>
         </div>
       </div>
 
-      <div class="w-full lg:w-6/12 h-1/2 md:h-3/5 flex items-start md:items-center">
+      <div
+        class="w-full lg:w-6/12 h-1/2 md:h-3/5 flex items-start md:items-center"
+      >
         <div class="space-y-4 sm:space-y-10">
           <div
             v-for="(skill, id) in generalSkills"
