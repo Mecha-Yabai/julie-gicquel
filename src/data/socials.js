@@ -3,19 +3,19 @@ const socials = [
     id: 1,
     name: "Linkedin",
     icon: "linkedin",
-    url: "",
+    url: "https://www.linkedin.com/in/juliegicquel/",
   },
   {
     id: 2,
     name: "GitHub",
     icon: "github",
-    url: "",
+    url: "https://github.com/JulieGcql",
   },
   {
     id: 3,
     name: "Twitter",
     icon: "twitter",
-    url: "",
+    url: "https://twitter.com/JulieJQuill",
   },
 ];
 
