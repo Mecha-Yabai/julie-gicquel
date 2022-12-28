@@ -1,9 +1,7 @@
 <template>
   <section class="flex content-center">
     <div class="flex flex-col justify-around lg:justify-between">
-      <!-- Hero Content -->
       <div class="flex lg:flex-1 flex-col-reverse lg:flex-row items-center">
-        <!-- Banner left contents -->
         <div class="w-full lg:w-6/12 text-left lg:pr-8">
           <h1
             class="font-jiho-medium xl:text-6xl sm:text-5xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light mb-4 lg:mb-0"
@@ -46,19 +44,9 @@
             Retrouvez-moi sur :
           </p>
           <div class="flex justify-center lg:justify-start mt-4">
-            <a
-              v-for="social in socials"
-              :key="social.id"
-              :href="social.url"
-              target="__blank"
-              class="rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-blue-dark shadow-lg border-primary-dark dark:border-blue-dark border-2 hover:bg-primary-dark text-primary-dark dark:text-white dark:hover:bg-blue-dark dark:hover:text-red-dark hover:text-white text-center"
-            >
-              <i :data-feather="social.icon" class="w-5 lg:w-16"></i>
-            </a>
+            <SocialButton />
           </div>
         </div>
-
-        <!-- Banner right illustration -->
         <div
           class="w-full lg:w-6/12 flex justify-center lg:justify-end mb-4 lg:mb-0"
         >
@@ -76,12 +64,10 @@
           />
         </div>
       </div>
-      <!-- Scroll part -->
       <div class="flex lg:flex-none items-center justify-center">
         <div class="font-jiho-light dark:text-ternary-light">
           Pour en découvrir plus
         </div>
-        <!-- <div @click="scrollToNexSection()" class="cursor-pointer"> -->
         <a id="scrollButton" href="#skills">
           <lottie-player
             :src="scrolldown"
@@ -92,7 +78,6 @@
             autoplay
           ></lottie-player>
         </a>
-        <!-- </div> -->
       </div>
     </div>
   </section>
@@ -100,33 +85,14 @@
 <script>
 import feather from "feather-icons";
 import scrolldown from "../assets/animation/scrolldown.json";
+import SocialButton from "./reusable/SocialButton.vue";
 
 export default {
-  components: {},
+  components: { SocialButton },
   data() {
     return {
       scrolldown,
       theme: "",
-      socials: [
-        {
-          id: 1,
-          name: "Linkedin",
-          icon: "linkedin",
-          url: "",
-        },
-        {
-          id: 2,
-          name: "GitHub",
-          icon: "github",
-          url: "",
-        },
-        {
-          id: 3,
-          name: "Twitter",
-          icon: "twitter",
-          url: "",
-        },
-      ],
     };
   },
   created() {
