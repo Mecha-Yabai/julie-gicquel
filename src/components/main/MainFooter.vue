@@ -3,7 +3,6 @@
     <div
       class="pt-20 sm:pt-30 pb-8 mt-20 border-t-2 border-primary-light dark:border-secondary-dark"
     >
-      <!-- Footer social links -->
       <div class="flex flex-col justify-center items-center mb-12 sm:mb-20">
         <p
           class="font-jiho-bold text-3xl sm:text-4xl font-semibold text-primary-dark dark:text-primary-light mb-5"
@@ -15,7 +14,6 @@
         </ul>
       </div>
 
-      <!-- Footer copyright -->
       <MainFooterCopyright />
     </div>
   </div>

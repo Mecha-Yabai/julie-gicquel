@@ -45,13 +45,7 @@ const formations = [
     id: 8,
     name: "Licence L.E.A Anglais-Japonais",
     school: "Aix-Marseille Université",
-    date: "2008 - 2011",
-  },
-  {
-    id: 9,
-    name: "Baccalauréat ES, option anglais",
-    school: "Lycée Empéri",
-    date: "2008",
+    date: "2008 - 2012",
   },
 ];
 

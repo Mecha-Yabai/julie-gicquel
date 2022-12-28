@@ -1,12 +1,9 @@
 <template>
   <nav id="nav">
-    <!-- Header start -->
     <div
       class="z-10 max-w-full block md:flex md:justify-between md:items-center"
     >
-      <!-- Header menu links and small screen hamburger menu -->
       <div class="flex justify-between items-center">
-        <!-- Header logos -->
         <div>
           <router-link to="/"
             ><img
@@ -24,14 +21,12 @@
           </router-link>
         </div>
         <div class="flex items-end">
-          <!-- Theme switcher small screen -->
           <theme-switcher
             :theme="theme"
             @themeChanged="updateTheme"
             class="block md:hidden bg-ternary-light text-red-600 dark:bg-ternary-dark hover:bg-hover-light dark:hover:bg-hover-dark hover:shadow-sm px-2.5 py-2 mr-2 rounded-lg"
           />
 
-          <!-- Small screen hamburger menu -->
           <div class="md:hidden">
             <button
               @click="isOpen = !isOpen"
@@ -61,20 +56,16 @@
         </div>
       </div>
 
-      <!-- Header right section buttons -->
       <div
         class="hidden md:flex justify-between items-center flex-col md:flex-row"
       >
-
-        <!-- Theme switcher large screen -->
         <ThemeSwitcher
           :theme="theme"
           @themeChanged="updateTheme"
-          class="ml-4 bg-ternary-light hover:bg-red-600 text-red-600 hover:text-white  dark:bg-blue-dark px-3 py-2 shadow-sm rounded-xl cursor-pointer"
+          class="ml-4 bg-ternary-light hover:bg-red-600 text-red-600 hover:text-white dark:bg-blue-dark px-3 py-2 shadow-sm rounded-xl cursor-pointer"
         />
       </div>
     </div>
-
   </nav>
 </template>
 <script>
