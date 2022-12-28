@@ -1,14 +1,21 @@
 <template>
   <section class="h-screen">
-    <div class="flex flex-col lg:flex-row h-full lg:items-center justify-center">
-      <div class="w-full lg:w-6/12 h-1/2 lg:h-fit lg:text-left lg:pr-8 mt-4 lg:mt-0">
+    <div
+      class="flex flex-col lg:flex-row h-full lg:items-center justify-center"
+    >
+      <div
+        class="w-full lg:w-6/12 h-1/2 md:h-2/5 lg:h-fit lg:text-left lg:pr-8 mt-4 lg:mt-0"
+      >
         <h1
-          class="h-1/3 lg:h-fit lg:mb-10 font-jiho-bold xl:text-6xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
+          class="h-1/4 md:h-1/3 lg:h-fit lg:mb-10 font-jiho-bold xl:text-6xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
           Un <span class="text-red-500 dark:text-red-dark">profil</span>,<br />
-          Triple <span class="text-red-500 dark:text-red-dark">compétences</span>.
+          Triple
+          <span class="text-red-500 dark:text-red-dark">compétences</span>.
         </h1>
-        <div class="h-2/3 lg:h-fit space-y-4 lg:space-y-6 xl:space-y-8">
+        <div
+          class="h-2/4 md:h-2/3 lg:h-fit space-y-4 lg:space-y-6 xl:space-y-8"
+        >
           <div>
             <p
               class="text-center md:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
@@ -40,53 +47,24 @@
         </div>
       </div>
 
-      <div class="w-full lg:w-6/12 h-1/2">
+      <div class="w-full lg:w-6/12 h-1/2 md:h-3/5 flex items-start md:items-center">
         <div class="space-y-4 sm:space-y-10">
-          <div class="mt-6 sm:mt-0">
+          <div
+            v-for="(skill, id) in generalSkills"
+            :key="id"
+            class="mt-6 sm:mt-0"
+          >
             <hr class="mb-4 sm:mb-10 dark:border-blue-dark" />
             <div class="flex items-top sm:mb-10">
               <p
-                class="mr-4 text-xl sm:text-3xl text-red-500 dark:text-red-dark font-jiho-regular"
+                class="mr-4 text-xl sm:text-3xl text-red-500 dark:text-red-dark font-jiho-regular whitespace-nowrap"
               >
-                01 /
+                {{ skill.id }} /
               </p>
               <h1
                 class="text-left text-xl md:text-3xl xl:text-4xl font-jiho-medium text-primary-dark dark:text-primary-light"
               >
-                Développement<br />
-                Full-Stack
-              </h1>
-            </div>
-          </div>
-          <div>
-            <hr class="mb-4 sm:mb-10 dark:border-blue-dark" />
-            <div class="flex items-top sm:mb-10">
-              <p
-                class="mr-4 text-xl sm:text-3xl text-red-500 dark:text-red-dark font-jiho-regular"
-              >
-                02 /
-              </p>
-              <h1
-                class="text-left text-xl md:text-3xl xl:text-4xl font-jiho-medium text-primary-dark dark:text-primary-light"
-              >
-                Web UI/UX<br />
-                Design
-              </h1>
-            </div>
-          </div>
-          <div>
-            <hr class="mb-4 sm:mb-10 dark:border-blue-dark" />
-            <div class="flex items-top sm:mb-10">
-              <p
-                class="mr-4 text-xl sm:text-3xl text-red-500 dark:text-red-dark font-jiho-regular"
-              >
-                03 /
-              </p>
-              <h1
-                class="text-left text-xl md:text-3xl xl:text-4xl font-jiho-medium text-primary-dark dark:text-primary-light"
-              >
-                Web marketing &<br />
-                Communication numérique
+                {{ skill.title }}
               </h1>
             </div>
           </div>
@@ -102,6 +80,11 @@ export default {
   data() {
     return {
       theme: "",
+      generalSkills: [
+        { id: 1, title: "Développement Full-Stack" },
+        { id: 2, title: "UI/UX Design" },
+        { id: 3, title: "Web marketing & Communication digitale" },
+      ],
     };
   },
   created() {
