@@ -61,9 +61,6 @@
         </div>
       </div>
 
-      <!-- Header links -->
-      <MainHeaderLinks :isOpen="isOpen" />
-
       <!-- Header right section buttons -->
       <div
         class="hidden md:flex justify-between items-center flex-col md:flex-row"
@@ -83,14 +80,10 @@
 <script>
 import ThemeSwitcher from "../ThemeSwitcher";
 import feather from "feather-icons";
-import MainHeaderLinks from "./MainHeaderLinks.vue";
-import Button from "../reusable/Button.vue";
 
 export default {
   components: {
     ThemeSwitcher,
-    MainHeaderLinks,
-    Button,
   },
   data() {
     return {

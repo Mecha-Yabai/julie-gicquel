@@ -32,7 +32,9 @@
           class="hidden lg:block lg:w-full"
         />
       </div>
-      <div class="w-full lg:pt-10 lg:w-6/12 flex flex-col items-baseline h-full justify-center">
+      <div
+        class="w-full lg:pt-10 lg:w-6/12 flex flex-col items-baseline h-full justify-center"
+      >
         <template v-for="experience in experiences" :key="experience.id">
           <div
             class="flex items-baseline w-full justify-between h-[110px] lg:h-[140px] border-t border-primary-dark dark:border-blue-dark"
@@ -45,12 +47,12 @@
             </div>
             <div class="my-auto flex-1 pr-4">
               <h3
-                class="text-md lg:text-lg font-jiho-medium text-primary-dark dark:text-red-dark"
+                class="text-md lg:text-lg font-jiho-medium text-primary-dark dark:text-white"
               >
                 {{ experience.name }}
               </h3>
               <h5
-                class="mt-2 text-md font-jiho-regular text-primay-dark dark:text-white"
+                class="mt-2 text-md font-jiho-regular text-primay-dark dark:text-red-dark"
               >
                 {{ experience.company }}
               </h5>

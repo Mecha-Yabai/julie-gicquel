@@ -2,7 +2,7 @@
   <section class="h-screen">
     <div class="flex flex-col lg:justify-between lg:flex-row h-full">
       <div
-        class="w-full lg:pr-8 lg:w-6/12 xl:pl-0 xl:w-5/12 h-full flex flex-col"
+        class="w-full lg:pr-8 lg:w-6/12 xl:pl-0 xl:w-5/12 flex flex-col"
       >
         <h1
           class="font-jiho-medium xl:text-6xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div
-        class="w-full lg:pt-10 lg:w-7/12 flex flex-col items-baseline h-full lg:items-end"
+        class="w-full lg:pt-10 lg:w-7/12 flex flex-col items-baseline h-full justify-center lg:justify-end lg:items-end"
       >
         <ol
           class="relative border-l border-primary-dark dark:border-ternary-light"
@@ -41,12 +41,12 @@
                 >{{ formation.date }}</time
               >
               <h3
-                class="lg:mt-1 text-md xl:text-lg font-jiho-medium text-primay-dark dark:text-red-dark"
+                class="lg:mt-1 text-md xl:text-lg font-jiho-medium text-primay-dark dark:text-white"
               >
                 {{ formation.name }}
               </h3>
               <h5
-                class="lg:mt-1 text-sm font-jiho-medium text-primay-dark dark:text-white"
+                class="lg:mt-1 text-sm font-jiho-medium text-primay-dark dark:text-red-dark"
               >
                 {{ formation.school }}
               </h5>

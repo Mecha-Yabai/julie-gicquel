@@ -1,7 +1,7 @@
 <template>
   <div :class="mainTheme">
     <!-- App header -->
-    <MainHeader class="container mx-auto px-4 sm:px-16 py-4 md:py-0" />
+    <MainHeader class="container mx-auto px-4 sm:px-16 py-4" />
 
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
