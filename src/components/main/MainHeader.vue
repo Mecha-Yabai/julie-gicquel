@@ -73,7 +73,7 @@
         <ThemeSwitcher
           :theme="theme"
           @themeChanged="updateTheme"
-          class="ml-4 bg-ternary-light hover:bg-red-600 text-red-600 hover:text-white  dark:bg-ternary-dark px-3 py-2 shadow-sm rounded-xl cursor-pointer"
+          class="ml-4 bg-ternary-light hover:bg-red-600 text-red-600 hover:text-white  dark:bg-blue-dark px-3 py-2 shadow-sm rounded-xl cursor-pointer"
         />
       </div>
     </div>
