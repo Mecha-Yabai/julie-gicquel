@@ -1,18 +1,19 @@
 <template>
   <section class="h-screen">
-    <div class="flex flex-col lg:justify-between lg:flex-row h-full pt-10">
+    <div class="flex flex-col lg:justify-between lg:flex-row h-full">
       <div class="w-full lg:pr-8 lg:w-6/12 xl:pl-0 xl:w-5/12">
         <h1
           class="font-jiho-medium xl:text-6xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
-          Compétences & expériences
+          Compétences
+          <span class="text-red-500 dark:text-red-dark">&</span> expériences
         </h1>
-        <div class="flex items-baseline justify-center lg:justify-start mt-6">
+        <div class="flex items-baseline justify-center md:justify-start mt-6">
           <hr
-            class="w-10 mr-2 border rounded-md border-primary-dark dark:border-primary-light"
+            class="hidden md:block w-10 mr-6 lg:m-2 border rounded-md border-primary-dark dark:border-primary-light"
           />
           <p
-            class="text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+            class="text-center md:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
           >
             Développeuse web full-stack spécialisée dans le design UI/UX.<br />
             J'aime challenger l'existant et imaginer le futur. 🚀
@@ -31,48 +32,43 @@
           class="hidden lg:block lg:w-full"
         />
       </div>
-      <div class="w-full pt-10 lg:w-6/12">
-        <div class="flex flex-col items-baseline mt-6">
-          <template v-for="experience in experiences" :key="experience.id">
-            <!-- <hr
-              class="w-full border rounded-md border-primary-dark dark:border-primary-light"
-            /> -->
-            <div
-              class="flex items-baseline w-full justify-between h-[110px] lg:h-[140px] border-t border-primary-dark dark:border-blue-dark"
-            >
-              <div class="my-auto min-w-[100px]">
-                <time
-                  class="text-sm font-jiho-regular leading-none text-gray-500 dark:text-ternary-light"
-                  >{{ experience.date }}</time
-                >
-              </div>
-              <div class="my-auto flex-1 pr-4">
-                <h3
-                  class="text-md lg:text-lg font-jiho-medium text-primary-dark dark:text-red-dark"
-                >
-                  {{ experience.name }}
-                </h3>
-                <h5
-                  class="mt-2 text-md font-jiho-regular text-primay-dark dark:text-white"
-                >
-                  {{ experience.company }}
-                </h5>
-              </div>
-              <div class="my-auto">
-                <button
-                  type="button"
-                  @click="openExperienceInfosPanel(experience)"
-                >
-                  <i
-                    data-feather="plus-circle"
-                    stroke-width="1.5"
-                    class="text-red-dark"
-                  ></i>
-                </button>
-              </div>
+      <div class="w-full lg:pt-10 lg:w-6/12 flex flex-col items-baseline h-full justify-center">
+        <template v-for="experience in experiences" :key="experience.id">
+          <div
+            class="flex items-baseline w-full justify-between h-[110px] lg:h-[140px] border-t border-primary-dark dark:border-blue-dark"
+          >
+            <div class="my-auto w-[70px] md:w-[100px]">
+              <time
+                class="text-sm font-jiho-regular leading-none text-gray-500 dark:text-ternary-light"
+                >{{ experience.date }}</time
+              >
             </div>
-          </template>
-        </div>
+            <div class="my-auto flex-1 pr-4">
+              <h3
+                class="text-md lg:text-lg font-jiho-medium text-primary-dark dark:text-red-dark"
+              >
+                {{ experience.name }}
+              </h3>
+              <h5
+                class="mt-2 text-md font-jiho-regular text-primay-dark dark:text-white"
+              >
+                {{ experience.company }}
+              </h5>
+            </div>
+            <div class="my-auto">
+              <button
+                type="button"
+                @click="openExperienceInfosPanel(experience)"
+              >
+                <i
+                  data-feather="chevron-right"
+                  stroke-width="1.5"
+                  class="text-red-dark"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </template>
       </div>
     </div>
     <transition
