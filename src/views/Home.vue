@@ -1,9 +1,9 @@
 <template>
   <div class="container mx-auto px-4 sm:px-16 min-h-screen">
-    <HeroSection id="hero" class="flex content-center" />
-    <SkillsSection id="skills" />
-    <ExperienceSection id="experience" />
-    <EducationSection id="eductation" />
+    <HeroSection id="hero" class="py-4" />
+    <SkillsSection id="skills" class="py-4" />
+    <ExperienceSection id="experience" class="py-4" />
+    <EducationSection id="education" class="py-4" />
     <!-- <ProjectsGrid class="snap-center"/> -->
   </div>
 
@@ -39,8 +39,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 #hero {
-  min-height: calc(100vh - 40px);
-  max-height: calc(100vh - 40px);
+  min-height: calc(100vh - 72px);
+  max-height: calc(100vh - 72px);
   @media (min-width: 768px) {
     min-height: calc(100vh - 64px);
     max-height: calc(100vh - 64px);
