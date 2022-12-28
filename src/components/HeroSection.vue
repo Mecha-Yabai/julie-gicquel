@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="flex content-center">
     <div class="flex flex-col justify-around lg:justify-between">
       <!-- Hero Content -->
       <div class="flex lg:flex-1 flex-col-reverse lg:flex-row items-center">
@@ -141,7 +141,6 @@ export default {
   },
   methods: {
     scrollToNexSection() {
-      console.log("eeee");
       document.getElementById("#Skills").scrollIntoView({
         behavior: "smooth",
       });
