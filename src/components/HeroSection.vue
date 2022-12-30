@@ -6,23 +6,21 @@
           <h1
             class="font-jiho-medium xl:text-6xl sm:text-5xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light mb-4 lg:mb-0"
           >
-            Hey ! Je suis
-            <span class="text-red-500 dark:text-red-dark font-jiho-bold"
-              >Julie</span
+            {{ $t("greetings") }}
+            <span class="text-red-500 dark:text-red-dark font-jiho-bold">{{
+              $t("name")
+            }}</span
             >,
+            {{ $t("web_developer") }}
             <br />
-            Développeuse web
           </h1>
           <div class="mb-8 lg:mb-0 lg:mt-10">
             <p
               class="text-justify sm:text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
-              Anciennement dans le marketing digital, je me suis reconvertie
-              dans le développement web full-stack et me suis spécialisée dans la
-              conception et l'implémentation d'UI / UX 👩🏻‍💻
+              {{ $t("hero_1") }}
               <br />
-              Mon but ? Offrir la meilleure expérience utilisateur en faisant
-              preuve de créativité, d'initiatives et de spontanéité 🎯
+              {{ $t("hero_2") }}
             </p>
           </div>
           <div class="w-auto flex justify-center mt-4 sm:mt-6 lg:mt-8">
@@ -32,16 +30,16 @@
               class="flex justify-center items-center px-4 w-auto py-3 shadow-lg shadow-red-600/50 dark:shadow-red-dark/50 rounded-lg bg-red-600 dark:bg-red-dark text-white duration-500"
               aria-label="Télécharger mon CV"
             >
-              <span class="text-md font-jiho-medium duration-100"
-                >Télécharger mon CV</span
-              >
+              <span class="text-md font-jiho-medium duration-100">{{
+                $t("download_resume")
+              }}</span>
               <i data-feather="download" class="ml-2 m:w-5 duration-100"></i>
             </a>
           </div>
           <p
             class="mt-6 font-jiho-medium text-lg xl:text-xl text-center lg:text-left text-primay-dark dark:text-white"
           >
-            Retrouvez-moi sur :
+            {{ $t("follow_me") }}
           </p>
           <div class="flex justify-center lg:justify-start mt-4">
             <SocialButton />
@@ -66,7 +64,7 @@
       </div>
       <div class="flex lg:flex-none items-center justify-center">
         <div class="font-jiho-light dark:text-ternary-light">
-          Pour en découvrir plus
+          {{ $t("explore") }}
         </div>
         <a id="scrollButton" href="#skills">
           <lottie-player
