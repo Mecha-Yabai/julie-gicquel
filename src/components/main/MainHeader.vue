@@ -59,6 +59,7 @@
       <div
         class="hidden md:flex justify-between items-center flex-col md:flex-row"
       >
+        <LocaleSwitcher />
         <ThemeSwitcher
           :theme="theme"
           @themeChanged="updateTheme"
@@ -70,11 +71,13 @@
 </template>
 <script>
 import ThemeSwitcher from "../ThemeSwitcher";
+import LocaleSwitcher from "../LocaleSwitcher";
 import feather from "feather-icons";
 
 export default {
   components: {
     ThemeSwitcher,
+    LocaleSwitcher,
   },
   data() {
     return {
