@@ -1,12 +1,12 @@
 <template>
   <div class="relative text-lg w-12 md:w-18 lg:w-36">
     <button
-      class="flex items-center justify-between px-3 py-2 bg-white dark:bg-blue-dark w-full border border-gray-500 dark:border-blue-dark rounded-lg"
+      class="flex items-center justify-between px-3 py-2 bg-white dark:bg-blue-dark-secondary dark:text-white w-full border border-ternary-light dark:border-none rounded-lg"
       @click="isOptionsExpanded = !isOptionsExpanded"
       @blur="isOptionsExpanded = false"
     >
       <span class="hidden lg:block">{{ selectedLocale.name }}</span>
-      <img class="lg:hidden lg:w-auto lg:h-5 py-1" :src="selectedLocale.flag" />
+      <img class="lg:hidden lg:w-auto lg:h-5 my-1" :src="selectedLocale.flag" />
       <svg
         fill="none"
         viewBox="0 0 24 24"
@@ -32,12 +32,12 @@
     >
       <ul
         v-show="isOptionsExpanded"
-        class="absolute left-0 right-0 mb-4 bg-white dark:bg-secondary-dark dark:border dark:border-blue-dark divide-y rounded-lg shadow-lg overflow-hidden"
+        class="absolute left-0 right-0 mb-4 bg-white dark:bg-blue-dark-secondary dark:border dark:border-blue-dark divide-y rounded-lg shadow-lg overflow-hidden"
       >
         <li
           v-for="locale in locales"
           :key="locale.id"
-          class="px-3 py-3 transition-colors duration-300 hover:bg-gray-200 hover:dark:bg-blue-dark"
+          class="px-3 py-3 transition-colors duration-300 hover:bg-gray-200 hover:dark:bg-primary-dark"
           @mousedown.prevent="setOption(locale)"
         >
           <div
@@ -48,7 +48,7 @@
               :src="locale.flag"
               :alt="locale.name"
             />
-            <span class="hidden lg:ml-2 lg:block font-jiho-light">{{
+            <span class="hidden lg:ml-2 lg:block lg:dark:text-white font-jiho-light">{{
               locale.name
             }}</span>
           </div>

@@ -25,7 +25,7 @@
           <theme-switcher
             :theme="theme"
             @themeChanged="updateTheme"
-            class="block md:hidden bg-ternary-light text-red-600 dark:bg-ternary-dark hover:bg-hover-light dark:hover:bg-hover-dark hover:shadow-sm px-2.5 py-2 mr-2 rounded-lg"
+            class="block md:hidden bg-ternary-light text-red-600 dark:bg-blue-dark-secondary hover:bg-hover-light dark:hover:bg-hover-dark hover:shadow-sm px-2.5 py-2 mr-2 rounded-lg"
           />
         </div>
       </div>
@@ -37,7 +37,7 @@
         <ThemeSwitcher
           :theme="theme"
           @themeChanged="updateTheme"
-          class="ml-4 bg-ternary-light hover:bg-red-600 text-red-600 hover:text-white dark:bg-blue-dark px-3 py-2 shadow-sm rounded-xl cursor-pointer"
+          class="ml-4 bg-ternary-light hover:bg-red-600 text-red-600 hover:text-white dark:bg-blue-dark-secondary px-3 py-2 shadow-sm rounded-xl cursor-pointer"
         />
       </div>
     </div>

@@ -5,7 +5,7 @@
     >
       &copy; {{ copyrightDate }}.
       <span
-        class="font-jiho-medium hover:text-red-500 dark:hover:text-red-dark duration-500"
+        class="font-jiho-medium text-secondary-dark dark:text-secondary-light hover:text-red-500 dark:hover:text-red-dark duration-500"
       >
         {{ projectName }}
       </span>

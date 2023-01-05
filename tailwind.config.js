@@ -20,6 +20,7 @@ module.exports = {
         "ternary-dark": "#666666",
         "red-dark": "#C92A1D",
         "blue-dark": "#233763",
+        "blue-dark-secondary": "#1f2937",
       },
       container: {
         center: true,
@@ -29,5 +30,4 @@ module.exports = {
   variants: {
     extend: { opacity: ["disabled"] },
   },
-  plugins: [require("@tailwindcss/forms")],
 };
