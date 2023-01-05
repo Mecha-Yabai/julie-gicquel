@@ -26,7 +26,7 @@
           <div class="w-auto flex justify-center mt-4 sm:mt-6 lg:mt-8">
             <a
               download="Julie-Gicquel-CV.pdf"
-              href="/files/Stoman-Resume.pdf"
+              href="/files/Julie-Gicquel-CV.pdf"
               class="flex justify-center items-center px-4 w-auto py-3 shadow-lg shadow-red-600/50 dark:shadow-red-dark/50 rounded-lg bg-red-600 dark:bg-red-dark text-white duration-500"
               aria-label="Télécharger mon CV"
             >
