@@ -1,26 +1,7 @@
 <template>
-  <!-- <div class="w-36">
-    <select
-      class="px-3 py-2 bg-white border focus:ring-red-500 focus:border-red-500 border-gray-500 rounded-lg w-full"
-      v-model="$i18n.locale"
-    >
-      <option
-        v-for="(locale, i) in locales"
-        :key="`locale-${i}`"
-        :value="locale.id"
-      >
-        <img
-          :src="locale.flag"
-          class="w-4"
-          :alt="locale.name"
-        />
-        {{ locale.name }}
-      </option>
-    </select>
-  </div> -->
   <div class="relative text-lg w-12 md:w-18 lg:w-36">
     <button
-      class="flex items-center justify-between px-3 py-2 bg-white w-full border border-gray-500 rounded-lg"
+      class="flex items-center justify-between px-3 py-2 bg-white dark:bg-blue-dark w-full border border-gray-500 dark:border-blue-dark rounded-lg"
       @click="isOptionsExpanded = !isOptionsExpanded"
       @blur="isOptionsExpanded = false"
     >
@@ -51,12 +32,12 @@
     >
       <ul
         v-show="isOptionsExpanded"
-        class="absolute left-0 right-0 mb-4 bg-white divide-y rounded-lg shadow-lg overflow-hidden"
+        class="absolute left-0 right-0 mb-4 bg-white dark:bg-secondary-dark dark:border dark:border-blue-dark divide-y rounded-lg shadow-lg overflow-hidden"
       >
         <li
           v-for="locale in locales"
           :key="locale.id"
-          class="px-3 py-3 transition-colors duration-300 hover:bg-gray-200"
+          class="px-3 py-3 transition-colors duration-300 hover:bg-gray-200 hover:dark:bg-blue-dark"
           @mousedown.prevent="setOption(locale)"
         >
           <div

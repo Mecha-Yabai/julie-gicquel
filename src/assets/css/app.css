@@ -1,15 +1,8 @@
-/*== 
- * Vue.js & TailwindCSS Portfolio Main CSS File
- * Powered by: @realstoman
-*/
-
 @tailwind base;
 
 @tailwind components;
 
 @tailwind utilities;
-
-/* Custom Styles Below */
 
 body {
   font-family: "Jiho-Regular";
@@ -222,11 +215,4 @@ body {
 
 .font-jiho-heavy-italic {
   font-family: "Jiho-HeavyItalic";
-}
-
-/* Active class for navigation menu */
-.router-link-active,
-.router-link-exact-active {
-  @apply text-red-800;
-  @apply text-red-600 dark:text-red-300;
 }

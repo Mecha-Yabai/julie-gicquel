@@ -6,9 +6,6 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-    meta: {
-      title: "Julie Gicquel - Accueil",
-    },
   },
 ];
 
