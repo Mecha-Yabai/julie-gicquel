@@ -11,10 +11,10 @@
               $t("name")
             }}</span
             >,
-            {{ $t("web_developer") }}
             <br />
+            {{ $t("web_developer") }}
           </h1>
-          <div class="mb-8 lg:mb-0 lg:mt-10">
+          <div class="mb-6 lg:mt-10">
             <p
               class="text-justify sm:text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
@@ -23,7 +23,9 @@
               {{ $t("hero_2") }}
             </p>
           </div>
-          <div class="w-auto flex justify-center mt-4 sm:mt-6 lg:mt-8">
+          <div
+            class="flex items-center justify-evenly lg:justify-start mt-4 sm:mt-6 lg:mt-8"
+          >
             <a
               download="Julie-Gicquel-CV.pdf"
               href="/files/Julie-Gicquel-CV.pdf"
@@ -34,6 +36,13 @@
                 $t("download_resume")
               }}</span>
               <i data-feather="download" class="ml-2 m:w-5 duration-100"></i>
+            </a>
+            <a
+              :href="`mailto:${mail}`"
+              class="lg:ml-4 px-4 w-auto py-3 shadow-lg shadow-primary-dark/30 dark:shadow-blue-dark/50 rounded-lg bg-white dark:bg-blue-dark border-primary-dark dark:border-blue-dark border-2 hover:bg-primary-dark text-primary-dark dark:text-white dark:hover:bg-blue-dark dark:hover:text-red-dark hover:text-white"
+              ><span class="text-md font-jiho-medium duration-100">
+                Me contacter</span
+              >
             </a>
           </div>
           <p
@@ -91,6 +100,7 @@ export default {
     return {
       scrolldown,
       theme: "",
+      mail: "julie.gcql@gmail.com",
     };
   },
   created() {
