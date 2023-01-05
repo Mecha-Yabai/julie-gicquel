@@ -5,6 +5,26 @@
   "hero_1": "Créative et force de proposition, j'ai plus de trois ans d'expérience dans le développement web (Vue.JS & Laravel) et le design UI/UX ainsi qu'une double compétence dans le web marketing. 👩🏻‍💻",
   "hero_2": "Mon but ? Offrir la meilleure expérience utilisateur en en maquettant et développant des interfaces intuitives et performantes avec un design adapté, respectant l’identité de la marque. 🎯",
   "download_resume": "Télécharger mon CV",
+  "get_in_touch": "Me contacter",
   "follow_me": "Retrouvez-moi sur :",
-  "explore": "Pour en découvrir plus"
+  "skills": {
+    "title_1": "Un",
+    "title_2": "profil",
+    "title_3": "Triple",
+    "title_4": "compétences",
+    "description_1": "J’ai commencé ma carrière dans le web marketing et le community management, ce qui m'a permis de mettre à profit ma créativité et d'apprendre comment réaliser des stratégies d’acquisition et fidélisation efficaces.",
+    "description_2": "J’ai décidé de me ré-orienter dans le développement web afin d'acquérir la technique nécessaire pour concevoir de manière plus concrète les idées que j'ai en tête.",
+    "description_3": "Curieuse et enrichie de mes diverses compétences professionnelles, je suis un profil front-end avec une appétence pour le back et qui porte une attention particulière à l’UI/UX. J'aime créer des maquettes et développer des sites attractifs, performants et intuitifs.",
+    "web_development": "Développement Full-Stack",
+    "ui_ux_design": "UI/UX Design",
+    "web_marketing": "Web marketing & Communication digitale"
+  },
+  "experiences": {
+    "title_1": "Compétences",
+    "title_2": "&",
+    "title_3": "expériences",
+    "description_1": "Développeuse web spécialisée dans le design UI/UX, j'ai auparavant travaillé dans le community management.",
+    "description_2": "De nature spontanée et polyvalente, j'ai à coeur de mettre à profit mes diverses compétences.",
+    "description_3": "J'aime challenger l'existant et imaginer le futur. 🚀"
+  }
 }

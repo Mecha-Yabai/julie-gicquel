@@ -9,9 +9,16 @@
         <h1
           class="h-1/4 md:h-1/3 lg:h-fit lg:mb-10 font-jiho-bold xl:text-6xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
-          Un <span class="text-red-500 dark:text-red-dark">profil</span>,<br />
-          Triple
-          <span class="text-red-500 dark:text-red-dark">compétences</span>.
+          {{ $t("skills.title_1") }}
+          <span class="text-red-500 dark:text-red-dark">{{
+            $t("skills.title_2")
+          }}</span
+          >,<br />
+          {{ $t("skills.title_3") }}
+          <span class="text-red-500 dark:text-red-dark">{{
+            $t("skills.title_4")
+          }}</span
+          >.
         </h1>
         <div
           class="h-2/4 md:h-2/3 lg:h-fit space-y-4 lg:space-y-6 xl:space-y-8"
@@ -20,24 +27,15 @@
             <p
               class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
-              J’ai commencé ma carrière dans le web marketing et le community
-              management, ce qui m'a permis de mettre à profit ma créativité et
-              d'apprendre comment réaliser des stratégies d’acquisition et
-              fidélisation efficaces. <br />
-              J’ai décidé de me ré-orienter dans le développement web afin
-              d'acquérir la technique nécessaire pour concevoir de manière plus
-              concrète les idées que j'ai en tête.
+              {{ $t("skills.description_1") }} <br />
+              {{ $t("skills.description_2") }}
             </p>
           </div>
           <div>
             <p
               class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
-              Force de proposition et enrichie de mes diverses compétences
-              professionnelles, je suis un profil front-end avec une appétence
-              pour le back et qui porte une attention particulière à l’UI/UX.
-              J'aime créer des maquettes et développer des sites attractifs,
-              performants et intuitifs.
+              {{ $t("skills.description_3") }}
             </p>
           </div>
         </div>
@@ -79,9 +77,9 @@ export default {
     return {
       theme: "",
       generalSkills: [
-        { id: 1, title: "Développement Full-Stack" },
-        { id: 2, title: "UI/UX Design" },
-        { id: 3, title: "Web marketing & Communication digitale" },
+        { id: 1, title: this.$t("skills.web_development") },
+        { id: 2, title: this.$t("skills.ui_ux_design") },
+        { id: 3, title: this.$t("skills.web_marketing") },
       ],
     };
   },

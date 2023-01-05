@@ -5,18 +5,19 @@
         <h1
           class="font-jiho-medium xl:text-6xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
-          Compétences
-          <span class="text-red-500 dark:text-red-dark">&</span> expériences
+          {{ $t("experiences.title_1") }}
+          <span class="text-red-500 dark:text-red-dark">{{
+            $t("experiences.title_2")
+          }}</span>
+          {{ $t("experiences.title_3") }}
         </h1>
         <p
           class="mt-6 text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
         >
-          Développeuse web spécialisée dans le design UI/UX, j'ai auparavant
-          travaillé dans le community management. <br />
-          De nature curieuse et polyvalente, j'ai à coeur de mettre à profit mes
-          diverses compétences.
+          {{ $t("experiences.description_1") }} <br />
+          {{ $t("experiences.description_2") }}
           <br />
-          J'aime challenger l'existant et imaginer le futur. 🚀
+          {{ $t("experiences.description_3") }}
         </p>
         <img
           v-if="theme === 'light'"

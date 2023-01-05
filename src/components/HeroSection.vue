@@ -29,7 +29,7 @@
             <a
               download="Julie-Gicquel-CV.pdf"
               href="/files/Julie-Gicquel-CV.pdf"
-              class="flex justify-center items-center px-4 w-auto py-3 shadow-lg shadow-red-600/50 dark:shadow-red-dark/50 rounded-lg bg-red-600 dark:bg-red-dark text-white duration-500"
+              class="flex justify-center items-center px-4 w-auto py-3 rounded-lg bg-red-600 dark:bg-red-dark text-white duration-500"
               aria-label="Télécharger mon CV"
             >
               <span class="text-md font-jiho-medium duration-100">{{
@@ -39,9 +39,9 @@
             </a>
             <a
               :href="`mailto:${mail}`"
-              class="lg:ml-4 px-4 w-auto py-3 shadow-lg shadow-primary-dark/30 dark:shadow-blue-dark/50 rounded-lg bg-white dark:bg-blue-dark border-primary-dark dark:border-blue-dark border-2 hover:bg-primary-dark text-primary-dark dark:text-white dark:hover:bg-blue-dark dark:hover:text-red-dark hover:text-white"
+              class="lg:ml-4 px-4 w-auto py-3 rounded-lg bg-white dark:bg-blue-dark border-primary-dark dark:border-none border-2 hover:bg-primary-dark text-primary-dark dark:text-white hover:text-white duration-500"
               ><span class="text-md font-jiho-medium duration-100">
-                Me contacter</span
+                {{ $t("get_in_touch") }}</span
               >
             </a>
           </div>
@@ -72,9 +72,6 @@
         </div>
       </div>
       <div class="flex lg:flex-none items-center justify-center">
-        <div class="font-jiho-light dark:text-ternary-light">
-          {{ $t("explore") }}
-        </div>
         <a id="scrollButton" href="#skills">
           <lottie-player
             :src="scrolldown"
