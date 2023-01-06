@@ -9,13 +9,7 @@ const socials = [
     id: 2,
     name: "GitHub",
     icon: "github",
-    url: "https://github.com/JulieGcql",
-  },
-  {
-    id: 3,
-    name: "Twitter",
-    icon: "twitter",
-    url: "https://twitter.com/JulieJQuill",
+    url: "https://github.com/Mecha-Yabai",
   },
 ];
 

@@ -20,12 +20,14 @@
 </template>
 <script>
 export default {
-  data: () => {
+  props: {
+    mail: String,
+  },
+  data() {
     return {
       copyrightDate: new Date().getFullYear(),
       projectName: "Mecha Yabai©",
       author: "Julie Gicquel",
-      mail: "julie.gcql@gmail.com",
     };
   },
 };
