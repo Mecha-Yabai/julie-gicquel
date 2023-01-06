@@ -1,4 +1,4 @@
-# mecha-yabai
+# Welcome to my online resume
 
 ## Project setup
 ```
