@@ -27,5 +27,12 @@
     "description_1": "Développeuse web spécialisée dans le design UI/UX, j'ai auparavant travaillé dans le community management.",
     "description_2": "De nature spontanée et polyvalente, j'ai à coeur de mettre à profit mes diverses compétences.",
     "description_3": "J'aime challenger l'existant et imaginer le futur. 🚀"
+  },
+  "education": {
+    "title_1": "Éducation",
+    "title_2": "&",
+    "title_3": "formations",
+    "description_1": "Après mon bac ES, j'ai obtenu une licence dans une filière pluridisciplinaire afin d'accroître mes connaissances en économie, en droit et en marketing tout en renforçant mes compétences linguistiques en anglais et en débutant le japonais.",
+    "description_2": "Attirée par le numérique, j'ai effectué un master dans la communication digitale puis après quelques expériences professionnelles, je me suis formée au développement web."
   }
 }

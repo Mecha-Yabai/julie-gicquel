@@ -5,20 +5,18 @@
         <h1
           class="font-jiho-medium xl:text-6xl sm:text-4xl text-2xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
-          Éducation
-          <span class="text-red-500 dark:text-red-dark">&</span> formations
+          {{ $t("education.title_1") }}
+          <span class="text-red-500 dark:text-red-dark">{{
+            $t("education.title_2")
+          }}</span>
+          {{ $t("education.title_3") }}
         </h1>
         <p
           class="m-6 md:mt-6 md:mb-0 text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
         >
-          Après mon bac ES, j'ai obtenu une licence dans une filière
-          pluridisciplinaire afin d'accroître mes connaissances en économie, en
-          droit et en marketing tout en renforçant mes compétences linguistiques
-          en anglais et en débutant le japonais.
+          {{ $t("education.description_1") }}
           <br />
-          Attirée par le numérique, j'ai effectué un master dans la
-          communication digitale puis après quelques expériences
-          professionnelles, je me suis formée au développement web.
+          {{ $t("education.description_2") }}
         </p>
         <div class="hidden h-full lg:flex items-center">
           <img
@@ -56,7 +54,7 @@
                 {{ formation.name }}
               </h3>
               <h5
-                class="lg:mt-1 text-sm font-jiho-medium text-primay-dark dark:text-red-dark"
+                class="lg:mt-1 text-sm font-jiho-regular text-primay-dark dark:text-red-dark"
               >
                 {{ formation.school }}
               </h5>
