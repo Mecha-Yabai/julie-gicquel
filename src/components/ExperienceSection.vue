@@ -52,7 +52,7 @@
                 {{ experience.name }}
               </h3>
               <h5
-                class="mt-2 text-md font-jiho-regular text-primay-dark dark:text-red-dark"
+                class="mt-2 text-sm font-jiho-regular text-primay-dark dark:text-red-dark"
               >
                 {{ experience.company }}
               </h5>
