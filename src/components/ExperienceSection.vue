@@ -1,9 +1,9 @@
 <template>
-  <section class="h-screen">
+  <section class="h-full sm:h-screen">
     <div class="flex flex-col lg:justify-between lg:flex-row h-full">
       <div class="w-full lg:pr-8 lg:w-6/12 xl:pl-0 xl:w-5/12">
         <h1
-          class="font-jiho-medium xl:text-6xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
+          class="font-jiho-medium xl:text-6xl sm:text-4xl text-2xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
           {{ $t("experiences.title_1") }}
           <span class="text-red-500 dark:text-red-dark">{{
@@ -12,7 +12,7 @@
           {{ $t("experiences.title_3") }}
         </h1>
         <p
-          class="mt-6 text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+          class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light m-6"
         >
           {{ $t("experiences.description_1") }} <br />
           {{ $t("experiences.description_2") }}

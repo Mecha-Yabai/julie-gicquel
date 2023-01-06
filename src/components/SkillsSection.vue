@@ -4,10 +4,10 @@
       class="flex flex-col lg:flex-row h-full lg:items-center justify-center"
     >
       <div
-        class="w-full lg:w-6/12 h-1/2 md:h-2/5 lg:h-fit lg:text-left lg:pr-8 mt-4 lg:mt-0"
+        class="w-full lg:w-6/12 h-2/3 sm:h-1/2 md:h-2/5 lg:h-fit lg:text-left lg:pr-8 mt-4 lg:mt-0"
       >
         <h1
-          class="h-1/4 md:h-1/3 lg:h-fit lg:mb-10 font-jiho-bold xl:text-6xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
+          class="h-1/4 md:h-1/3 lg:h-fit lg:mb-10 font-jiho-bold xl:text-6xl sm:text-4xl text-2xl text-center lg:text-left text-primary-dark dark:text-primary-light"
         >
           {{ $t("skills.title_1") }}
           <span class="text-red-500 dark:text-red-dark">{{
@@ -42,7 +42,7 @@
       </div>
 
       <div
-        class="w-full lg:w-6/12 h-1/2 md:h-3/5 flex items-start md:items-center"
+        class="w-full lg:w-6/12 h-1/3 sm:h-1/2 md:h-3/5 flex items-start md:items-center"
       >
         <div class="space-y-4 sm:space-y-10">
           <div
