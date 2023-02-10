@@ -5,6 +5,34 @@
   "hero_1": "Formerly in digital marketing, I retrained as a full-stack web developer and specialized in UI / UX design and implementation 👩🏻‍💻",
   "hero_2": "My goal is to provide the best user experience by being creative, spontaneous and taking initiatives 🎯",
   "download_resume": "Download my resume",
+  "get_in_touch": "Contact",
   "follow_me": "Follow me on:",
-  "learn_more": "Learn more"
+  "learn_more": "Learn more",
+  "skills": {
+    "title_1": "One",
+    "title_2": "profile",
+    "title_3": "Three",
+    "title_4": "skills",
+    "description_1": "I started my career in web marketing and community management, which allowed me to put my creativity to work and learn how to implement effective acquisition strategies and to create customer loyalty.",
+    "description_2": "I decided to reorient myself in web development to acquire the technique required to more concretely design the ideas that abound in my head.",
+    "description_3": "Curious and full of my various professional skills, I am a front-end developer with a particular appetite for UI/UX and always eager to progress in back-end. I like to create wireframes and develop attractive, efficient and intuitive websites.",
+    "web_development": "Full-stack development",
+    "ui_ux_design": "UI/UX Design",
+    "web_marketing": "Web marketing & Community Management"
+  },
+  "experiences": {
+    "title_1": "Skills",
+    "title_2": "&",
+    "title_3": "experience",
+    "description_1": "Web developer specialized in UI/UX design, I previously worked in community management.",
+    "description_2": "Of a spontaneous and versatile nature, I make a commitment to use my various skills.",
+    "description_3": "I like to challenge the existing and imagine the future. 🚀"
+  },
+  "education": {
+    "title_1": "Education",
+    "title_2": "&",
+    "title_3": "training",
+    "description_1": "I obtained a bachelor's degree in a multidisciplinary program to improve my knowledge in economics, law and marketing while strengthening my language skills in english and starting to learn japanese.",
+    "description_2": "Attracted by digital technology, I completed a master's degree in digital communication and, following certain professional experiences, I followed a training in web development."
+  }
 }
