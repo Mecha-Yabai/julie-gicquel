@@ -35,5 +35,31 @@
     "description_1": "経済学、法律、マーケティングの知識を向上させるために学士号を取得し、英語の語学力を強化し、日本語を学び始めました。",
     "description_2": "デジタル技術に惹かれ、デジタルコミュニケーションの修士号を取得し、専門的な経験を経て、Web開発のトレーニングを受けました。"
   },
+  "formations": {
+    "sauveteur_name": "First Aid Worker",
+    "sauveteur_school": "PREVISS",
+    "sauveteur_date": "2022年11月",
+    "typescript_name": "TypeScriptトレーニング",
+    "typescript_school": "Le Réacteur",
+    "typescript_date": "2022年1月",
+    "communication_name": "非暴力コミュニケーション (NVC)",
+    "communication_school": "CAECI Conseil",
+    "communication_date": "2021年5月",
+    "agile_name": "アジャイルソフトウェア開発",
+    "agile_school": "Agile Partner",
+    "agile_date": "2020年10月",
+    "vue_name": "Advanced Vue.Jsトレーニング",
+    "vue_school": "Human Coders",
+    "vue_date": "2020年6月",
+    "dev_name": "Web Developmentでのプロフェッショナル認定(RNCPレベル5)",
+    "dev_school": "Wild Code School",
+    "dev_date": "2018年 - 2019年",
+    "kedge_name": "MSc in Digital Marketing / デジタルマーケティング修士コース",
+    "kedge_school": "Kedge Business School",
+    "kedge_date": "2013年 - 2015年",
+    "lea_name": "Bachelors's Degree in Applied Foreign Languages / 外国語の学士号（英語および日本語）",
+    "lea_school": "Aix-Marseille Université",
+    "lea_date": "2008年 - 2012年"
+  },
   "contact_me": "お気軽にご連絡下さい"
 }

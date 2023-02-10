@@ -35,5 +35,31 @@
     "description_1": "I obtained a bachelor's degree in a multidisciplinary program to improve my knowledge in economics, law and marketing while strengthening my language skills in english and starting to learn japanese.",
     "description_2": "Attracted by digital technology, I completed a master's degree in digital communication and, following certain professional experiences, I followed a training in web development."
   },
+  "formations": {
+    "sauveteur_name": "First Aid Worker",
+    "sauveteur_school": "PREVISS",
+    "sauveteur_date": "November 2022",
+    "typescript_name": "TypeScript training",
+    "typescript_school": "Le Réacteur",
+    "typescript_date": "January 2022",
+    "communication_name": "Nonviolent Communication (NVC)",
+    "communication_school": "CAECI Conseil",
+    "communication_date": "May 2021",
+    "agile_name": "Agile software development",
+    "agile_school": "Agile Partner",
+    "agile_date": "October 2020",
+    "vue_name": "Advanced Vue.Js training",
+    "vue_school": "Human Coders",
+    "vue_date": "June 2020",
+    "dev_name": "Professional certification (RNCP level 5) in Web Development",
+    "dev_school": "Wild Code School",
+    "dev_date": "2018 - 2019",
+    "kedge_name": "MSc Digital Marketing",
+    "kedge_school": "Kedge Business School",
+    "kedge_date": "2013 - 2015",
+    "lea_name": "Bachelors's Degree in Applied Foreign Languages (english and japanese)",
+    "lea_school": "Aix-Marseille Université",
+    "lea_date": "2008 - 2012"
+  },
   "contact_me": "Feel free to contact me on"
 }

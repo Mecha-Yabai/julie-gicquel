@@ -35,5 +35,31 @@
     "description_1": "Après mon bac ES, j'ai obtenu une licence dans une filière pluridisciplinaire afin d'accroître mes connaissances en économie, en droit et en marketing tout en renforçant mes compétences linguistiques en anglais et en commençant l'apprentissage du japonais.",
     "description_2": "Attirée par le numérique, j'ai effectué un master dans la communication digitale et, suite à quelques expériences professionnelles, je me suis formée au développement web."
   },
+  "formations": {
+    "sauveteur_name": "Formation Sauveteur Secouriste du Travail",
+    "sauveteur_school": "PREVISS",
+    "sauveteur_date": "Novembre 2022",
+    "typescript_name": "Formation TypeScript",
+    "typescript_school": "Le Réacteur",
+    "typescript_date": "Janvier 2022",
+    "communication_name": "Formation La communication & les émotions au service d'une relation constructive",
+    "communication_school": "CAECI Conseil",
+    "communication_date": "Mai 2021",
+    "agile_name": "Formation Méthode Agiles",
+    "agile_school": "Agile Partner",
+    "agile_date": "Octobre 2020",
+    "vue_name": "Formation Vue.Js Avancée",
+    "vue_school": "Human Coders",
+    "vue_date": "Juin 2020",
+    "dev_name": "Titre professionnel de Développeur Web et Mobile",
+    "dev_school": "Wild Code School",
+    "dev_date": "2018 - 2019",
+    "kedge_name": "M.Sc Marketing Digital",
+    "kedge_school": "Kedge Business School",
+    "kedge_date": "2013 - 2015",
+    "lea_name": "Licence L.E.A Anglais-Japonais",
+    "lea_school": "Aix-Marseille Université",
+    "lea_date": "2008 - 2012"
+  },
   "contact_me": "Contactez-moi sur"
 }

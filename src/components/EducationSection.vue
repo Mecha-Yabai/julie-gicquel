@@ -67,14 +67,23 @@
 </template>
 <script>
 import feather from "feather-icons";
-import formations from "../data/formations";
+import { getFormations } from "../data/formations";
 
 export default {
   data() {
     return {
       theme: "",
-      formations,
     };
+  },
+  computed: {
+    formations() {
+      return getFormations().map((formations) => ({
+        ...formations,
+        name: this.$t(formations.name),
+        school: this.$t(formations.school),
+        date: this.$t(formations.date),
+      }));
+    },
   },
   created() {
     this.theme = localStorage.getItem("theme") || "light";
