@@ -76,12 +76,16 @@ export default {
   data() {
     return {
       theme: "",
-      generalSkills: [
+    };
+  },
+  computed: {
+    generalSkills() {
+      return [
         { id: 1, title: this.$t("skills.web_development") },
         { id: 2, title: this.$t("skills.ui_ux_design") },
         { id: 3, title: this.$t("skills.web_marketing") },
-      ],
-    };
+      ];
+    },
   },
   created() {
     this.theme = localStorage.getItem("theme") || "light";
