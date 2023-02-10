@@ -37,7 +37,7 @@
         <li
           v-for="locale in locales"
           :key="locale.id"
-          class="px-3 py-3 transition-colors duration-300 hover:bg-gray-200 hover:dark:bg-primary-dark"
+          class="px-3 py-3 transition-colors duration-300 hover:bg-gray-200 hover:dark:bg-primary-dark cursor-pointer"
           @mousedown.prevent="setOption(locale)"
         >
           <div
