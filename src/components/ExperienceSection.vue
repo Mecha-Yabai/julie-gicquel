@@ -112,6 +112,7 @@
               class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
             >
               Missions :
+              {{ $t("experiences.duties") }}
             </div>
             <template v-for="duty in currentExperience.duties" :key="duty.id">
               <div
@@ -124,7 +125,7 @@
               v-if="currentExperience.stacks"
               class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
             >
-              Stacks :
+              {{ $t("experiences.stack") }}
             </div>
             <template v-for="stack in currentExperience.stacks" :key="stack.id">
               <div

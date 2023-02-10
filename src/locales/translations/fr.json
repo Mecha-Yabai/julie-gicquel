@@ -26,7 +26,9 @@
     "title_3": "expériences",
     "description_1": "Développeuse web spécialisée dans le design UI/UX, j'ai auparavant travaillé dans le community management.",
     "description_2": "De nature spontanée et polyvalente, j'ai à coeur de mettre à profit mes diverses compétences.",
-    "description_3": "J'aime challenger l'existant et imaginer le futur. 🚀"
+    "description_3": "J'aime challenger l'existant et imaginer le futur. 🚀",
+    "duties": "Missions :",
+    "stack": "Stack :"
   },
   "jobs": {
     "kizeo_name": "Développeuse Web - Spécialisée Front-End & conception UI/UX",
@@ -47,7 +49,7 @@
     "simplelif_duties_1": "• Création de features pour l'application mobile Bonami en React Native",
     "simplelif_duties_2": "• Design et implémentation des pages d'inscription, confirmation et du workplace des infirmiers",
     "office_name": "Community Manager & Assistance Webmaster",
-    "office_company": "Office de Tourisme de Salon-de-Provence'",
+    "office_company": "Office de Tourisme de Salon-de-Provence",
     "office_date": "2016 - 2017",
     "office_duties_1": "• Participation à la définition et à la mise en œuvre de la stratégie digitale de l'office en développant sa présence sur les médias sociaux et sur le web",
     "office_duties_2": "• Animation et gestion des communautés sur Facebook, Instagram et Twitter; mises en place d'actions afin de fidéliser, impliquer et fédérer les différentes cibles pour la promotion de la ville",
