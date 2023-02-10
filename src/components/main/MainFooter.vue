@@ -7,7 +7,7 @@
         <p
           class="font-jiho-bold text-3xl sm:text-4xl font-semibold text-primary-dark dark:text-primary-light mb-5"
         >
-          Contactez-moi sur
+          {{ $t("contact_me") }}
         </p>
         <ul class="flex gap-4 sm:gap-8">
           <SocialButton />
