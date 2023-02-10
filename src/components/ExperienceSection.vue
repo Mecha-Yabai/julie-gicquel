@@ -100,7 +100,7 @@
             </button>
           </div>
           <div class="flex-1 overflow-hidden hover:overflow-y-auto">
-            <div class="px-6 py-2">
+            <div class="px-6 py-2" v-if="currentExperience.description">
               <h5
                 class="mt-2 font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
               >
@@ -117,7 +117,7 @@
               <div
                 class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
               >
-                {{ duty }}
+                {{ $t(duty) }}
               </div>
             </template>
             <div
@@ -141,13 +141,12 @@
 </template>
 <script>
 import feather from "feather-icons";
-import experiences from "../data/experiences";
+import { getExperiences } from "../data/experiences";
 
 export default {
   data() {
     return {
       theme: "",
-      experiences,
       modal: false,
       currentExperience: {},
       isExperienceInfosPanelOpen: false,
@@ -173,12 +172,27 @@ export default {
   updated() {
     feather.replace();
   },
+  computed: {
+    experiences() {
+      return getExperiences().map((experiences) => ({
+        ...experiences,
+        name: this.$t(experiences.name),
+        company: this.$t(experiences.company),
+        date: this.$t(experiences.date),
+      }));
+    },
+  },
   methods: {
     closeExperienceInfosPanel() {
       this.isExperienceInfosPanelOpen = false;
     },
     openExperienceInfosPanel(experience) {
-      this.currentExperience = experience;
+      this.currentExperience = {
+        ...experience,
+        description: experience.description
+          ? this.$t(experience.description)
+          : "",
+      };
       this.isExperienceInfosPanelOpen = true;
       this.$nextTick(() => {
         this.$refs.experienceInfosPanel.focus();
