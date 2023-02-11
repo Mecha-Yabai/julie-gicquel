@@ -1,7 +1,9 @@
 <template>
-  <section class="flex content-center">
+  <section class="h-full sm:h-screen flex content-center py-4">
     <div class="flex flex-col justify-around lg:justify-between">
-      <div class="flex lg:flex-1 flex-col-reverse lg:flex-row items-center">
+      <div
+        class="flex lg:flex-1 flex-col-reverse lg:flex-row items-center mt-20 sm:mt-12"
+      >
         <div class="w-full lg:w-6/12 text-left lg:pr-8">
           <h1
             class="font-jiho-medium xl:text-6xl sm:text-5xl text-2xl text-center lg:text-left text-primary-dark dark:text-primary-light mb-4 lg:mb-0"
@@ -74,7 +76,7 @@
           />
         </div>
       </div>
-      <div class="flex lg:flex-none items-center justify-center py-2">
+      <div class="flex lg:flex-none items-center justify-center py-4 sm:py-2">
         <a href="#skills">
           <button
             class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
@@ -105,6 +107,7 @@ export default {
     return {
       theme: "",
       mail: "julie.gcql@gmail.com",
+      addMarginOnTop: false,
     };
   },
   created() {
@@ -113,6 +116,9 @@ export default {
   mounted() {
     feather.replace();
     this.theme = localStorage.getItem("theme") || "light";
+    if (window.pageYOffset < 0) {
+      this.addMarginOnTop = true;
+    }
   },
   updated() {
     feather.replace();

@@ -1,6 +1,6 @@
 <template>
   <div :class="mainTheme">
-    <MainHeader class="container mx-auto px-4 sm:px-16 py-4" />
+    <MainHeader />
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
         <component :is="Component" :theme="mainTheme" />

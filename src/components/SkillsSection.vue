@@ -1,5 +1,5 @@
 <template>
-  <section class="h-screen">
+  <section class="h-screen py-4">
     <div
       class="flex flex-col lg:flex-row h-full lg:items-center justify-center"
     >
