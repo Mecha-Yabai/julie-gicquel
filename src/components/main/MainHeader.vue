@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="header fixed top-0 inset-x-0 px-4 sm:px-16 py-4 bg-white shadow-md z-10 max-w-full block md:flex md:justify-between md:items-center"
+    class="header fixed top-0 inset-x-0 px-4 sm:px-16 py-4 bg-white dark:bg-primary-dark shadow-md z-10 max-w-full block md:flex md:justify-between md:items-center"
     :class="{ 'is-hidden': !showHeader }"
   >
     <div class="flex items-center justify-between">
@@ -59,7 +59,6 @@
 <script>
 import ThemeSwitcher from "../ThemeSwitcher";
 import LocaleSwitcher from "../LocaleSwitcher";
-import feather from "feather-icons";
 
 export default {
   components: {
@@ -103,7 +102,6 @@ export default {
     this.theme = localStorage.getItem("theme") || "light";
   },
   mounted() {
-    feather.replace();
     this.theme = localStorage.getItem("theme") || "light";
     this.lastScrollPosition = window.pageYOffset;
     window.addEventListener("scroll", this.onScroll);
@@ -128,9 +126,6 @@ export default {
       this.showHeader = window.pageYOffset < this.lastScrollPosition;
       this.lastScrollPosition = window.pageYOffset;
     },
-  },
-  updated() {
-    feather.replace();
   },
 };
 </script>
