@@ -80,6 +80,9 @@ export default {
       mail: "julie.gcql@gmail.com",
     };
   },
+  created() {
+    this.theme = localStorage.getItem("theme") || "light";
+  },
   methods: {
     goTop: function () {
       window.scrollTo({
