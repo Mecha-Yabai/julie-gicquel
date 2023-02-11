@@ -4,16 +4,31 @@
       class="pt-16 pb-8 mt-20 border-t-2 border-primary-light dark:border-secondary-dark"
     >
       <div class="pb-5 flex justify-center">
-        <button @click="goTop()">
-          <div class="text text-primary-dark">
-            <span class="font-jiho-regular">{{ $t("footer.back_to_top_1") }}</span>
-            <span class="font-jiho-regular">{{ $t("footer.back_to_top_2") }}</span>
-            <span class="font-jiho-regular">{{ $t("footer.back_to_top_3") }}</span>
+        <button
+          :class="theme === 'light' ? 'text-primary-dark' : 'text-white'"
+          @click="goTop()"
+        >
+          <div class="text text-primary-dark dark:text-white">
+            <span class="font-jiho-regular">{{
+              $t("footer.back_to_top_1")
+            }}</span>
+            <span class="font-jiho-regular">{{
+              $t("footer.back_to_top_2")
+            }}</span>
+            <span class="font-jiho-regular">{{
+              $t("footer.back_to_top_3")
+            }}</span>
           </div>
-          <div class="clone text-primary-dark">
-            <span class="font-jiho-regular">{{ $t("footer.back_to_top_1") }}</span>
-            <span class="font-jiho-regular">{{ $t("footer.back_to_top_2") }}</span>
-            <span class="font-jiho-regular">{{ $t("footer.back_to_top_3") }}</span>
+          <div class="clone text-primary-dark dark:text-white">
+            <span class="font-jiho-regular">{{
+              $t("footer.back_to_top_1")
+            }}</span>
+            <span class="font-jiho-regular">{{
+              $t("footer.back_to_top_2")
+            }}</span>
+            <span class="font-jiho-regular">{{
+              $t("footer.back_to_top_3")
+            }}</span>
           </div>
           <svg
             width="20px"
@@ -21,14 +36,13 @@
             class="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="#030303"
+            :stroke="theme === 'light' ? '#030303' : 'white'"
             stroke-width="2"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               d="M14 5l7 7m0 0l-7 7m7-7H3"
-              stroke="#030303"
             ></path>
           </svg>
         </button>
@@ -68,11 +82,11 @@ export default {
   },
   methods: {
     goTop: function () {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-      },
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
   },
 };
 </script>
@@ -82,7 +96,6 @@ button {
   height: 56px;
   overflow: hidden;
   border: none;
-  color: #030303;
   background: none;
   position: relative;
   padding-bottom: 2em;
