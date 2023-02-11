@@ -110,12 +110,8 @@ export default {
       addMarginOnTop: false,
     };
   },
-  created() {
-    this.theme = localStorage.getItem("theme") || "light";
-  },
   mounted() {
     feather.replace();
-    this.theme = localStorage.getItem("theme") || "light";
     if (window.pageYOffset < 0) {
       this.addMarginOnTop = true;
     }

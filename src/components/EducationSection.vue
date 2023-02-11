@@ -66,7 +66,6 @@
   </section>
 </template>
 <script>
-import feather from "feather-icons";
 import { getFormations } from "../data/formations";
 
 export default {
@@ -84,16 +83,6 @@ export default {
         date: this.$t(formations.date),
       }));
     },
-  },
-  created() {
-    this.theme = localStorage.getItem("theme") || "light";
-  },
-  mounted() {
-    feather.replace();
-    this.theme = localStorage.getItem("theme") || "light";
-  },
-  updated() {
-    feather.replace();
   },
 };
 </script>

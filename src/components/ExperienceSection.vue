@@ -141,7 +141,6 @@
   </section>
 </template>
 <script>
-import feather from "feather-icons";
 import { getExperiences } from "../data/experiences";
 
 export default {
@@ -162,16 +161,6 @@ export default {
 
       document.documentElement.style.overflow = "auto";
     },
-  },
-  created() {
-    this.theme = localStorage.getItem("theme") || "light";
-  },
-  mounted() {
-    feather.replace();
-    this.theme = localStorage.getItem("theme") || "light";
-  },
-  updated() {
-    feather.replace();
   },
   computed: {
     experiences() {

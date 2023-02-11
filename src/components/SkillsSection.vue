@@ -70,7 +70,6 @@
   </section>
 </template>
 <script>
-import feather from "feather-icons";
 
 export default {
   data() {
@@ -86,16 +85,6 @@ export default {
         { id: 3, title: this.$t("skills.web_marketing") },
       ];
     },
-  },
-  created() {
-    this.theme = localStorage.getItem("theme") || "light";
-  },
-  mounted() {
-    feather.replace();
-    this.theme = localStorage.getItem("theme") || "light";
-  },
-  updated() {
-    feather.replace();
   },
 };
 </script>
