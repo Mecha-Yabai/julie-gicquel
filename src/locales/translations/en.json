@@ -8,6 +8,10 @@
   "get_in_touch": "Contact",
   "follow_me": "Follow me on",
   "learn_more": "Learn more",
+  "header": {
+    "experience": "Skills",
+    "education" : "Education"
+  },
   "skills": {
     "title_1": "One",
     "title_2": "profile",

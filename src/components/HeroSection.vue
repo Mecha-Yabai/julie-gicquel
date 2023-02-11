@@ -75,7 +75,7 @@
         </div>
       </div>
       <div class="flex lg:flex-none items-center justify-center py-2">
-        <a id="scrollButton" href="#skills">
+        <a href="#skills">
           <button
             class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
           >
@@ -116,13 +116,6 @@ export default {
   },
   updated() {
     feather.replace();
-  },
-  methods: {
-    scrollToNexSection() {
-      document.getElementById("#Skills").scrollIntoView({
-        behavior: "smooth",
-      });
-    },
   },
 };
 </script>

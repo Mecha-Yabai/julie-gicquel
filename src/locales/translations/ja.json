@@ -8,6 +8,10 @@
   "get_in_touch": "メールアドレス",
   "follow_me": "フォローしてください。",
   "learn_more": "詳細情報。",
+  "header": {
+    "experience": "実務経験",
+    "education": "教育"
+  },
   "skills": {
     "title_1": "1 つの",
     "title_2": "プロファイル",

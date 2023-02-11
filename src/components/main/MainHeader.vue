@@ -3,24 +3,23 @@
     <div
       class="z-10 max-w-full block md:flex md:justify-between md:items-center"
     >
-      <div class="flex justify-between items-center">
-        <div>
-          <router-link to="/"
-            ><img
-              v-if="theme === 'light'"
-              src="@/assets/images/logo-dark.svg"
-              class="w-36"
-              alt="Dark Logo"
-            />
-            <img
-              v-else
-              src="@/assets/images/logo-light.svg"
-              class="w-36"
-              alt="Light Logo"
-            />
-          </router-link>
-        </div>
-        <div class="flex items-end">
+      <div class="flex items-center justify-between">
+        <router-link to="/"
+          ><img
+            v-if="theme === 'light'"
+            src="@/assets/images/logo-dark.svg"
+            class="w-36"
+            alt="Dark Logo"
+          />
+          <img
+            v-else
+            src="@/assets/images/logo-light.svg"
+            class="w-36"
+            alt="Light Logo"
+          />
+        </router-link>
+
+        <div class="flex">
           <locale-switcher class="block md:hidden mr-2" />
           <theme-switcher
             :theme="theme"
@@ -28,6 +27,21 @@
             class="block md:hidden bg-ternary-light text-red-600 dark:bg-blue-dark-secondary hover:bg-hover-light dark:hover:bg-hover-dark hover:shadow-sm px-2.5 py-2 mr-2 rounded-lg"
           />
         </div>
+      </div>
+
+      <div class="hidden md:flex w-full justify-evenly">
+        <a href="#experience">
+          <span
+            class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-red-dark"
+            >{{ $t("header.experience") }}</span
+          >
+        </a>
+        <a href="#education">
+          <span
+            class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-red-dark"
+            >{{ $t("header.education") }}</span
+          >
+        </a>
       </div>
 
       <div
