@@ -113,5 +113,11 @@
     "lea_school": "Aix-Marseille Université",
     "lea_date": "2008年 - 2012年"
   },
-  "contact_me": "お気軽にご連絡下さい"
+
+  "footer": {
+    "back_to_top_1": "トップ",
+    "back_to_top_2": "へ",
+    "back_to_top_3": "戻る",
+    "contact_me": "お気軽にご連絡下さい"
+  }
 }
