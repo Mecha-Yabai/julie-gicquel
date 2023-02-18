@@ -2,15 +2,16 @@
   "greetings": "Hello ! I am",
   "name": "Julie",
   "web_developer": "a full-stack developer",
-  "hero_1": "Creative and proactive, I have over three years of experience in web development (Vue.JS & Laravel), UI/UX design, and a double expertise in web marketing. 👩🏻‍💻",
-  "hero_2": "My goal? Providing the best user experience by designing and developing intuitive and performant interfaces with a suitable design that respects the brand's identity. 🎯",
+  "hero_1": "Creative and proactive, I have more than three years of experience in web development (Vue.JS & Laravel), UI/UX design, and a double expertise in web marketing. 👩🏻‍💻",
+  "hero_2": "My goal is to provide the best user experience by designing and developing intuitive and performant interfaces with a suitable design that respects the brand's identity. 🎯",
   "download_resume": "Download my resume",
   "get_in_touch": "Get in touch",
   "follow_me": "Follow me on",
   "learn_more": "Learn more",
   "header": {
     "experience": "Skills",
-    "education": "Education"
+    "education": "Education",
+    "about_me": "About me"
   },
   "skills": {
     "title_1": "One",
@@ -28,7 +29,7 @@
     "title_1": "Skills",
     "title_2": "&",
     "title_3": "experience",
-    "description_1": "As a web developer specializing in UI/UX design, I previously worked in community management.",
+    "description_1": "I'm a full-stack developer but I previously worked in community management and web-marketing.",
     "description_2": "Spontaneous and multi-skilled, I am committed to using my various skills.",
     "description_3": "I like to challenge the existing and imagine the future. 🚀",
     "duties": "Duties :",
@@ -85,7 +86,7 @@
     "title_2": "&",
     "title_3": "training",
     "description_1": "I obtained a bachelor's degree in a multidisciplinary program to improve my knowledge in economics, law and marketing while strengthening my language skills in english and starting to learn japanese.",
-    "description_2": "Attracted by digital technology, I completed a master's degree in digital communication and, following certain professional experiences, I followed a training in web development."
+    "description_2": "Attracted by digital technology, I completed a master's degree in digital communication and, after some professional experiences, I decided to follow a training in web development."
   },
   "formations": {
     "sauveteur_name": "First Aid Worker",
@@ -119,5 +120,7 @@
     "back_to_top_3": "top",
     "contact_me": "Feel free to contact me on",
     "developed_by": "Developed by"
-  }
+  },
+  "about_me_1": "Who am I? Professionally, if I refer to my talent (ECSX) of Prismatic Intelligence and the results obtained during my skills assessment by the Executive Profiler research and training center, I define myself as an active, spontaneous, intuitive person who exercises my creativity through concrete achievements. I am someone who values the atmosphere within the team I work with and learns by doing.",
+  "about_me_2": "Outside of work, I am passionate about music, which I listen to constantly and practice in my daily life. I am also a fan of video games since my first console (Mega Drive 2). Finally, I am a fervent supporter of Olympique de Marseille, whose motto `Right to the goal` perfectly corresponds to my personality."
 }

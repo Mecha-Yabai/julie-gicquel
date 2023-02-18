@@ -42,6 +42,12 @@
           >{{ $t("header.education") }}</span
         >
       </a>
+      <router-link to="/about"
+        ><span
+          class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-red-dark"
+          >{{ $t("header.about_me") }}</span
+        ></router-link
+      >
     </div>
 
     <div

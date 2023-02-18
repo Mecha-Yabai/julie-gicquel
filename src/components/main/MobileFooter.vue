@@ -20,6 +20,14 @@
           }}</span>
         </div>
       </a>
+      <router-link to="/about">
+        <div class="flex flex-col items-center">
+          <i data-feather="user" class="w-5 lg:w-16 text-white"></i>
+          <span class="font-jiho-medium text-white">{{
+            $t("header.about_me")
+          }}</span>
+        </div>
+      </router-link>
     </div>
   </nav>
 </template>

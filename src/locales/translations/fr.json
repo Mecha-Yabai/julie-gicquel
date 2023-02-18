@@ -10,7 +10,8 @@
   "learn_more": "En savoir plus",
   "header": {
     "experience": "Expériences",
-    "education": "Formations"
+    "education": "Formations",
+    "about_me": "À propos"
   },
   "skills": {
     "title_1": "Un",
@@ -119,5 +120,7 @@
     "back_to_top_3": "page",
     "contact_me": "Contactez-moi sur",
     "developed_by": "Développé par"
-  }
+  },
+  "about_me_1": "Qui suis-je ? Profesionnellement, si je me réfère à mon talent (ECSX) d'Intelligence Prismatique et aux résultats obtenus lors de mon bilan de compétences par le centre de recherche et de formation Executive Profiler, je me définis comme une personne active, spontanée, intuitive et qui exerce sa créativité au travers de réalisations concrètes. Je suis quelqu'un qui attache une importance à l'ambiance au sein de l'équipe dans laquelle j'évolue et qui apprends dans l'action.",
+  "about_me_2": "En dehors du travail, je suis passionnée par la musique que j'écoute continuellement et pratique dans mon quotidien. Je suis également fan de jeux vidéo depuis ma première console (Méga Drive 2). Enfin, je suis une fervente supportrice de l'Olympique de Marseille dont la devise 'Droit au but' corresponds tout à fait à ma personnalité."
 }
