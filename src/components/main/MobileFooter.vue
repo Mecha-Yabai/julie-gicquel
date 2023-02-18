@@ -4,7 +4,7 @@
     :class="{ 'is-hidden': !showFooter }"
   >
     <div class="flex md:hidden w-full justify-evenly">
-      <router-link :to="{ path: '/', hash: '#experience' }">
+      <router-link :to="{ path: '/julie-gicquel/', hash: '#experience' }">
         <div class="flex flex-col items-center">
           <i data-feather="briefcase" class="w-5 lg:w-16 text-white"></i>
           <span class="font-jiho-medium text-white">{{
@@ -12,7 +12,7 @@
           }}</span>
         </div>
       </router-link>
-      <router-link :to="{ path: '/', hash: '#education' }">
+      <router-link :to="{ path: '/julie-gicquel/', hash: '#education' }">
         <div class="flex flex-col items-center">
           <i data-feather="book-open" class="w-5 lg:w-16 text-white"></i>
           <span class="font-jiho-medium text-white">{{
@@ -20,7 +20,7 @@
           }}</span>
         </div>
       </router-link>
-      <router-link to="/about">
+      <router-link to="/julie-gicquel/about">
         <div class="flex flex-col items-center">
           <i data-feather="user" class="w-5 lg:w-16 text-white"></i>
           <span class="font-jiho-medium text-white">{{

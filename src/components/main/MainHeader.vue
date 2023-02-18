@@ -4,7 +4,7 @@
     :class="{ 'is-hidden': !showHeader }"
   >
     <div class="flex items-center justify-between">
-      <router-link to="/"
+      <router-link to="/julie-gicquel/"
         ><img
           v-if="theme === 'light'"
           src="@/assets/images/logo-dark.svg"
@@ -30,19 +30,19 @@
     </div>
 
     <div class="hidden md:flex w-full justify-evenly">
-      <router-link :to="{ path: '/', hash: '#experience' }">
+      <router-link :to="{ path: '/julie-gicquel/', hash: '#experience' }">
         <span
           class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-red-dark"
           >{{ $t("header.experience") }}</span
         >
       </router-link>
-      <router-link :to="{ path: '/', hash: '#education' }">
+      <router-link :to="{ path: '/julie-gicquel/', hash: '#education' }">
         <span
           class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-red-dark"
           >{{ $t("header.education") }}</span
         >
       </router-link>
-      <router-link to="/about"
+      <router-link to="/julie-gicquel/about"
         ><span
           class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-red-dark"
           >{{ $t("header.about_me") }}</span
