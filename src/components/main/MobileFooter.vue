@@ -4,22 +4,22 @@
     :class="{ 'is-hidden': !showFooter }"
   >
     <div class="flex md:hidden w-full justify-evenly">
-      <a href="#experience">
+      <router-link :to="{ path: '/', hash: '#experience' }">
         <div class="flex flex-col items-center">
           <i data-feather="briefcase" class="w-5 lg:w-16 text-white"></i>
           <span class="font-jiho-medium text-white">{{
             $t("header.experience")
           }}</span>
         </div>
-      </a>
-      <a href="#education">
+      </router-link>
+      <router-link :to="{ path: '/', hash: '#education' }">
         <div class="flex flex-col items-center">
           <i data-feather="book-open" class="w-5 lg:w-16 text-white"></i>
           <span class="font-jiho-medium text-white">{{
             $t("header.education")
           }}</span>
         </div>
-      </a>
+      </router-link>
       <router-link to="/about">
         <div class="flex flex-col items-center">
           <i data-feather="user" class="w-5 lg:w-16 text-white"></i>

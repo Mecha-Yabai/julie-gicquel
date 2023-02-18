@@ -30,18 +30,18 @@
     </div>
 
     <div class="hidden md:flex w-full justify-evenly">
-      <a href="#experience">
+      <router-link :to="{ path: '/', hash: '#experience' }">
         <span
           class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-red-dark"
           >{{ $t("header.experience") }}</span
         >
-      </a>
-      <a href="#education">
+      </router-link>
+      <router-link :to="{ path: '/', hash: '#education' }">
         <span
           class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-red-dark"
           >{{ $t("header.education") }}</span
         >
-      </a>
+      </router-link>
       <router-link to="/about"
         ><span
           class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-red-dark"

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import About from "../views/About.vue";
 
 const routes = [
   {
@@ -10,15 +11,29 @@ const routes = [
   {
     path: "/about",
     name: "About",
-    component: () => import("../views/About.vue"),
+    component: About,
+    // component: () => import("../views/About.vue"),
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes,
-  scrollBehavior() {
-    document.getElementById("app").scrollIntoView();
+  scrollBehavior(to, from, savedPosition) {
+    let position = {};
+    if (to.hash) {
+      position = {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    } else {
+      position = { left: 0, top: 0 };
+    }
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(position);
+      }, 100);
+    });
   },
 });
 
