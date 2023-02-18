@@ -117,6 +117,7 @@ export default {
     if (window.pageYOffset < 0) {
       this.addMarginOnTop = true;
     }
+    this.theme = localStorage.getItem("theme") || "light";
   },
   updated() {
     feather.replace();

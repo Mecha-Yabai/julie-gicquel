@@ -74,6 +74,9 @@ export default {
       theme: "",
     };
   },
+  mounted() {
+    this.theme = localStorage.getItem("theme") || "light";
+  },
   computed: {
     formations() {
       return getFormations().map((formations) => ({

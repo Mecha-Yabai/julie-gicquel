@@ -103,7 +103,6 @@ export default {
       scrollOffset: 40,
     };
   },
-
   created() {
     this.theme = localStorage.getItem("theme") || "light";
   },

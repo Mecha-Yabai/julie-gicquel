@@ -152,6 +152,9 @@ export default {
       isExperienceInfosPanelOpen: false,
     };
   },
+  mounted() {
+    this.theme = localStorage.getItem("theme") || "light";
+  },
   watch: {
     isExperienceInfosPanelOpen: function () {
       if (this.isExperienceInfosPanelOpen) {

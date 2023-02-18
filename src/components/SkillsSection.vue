@@ -70,12 +70,14 @@
   </section>
 </template>
 <script>
-
 export default {
   data() {
     return {
       theme: "",
     };
+  },
+  mounted() {
+    this.theme = localStorage.getItem("theme") || "light";
   },
   computed: {
     generalSkills() {
