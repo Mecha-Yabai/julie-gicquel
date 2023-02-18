@@ -49,7 +49,7 @@
       </div>
       <div class="flex flex-col justify-center items-center mb-12 sm:mb-20">
         <p
-          class="font-jiho-bold text-3xl sm:text-4xl font-semibold text-primary-dark dark:text-primary-light mb-5"
+          class="font-jiho-medium sm:text-3xl text-2xl text-primary-dark dark:text-primary-light mb-5"
         >
           {{ $t("footer.contact_me") }}
         </p>

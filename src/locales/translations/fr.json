@@ -115,8 +115,9 @@
   },
   "footer": {
     "back_to_top_1": "Haut",
-    "back_to_top_2" : "de",
-    "back_to_top_3" : "page",
-    "contact_me": "Contactez-moi sur"
+    "back_to_top_2": "de",
+    "back_to_top_3": "page",
+    "contact_me": "Contactez-moi sur",
+    "developed_by": "Développé par"
   }
 }

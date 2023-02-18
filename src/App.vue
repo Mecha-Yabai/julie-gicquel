@@ -7,12 +7,14 @@
       </transition>
     </router-view>
     <MainFooter />
+    <MobileFooter />
   </div>
 </template>
 
 <script>
 import MainHeader from "./components/main/MainHeader.vue";
 import MainFooter from "./components/main/MainFooter.vue";
+import MobileFooter from "./components/main/MobileFooter.vue";
 import feather from "feather-icons";
 
 export default {
@@ -20,6 +22,7 @@ export default {
   components: {
     MainHeader,
     MainFooter,
+    MobileFooter,
   },
   data: () => {
     return {

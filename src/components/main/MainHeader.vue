@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="header fixed top-0 inset-x-0 px-4 sm:px-16 py-4 bg-white dark:bg-primary-dark shadow-md z-10 max-w-full block md:flex md:justify-between md:items-center"
+    class="header fixed top-0 inset-x-0 px-4 sm:px-16 py-4 bg-white dark:bg-primary-dark shadow-md z-10 max-w-full block md:flex md:justify-between md:items-center dark:border-b-[2px] dark:border-blue-dark"
     :class="{ 'is-hidden': !showHeader }"
   >
     <div class="flex items-center justify-between">
