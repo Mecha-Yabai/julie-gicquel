@@ -31,7 +31,7 @@
             <a
               download="Julie-Gicquel-CV.pdf"
               href="/files/Julie-Gicquel-CV.pdf"
-              class="flex justify-center items-center px-4 w-auto py-3 rounded-lg bg-red-600 dark:bg-red-dark text-white duration-500"
+              class="flex justify-center items-center px-4 w-auto sm:w-48 py-3 rounded-lg bg-red-600 dark:bg-red-dark border-red-600 dark:border-none border-2 text-white duration-500"
               aria-label="Télécharger mon CV"
             >
               <span class="text-sm sm:text-md font-jiho-medium duration-100">{{
@@ -44,10 +44,12 @@
             </a>
             <a
               :href="`mailto:${mail}`"
-              class="lg:ml-4 px-4 w-auto py-3 rounded-lg bg-white dark:bg-blue-dark border-primary-dark dark:border-none border-2 hover:bg-primary-dark text-primary-dark dark:text-white hover:text-white duration-500"
-              ><span class="text-sm sm:text-md font-jiho-medium duration-100">
-                {{ $t("get_in_touch") }}</span
-              >
+              class="flex justify-center items-center lg:ml-4 px-4 w-auto sm:w-48 py-3 rounded-lg bg-white dark:bg-blue-dark border-primary-dark dark:border-none border-2 hover:bg-primary-dark text-primary-dark dark:text-white hover:text-white duration-500"
+            >
+              <span class="text-sm sm:text-md font-jiho-medium duration-100">
+                {{ $t("get_in_touch") }}
+              </span>
+              <i data-feather="mail" class="ml-2 w-4 sm:w-5 duration-100"></i>
             </a>
           </div>
           <p
