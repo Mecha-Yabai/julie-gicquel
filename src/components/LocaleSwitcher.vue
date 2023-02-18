@@ -48,9 +48,10 @@
               :src="locale.flag"
               :alt="locale.name"
             />
-            <span class="hidden lg:ml-2 lg:block lg:dark:text-white font-jiho-light">{{
-              locale.name
-            }}</span>
+            <span
+              class="hidden lg:ml-2 lg:block lg:dark:text-white font-jiho-light"
+              >{{ locale.name }}</span
+            >
           </div>
         </li>
       </ul>
