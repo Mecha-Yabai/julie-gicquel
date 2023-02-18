@@ -19,18 +19,5 @@ export default {
     ExperienceSection,
     EducationSection,
   },
-  // mounted() {
-  //   // From testing, without a brief timeout, it won't work.
-  //   if (this.$route.hash) {
-  //     setTimeout(() => this.scrollTo(this.$route.hash), 500);
-  //   }
-  // },
-  // methods: {
-  //   scrollTo: function (hashtag) {
-  //     setTimeout(() => {
-  //       location.href = hashtag;
-  //     }, 500);
-  //   },
-  // },
 };
 </script>
