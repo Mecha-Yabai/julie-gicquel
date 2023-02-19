@@ -147,7 +147,6 @@ button .text > * {
   opacity: 1;
   font-size: 1.3rem;
   transition: 0.2s;
-  // margin-left: 4px;
 }
 
 button .clone > * {
