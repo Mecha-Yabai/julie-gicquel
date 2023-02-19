@@ -82,59 +82,57 @@
       @keydown.escape="closeExperienceInfosPanel()"
       class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-secondary-light dark:bg-primary-dark shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-none"
     >
-      <div>
-        <div class="flex flex-col h-screen">
-          <div
-            class="flex tems-center justify-center px-4 py-6 border-b dark:border-blue-dark"
+      <div class="flex flex-col h-screen dark:border-l-2 dark:border-blue-dark">
+        <div
+          class="flex tems-center justify-center px-4 py-6 border-b dark:border-blue-dark"
+        >
+          <h3
+            class="flex-1 text-md lg:text-lg font-jiho-medium text-primay-dark dark:text-red-dark"
           >
-            <h3
-              class="flex-1 text-md lg:text-lg font-jiho-medium text-primay-dark dark:text-red-dark"
+            {{ currentExperience.name }}
+          </h3>
+          <button
+            @click="closeExperienceInfosPanel()"
+            class="flex-none text-primay-dark ml-2"
+          >
+            <i data-feather="x" class="text-red-dark"></i>
+          </button>
+        </div>
+        <div class="flex-1 overflow-y-auto">
+          <div class="px-6 py-2" v-if="currentExperience.description">
+            <h5
+              class="mt-2 font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
             >
-              {{ currentExperience.name }}
-            </h3>
-            <button
-              @click="closeExperienceInfosPanel()"
-              class="flex-none text-primay-dark ml-2"
-            >
-              <i data-feather="x" class="text-red-dark"></i>
-            </button>
+              {{ currentExperience.description }}
+            </h5>
           </div>
-          <div class="flex-1 overflow-hidden hover:overflow-y-auto">
-            <div class="px-6 py-2" v-if="currentExperience.description">
-              <h5
-                class="mt-2 font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
-              >
-                {{ currentExperience.description }}
-              </h5>
-            </div>
-            <div
-              v-if="currentExperience.duties"
-              class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
-            >
-              Missions :
-              {{ $t("experiences.duties") }}
-            </div>
-            <template v-for="duty in currentExperience.duties" :key="duty.id">
-              <div
-                class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
-              >
-                {{ $t(duty) }}
-              </div>
-            </template>
-            <div
-              v-if="currentExperience.stacks"
-              class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
-            >
-              {{ $t("experiences.stack") }}
-            </div>
-            <template v-for="stack in currentExperience.stacks" :key="stack.id">
-              <div
-                class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
-              >
-                {{ stack }}
-              </div>
-            </template>
+          <div
+            v-if="currentExperience.duties"
+            class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
+          >
+            Missions :
+            {{ $t("experiences.duties") }}
           </div>
+          <template v-for="duty in currentExperience.duties" :key="duty.id">
+            <div
+              class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
+            >
+              {{ $t(duty) }}
+            </div>
+          </template>
+          <div
+            v-if="currentExperience.stacks"
+            class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
+          >
+            {{ $t("experiences.stack") }}
+          </div>
+          <template v-for="stack in currentExperience.stacks" :key="stack.id">
+            <div
+              class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
+            >
+              {{ stack }}
+            </div>
+          </template>
         </div>
       </div>
     </transition>
