@@ -1,5 +1,5 @@
 <template>
-  <section class="h-screen py-4">
+  <section class="py-4" :class="hasSmalScreen ? 'h-full' : 'h-screen'">
     <div
       class="flex flex-col lg:flex-row h-full lg:items-center justify-center"
     >
@@ -86,6 +86,9 @@ export default {
         { id: 2, title: this.$t("skills.ui_ux_design") },
         { id: 3, title: this.$t("skills.web_marketing") },
       ];
+    },
+    hasSmalScreen() {
+      return window.innerHeight <= 700
     },
   },
 };
