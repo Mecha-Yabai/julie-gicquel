@@ -12,7 +12,7 @@
           {{ $t("experiences.title_3") }}
         </h1>
         <p
-          class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light m-6"
+          class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light my-6 md:mt-6 md:mb-0"
         >
           {{ $t("experiences.description_1") }} <br />
           {{ $t("experiences.description_2") }}

@@ -12,7 +12,7 @@
           {{ $t("education.title_3") }}
         </h1>
         <p
-          class="m-6 md:mt-6 md:mb-0 text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+          class="my-6 md:mt-6 md:mb-0 text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
         >
           {{ $t("education.description_1") }}
           <br />
