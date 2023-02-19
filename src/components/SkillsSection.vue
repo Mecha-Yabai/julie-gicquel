@@ -76,7 +76,7 @@ export default {
       theme: "",
     };
   },
-  mounted() {
+  created() {
     this.theme = localStorage.getItem("theme") || "light";
   },
   computed: {

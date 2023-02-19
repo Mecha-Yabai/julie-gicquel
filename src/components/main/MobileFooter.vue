@@ -48,7 +48,6 @@ export default {
   },
   mounted() {
     feather.replace();
-    this.theme = localStorage.getItem("theme") || "light";
     this.lastScrollPosition = window.pageYOffset;
     window.addEventListener("scroll", this.onScroll);
   },

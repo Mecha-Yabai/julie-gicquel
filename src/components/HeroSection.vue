@@ -112,12 +112,14 @@ export default {
       addMarginOnTop: false,
     };
   },
+  created() {
+    this.theme = localStorage.getItem("theme") || "light";
+  },
   mounted() {
     feather.replace();
     if (window.pageYOffset < 0) {
       this.addMarginOnTop = true;
     }
-    this.theme = localStorage.getItem("theme") || "light";
   },
   updated() {
     feather.replace();

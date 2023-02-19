@@ -150,7 +150,7 @@ export default {
       isExperienceInfosPanelOpen: false,
     };
   },
-  mounted() {
+  created() {
     this.theme = localStorage.getItem("theme") || "light";
   },
   watch: {

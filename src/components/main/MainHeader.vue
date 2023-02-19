@@ -107,7 +107,6 @@ export default {
     this.theme = localStorage.getItem("theme") || "light";
   },
   mounted() {
-    this.theme = localStorage.getItem("theme") || "light";
     this.lastScrollPosition = window.pageYOffset;
     window.addEventListener("scroll", this.onScroll);
   },
