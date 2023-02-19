@@ -110,7 +110,6 @@
             v-if="currentExperience.duties"
             class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
           >
-            Missions :
             {{ $t("experiences.duties") }}
           </div>
           <template v-for="duty in currentExperience.duties" :key="duty.id">
