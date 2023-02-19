@@ -9,26 +9,38 @@
           @click="goTop()"
         >
           <div class="text text-primary-dark dark:text-white">
-            <span class="font-jiho-regular">{{
-              $t("footer.back_to_top_1")
-            }}</span>
-            <span class="font-jiho-regular">{{
-              $t("footer.back_to_top_2")
-            }}</span>
-            <span class="font-jiho-regular">{{
-              $t("footer.back_to_top_3")
-            }}</span>
+            <span
+              class="font-jiho-regular"
+              :class="{ 'ml-[4px]': $i18n.locale !== 'ja' }"
+              >{{ $t("footer.back_to_top_1") }}</span
+            >
+            <span
+              class="font-jiho-regular"
+              :class="{ 'ml-[4px]': $i18n.locale !== 'ja' }"
+              >{{ $t("footer.back_to_top_2") }}</span
+            >
+            <span
+              class="font-jiho-regular"
+              :class="{ 'ml-[4px]': $i18n.locale !== 'ja' }"
+              >{{ $t("footer.back_to_top_3") }}</span
+            >
           </div>
           <div class="clone text-primary-dark dark:text-white">
-            <span class="font-jiho-regular">{{
-              $t("footer.back_to_top_1")
-            }}</span>
-            <span class="font-jiho-regular">{{
-              $t("footer.back_to_top_2")
-            }}</span>
-            <span class="font-jiho-regular">{{
-              $t("footer.back_to_top_3")
-            }}</span>
+            <span
+              class="font-jiho-regular"
+              :class="{ 'ml-[4px]': $i18n.locale !== 'ja' }"
+              >{{ $t("footer.back_to_top_1") }}</span
+            >
+            <span
+              class="font-jiho-regular"
+              :class="{ 'ml-[4px]': $i18n.locale !== 'ja' }"
+              >{{ $t("footer.back_to_top_2") }}</span
+            >
+            <span
+              class="font-jiho-regular"
+              :class="{ 'ml-[4px]': $i18n.locale !== 'ja' }"
+              >{{ $t("footer.back_to_top_3") }}</span
+            >
           </div>
           <svg
             width="20px"
@@ -93,7 +105,7 @@ export default {
   },
 };
 </script>
-<style lang="css" scoped>
+<style lang="scss" scoped>
 button {
   width: 140px;
   height: 56px;
@@ -135,7 +147,7 @@ button .text > * {
   opacity: 1;
   font-size: 1.3rem;
   transition: 0.2s;
-  margin-left: 4px;
+  // margin-left: 4px;
 }
 
 button .clone > * {
