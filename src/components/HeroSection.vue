@@ -30,7 +30,7 @@
           >
             <a
               download="Julie-Gicquel-CV.pdf"
-              href="/files/Julie-Gicquel-CV.pdf"
+              href="/julie-gicquel/files/Julie-Gicquel-CV.pdf"
               class="flex justify-center items-center px-4 w-auto sm:w-52 py-3 rounded-lg bg-red-600 dark:bg-red-dark border-red-600 dark:border-none border-2 text-white duration-500"
               aria-label="Télécharger mon CV"
             >
