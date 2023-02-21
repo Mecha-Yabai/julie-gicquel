@@ -1,7 +1,7 @@
 <template>
-  <section class="py-4" :class="hasSmalScreen ? 'h-full' : 'h-screen'">
+  <section class="py-4 h-full min-h-screen">
     <div
-      class="flex flex-col lg:flex-row h-full lg:items-center justify-center"
+      class="flex flex-col lg:flex-row lg:items-center justify-center inherit-height"
     >
       <div
         class="w-full lg:w-6/12 h-2/3 sm:h-1/2 md:h-2/5 lg:h-fit lg:text-left lg:pr-8 mt-4 lg:mt-0"
@@ -87,9 +87,6 @@ export default {
         { id: 3, title: this.$t("skills.web_marketing") },
       ];
     },
-    hasSmalScreen() {
-      return window.innerHeight <= 700
-    },
   },
 };
 </script>
@@ -97,5 +94,8 @@ export default {
 hr {
   height: 2px;
   color: #404040;
+}
+.inherit-height {
+  min-height: inherit;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 sm:px-16 min-h-screen">
+  <div class="container mx-auto px-4 sm:px-16">
     <HeroSection id="hero" />
     <SkillsSection id="skills" />
     <ExperienceSection id="experience" />

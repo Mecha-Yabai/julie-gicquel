@@ -1,5 +1,5 @@
 <template>
-  <section class="h-full sm:h-screen flex content-center py-4">
+  <section class="h-full min-h-screen flex content-center py-4">
     <div class="flex flex-col justify-around lg:justify-between">
       <div
         class="flex lg:flex-1 flex-col-reverse lg:flex-row items-center mt-20 sm:mt-12"
