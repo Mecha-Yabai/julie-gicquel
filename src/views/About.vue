@@ -36,6 +36,18 @@ export default {
           id: 2,
           bio: this.$t("about_me_2"),
         },
+        {
+          id: 3,
+          bio: this.$t("about_me_3"),
+        },
+        {
+          id: 4,
+          bio: this.$t("about_me_4"),
+        },
+        {
+          id: 5,
+          bio: this.$t("about_me_5"),
+        },
       ];
     },
   },
