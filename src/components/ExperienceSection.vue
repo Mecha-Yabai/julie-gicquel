@@ -28,7 +28,7 @@
                 </p>
                 <img
                     v-if="theme === 'light'"
-                    src="@/assets/images/heroJG_v2.png"
+                    src="@/assets/images/hero2.png"
                     alt="Developer"
                     class="hidden lg:block lg:w-full"
                 />

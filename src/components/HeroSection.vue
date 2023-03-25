@@ -75,7 +75,7 @@
                 >
                     <img
                         v-if="theme === 'light'"
-                        src="@/assets/images/heroJG_v1.png"
+                        src="@/assets/images/hero1.png"
                         alt="Developer"
                         class="w-3/5 md:w-2/5 lg:w-10/12 lg:max-w-lg"
                     />

@@ -26,7 +26,7 @@
                 <div class="hidden h-full lg:flex items-center">
                     <img
                         v-if="theme === 'light'"
-                        src="@/assets/images/heroJG_v3.png"
+                        src="@/assets/images/hero3.png"
                         alt="Developer"
                         class="lg:w-full"
                     />
