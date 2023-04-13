@@ -29,6 +29,8 @@ const router = createRouter({
                 el: to.hash,
                 behavior: "smooth",
             };
+        } else if (savedPosition) {
+            position = savedPosition;
         } else {
             position = { left: 0, top: 0 };
         }
