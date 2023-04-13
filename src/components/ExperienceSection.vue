@@ -1,159 +1,158 @@
 <template>
-    <section class="h-full min-h-screen py-4">
-        <div class="flex flex-col lg:justify-between lg:flex-row h-full">
-            <div class="w-full lg:pr-8 lg:w-6/12 xl:pl-0 xl:w-5/12">
-                <h1
-                    class="font-jiho-medium xl:text-6xl sm:text-4xl text-2xl text-center lg:text-left text-primary-dark dark:text-primary-light"
-                >
-                    {{ $t("experiences.title_1") }}
-                    <span class="text-red-500 dark:text-red-dark">{{
-                        $t("experiences.title_2")
-                    }}</span>
-                    {{ $t("experiences.title_3") }}
-                </h1>
+    <div class="flex flex-col lg:justify-between lg:flex-row inherit-height">
+        <div class="w-full lg:pr-8 lg:w-6/12 xl:pl-0 xl:w-5/12 flex flex-col">
+            <h1
+                class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light my-4"
+            >
+                {{ $t("experiences.title_1") }}
+                <span class="text-red-500 dark:text-red-dark">{{
+                    $t("experiences.title_2")
+                }}</span>
+                {{ $t("experiences.title_3") }}
+            </h1>
+            <div class="space-y-4 lg:space-y-6 xl:space-y-8 my-4">
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light my-6 md:mt-6 md:mb-0"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
                 >
                     {{ $t("experiences.description_1") }}
                 </p>
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light my-6 md:mt-6 md:mb-0"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
                 >
                     {{ $t("experiences.description_2") }}
                 </p>
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light my-6 md:mt-6 md:mb-0"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
                 >
                     {{ $t("experiences.description_3") }}
                 </p>
+            </div>
+            <div class="hidden h-full lg:flex items-center">
                 <img
                     v-if="theme === 'light'"
                     src="@/assets/images/hero2.png"
                     alt="Developer"
-                    class="hidden lg:block lg:w-full"
+                    class="lg:w-full"
                 />
                 <img
                     v-else
                     src="@/assets/images/heroJG_v2_BW.png"
                     alt="Developer"
-                    class="hidden lg:block lg:w-full"
+                    class="lg:w-full"
                 />
             </div>
+        </div>
+        <div
+            class="w-full flex-1 lg:w-6/12 flex flex-col items-baseline h-full justify-start lg:justify-center lg:self-center mt-6 md:mt-12 lg:mt-0"
+        >
+            <template v-for="experience in experiences" :key="experience.id">
+                <div
+                    class="flex items-baseline w-full justify-between h-[110px] lg:h-[140px] border-t border-primary-dark dark:border-blue-dark"
+                >
+                    <div class="my-auto w-[70px] md:w-[100px]">
+                        <time
+                            class="text-sm font-jiho-regular leading-none text-gray-500 dark:text-ternary-light"
+                            >{{ experience.date }}</time
+                        >
+                    </div>
+                    <div class="my-auto flex-1 pr-4">
+                        <h3
+                            class="text-md lg:text-lg font-jiho-medium text-primary-dark dark:text-white"
+                        >
+                            {{ experience.name }}
+                        </h3>
+                        <h5
+                            class="mt-2 text-sm font-jiho-regular text-primay-dark dark:text-red-dark"
+                        >
+                            {{ experience.company }}
+                        </h5>
+                    </div>
+                    <div class="my-auto">
+                        <button
+                            type="button"
+                            @click="openExperienceInfosPanel(experience)"
+                            class="dark:border-white dark:border dark:hover:border-blue-dark dark:rounded-full dark:hover:bg-blue-dark"
+                        >
+                            <i
+                                data-feather="chevron-right"
+                                stroke-width="1.5"
+                                class="text-red-dark dark:text-white"
+                            ></i>
+                        </button>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    <transition
+        name="panel-fade"
+        ref="experienceInfosPanel"
+        tabindex="-1"
+        v-show="isExperienceInfosPanelOpen"
+        @keydown.escape="closeExperienceInfosPanel()"
+        class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-secondary-light dark:bg-primary-dark shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-none"
+    >
+        <div
+            class="flex flex-col h-screen dark:border-l-2 dark:border-blue-dark"
+        >
             <div
-                class="w-full lg:pt-10 lg:w-6/12 flex flex-col items-baseline h-full justify-center mt-6 lg:mt-0"
+                class="flex tems-center justify-center px-4 py-6 border-b dark:border-blue-dark"
             >
+                <h3
+                    class="flex-1 text-md lg:text-lg font-jiho-medium text-primay-dark dark:text-red-dark"
+                >
+                    {{ currentExperience.name }}
+                </h3>
+                <button
+                    @click="closeExperienceInfosPanel()"
+                    class="flex-none text-primay-dark ml-2"
+                >
+                    <i data-feather="x" class="text-red-dark"></i>
+                </button>
+            </div>
+            <div class="flex-1 overflow-y-auto">
+                <div class="px-6 py-2" v-if="currentExperience.description">
+                    <h5
+                        class="mt-2 font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+                    >
+                        {{ currentExperience.description }}
+                    </h5>
+                </div>
+                <div
+                    v-if="currentExperience.duties"
+                    class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
+                >
+                    {{ $t("experiences.duties") }}
+                </div>
                 <template
-                    v-for="experience in experiences"
-                    :key="experience.id"
+                    v-for="duty in currentExperience.duties"
+                    :key="duty.id"
                 >
                     <div
-                        class="flex items-baseline w-full justify-between h-[110px] lg:h-[140px] border-t border-primary-dark dark:border-blue-dark"
+                        class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
                     >
-                        <div class="my-auto w-[70px] md:w-[100px]">
-                            <time
-                                class="text-sm font-jiho-regular leading-none text-gray-500 dark:text-ternary-light"
-                                >{{ experience.date }}</time
-                            >
-                        </div>
-                        <div class="my-auto flex-1 pr-4">
-                            <h3
-                                class="text-md lg:text-lg font-jiho-medium text-primary-dark dark:text-white"
-                            >
-                                {{ experience.name }}
-                            </h3>
-                            <h5
-                                class="mt-2 text-sm font-jiho-regular text-primay-dark dark:text-red-dark"
-                            >
-                                {{ experience.company }}
-                            </h5>
-                        </div>
-                        <div class="my-auto">
-                            <button
-                                type="button"
-                                @click="openExperienceInfosPanel(experience)"
-                                class="dark:border-white dark:border dark:hover:border-blue-dark dark:rounded-full dark:hover:bg-blue-dark"
-                            >
-                                <i
-                                    data-feather="chevron-right"
-                                    stroke-width="1.5"
-                                    class="text-red-dark dark:text-white"
-                                ></i>
-                            </button>
-                        </div>
+                        {{ $t(duty) }}
+                    </div>
+                </template>
+                <div
+                    v-if="currentExperience.stacks"
+                    class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
+                >
+                    {{ $t("experiences.stack") }}
+                </div>
+                <template
+                    v-for="stack in currentExperience.stacks"
+                    :key="stack.id"
+                >
+                    <div
+                        class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
+                    >
+                        {{ stack }}
                     </div>
                 </template>
             </div>
         </div>
-        <transition
-            name="panel-fade"
-            ref="experienceInfosPanel"
-            tabindex="-1"
-            v-show="isExperienceInfosPanelOpen"
-            @keydown.escape="closeExperienceInfosPanel()"
-            class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-secondary-light dark:bg-primary-dark shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-none"
-        >
-            <div
-                class="flex flex-col h-screen dark:border-l-2 dark:border-blue-dark"
-            >
-                <div
-                    class="flex tems-center justify-center px-4 py-6 border-b dark:border-blue-dark"
-                >
-                    <h3
-                        class="flex-1 text-md lg:text-lg font-jiho-medium text-primay-dark dark:text-red-dark"
-                    >
-                        {{ currentExperience.name }}
-                    </h3>
-                    <button
-                        @click="closeExperienceInfosPanel()"
-                        class="flex-none text-primay-dark ml-2"
-                    >
-                        <i data-feather="x" class="text-red-dark"></i>
-                    </button>
-                </div>
-                <div class="flex-1 overflow-y-auto">
-                    <div class="px-6 py-2" v-if="currentExperience.description">
-                        <h5
-                            class="mt-2 font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
-                        >
-                            {{ currentExperience.description }}
-                        </h5>
-                    </div>
-                    <div
-                        v-if="currentExperience.duties"
-                        class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
-                    >
-                        {{ $t("experiences.duties") }}
-                    </div>
-                    <template
-                        v-for="duty in currentExperience.duties"
-                        :key="duty.id"
-                    >
-                        <div
-                            class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
-                        >
-                            {{ $t(duty) }}
-                        </div>
-                    </template>
-                    <div
-                        v-if="currentExperience.stacks"
-                        class="px-6 py-2 font-jiho-medium text-primay-dark dark:text-white"
-                    >
-                        {{ $t("experiences.stack") }}
-                    </div>
-                    <template
-                        v-for="stack in currentExperience.stacks"
-                        :key="stack.id"
-                    >
-                        <div
-                            class="px-6 py-2 font-jiho-regular text-primay-dark dark:text-white"
-                        >
-                            {{ stack }}
-                        </div>
-                    </template>
-                </div>
-            </div>
-        </transition>
-    </section>
+    </transition>
 </template>
 <script>
 import { getExperiences } from "../data/experiences";

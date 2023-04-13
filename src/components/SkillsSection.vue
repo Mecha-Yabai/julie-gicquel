@@ -1,73 +1,69 @@
 <template>
-    <section class="py-4 h-full min-h-screen">
+    <div
+        class="flex flex-col lg:flex-row lg:items-center justify-center inherit-height"
+    >
         <div
-            class="flex flex-col lg:flex-row lg:items-center justify-center inherit-height"
+            class="w-full flex flex-col flex-1 justify-center lg:w-6/12 h-2/3 sm:h-1/2 md:h-2/5 lg:h-fit lg:text-left lg:pr-8"
+        >
+            <h1
+                class="h-1/4 md:h-1/3 lg:h-fit my-4 font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light"
+            >
+                {{ $t("skills.title_1") }}
+                <span class="text-red-500 dark:text-red-dark">{{
+                    $t("skills.title_2")
+                }}</span
+                >,<br />
+                {{ $t("skills.title_3") }}
+                <span class="text-red-500 dark:text-red-dark">{{
+                    $t("skills.title_4")
+                }}</span
+                >.
+            </h1>
+            <div
+                class="h-2/4 md:h-2/3 lg:h-fit space-y-4 lg:space-y-6 xl:space-y-8 my-4"
+            >
+                <p
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+                >
+                    {{ $t("skills.description_1") }}
+                </p>
+                <p
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+                >
+                    {{ $t("skills.description_2") }}
+                </p>
+                <p
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+                >
+                    {{ $t("skills.description_3") }}
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="justify-start w-full lg:w-6/12 h-1/3 sm:h-1/2 md:h-3/5 flex flex-col flex-1"
         >
             <div
-                class="w-full lg:w-6/12 h-2/3 sm:h-1/2 md:h-2/5 lg:h-fit lg:text-left lg:pr-8 mt-4 lg:mt-0"
+                v-for="(skill, id) in generalSkills"
+                :key="id"
+                class="h-24 md:h-32 lg:h-40"
             >
-                <h1
-                    class="h-1/4 md:h-1/3 lg:h-fit mb-6 lg:mb-10 font-jiho-bold xl:text-6xl sm:text-4xl text-2xl text-center lg:text-left text-primary-dark dark:text-primary-light"
-                >
-                    {{ $t("skills.title_1") }}
-                    <span class="text-red-500 dark:text-red-dark">{{
-                        $t("skills.title_2")
-                    }}</span
-                    >,<br />
-                    {{ $t("skills.title_3") }}
-                    <span class="text-red-500 dark:text-red-dark">{{
-                        $t("skills.title_4")
-                    }}</span
-                    >.
-                </h1>
-                <div
-                    class="h-2/4 md:h-2/3 lg:h-fit space-y-4 lg:space-y-6 xl:space-y-8"
-                >
+                <hr class="dark:border-blue-dark" />
+                <div class="flex min-h-full items-center">
                     <p
-                        class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+                        class="mr-4 text-xl sm:text-2xl lg:text-3xl text-red-500 dark:text-red-dark font-jiho-regular whitespace-nowrap"
                     >
-                        {{ $t("skills.description_1") }}
+                        {{ skill.id }} /
                     </p>
-                    <p
-                        class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+                    <h1
+                        class="text-left text-xl sm:text-2xl lg:text-3xl font-jiho-medium text-primary-dark dark:text-primary-light"
                     >
-                        {{ $t("skills.description_2") }}
-                    </p>
-                    <p
-                        class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
-                    >
-                        {{ $t("skills.description_3") }}
-                    </p>
-                </div>
-            </div>
-
-            <div
-                class="w-full lg:w-6/12 h-1/3 sm:h-1/2 md:h-3/5 flex items-start md:items-center mt-6 lg:mt-0"
-            >
-                <div class="space-y-4 sm:space-y-10">
-                    <div
-                        v-for="(skill, id) in generalSkills"
-                        :key="id"
-                        class="mt-6 sm:mt-0"
-                    >
-                        <hr class="mb-4 sm:mb-10 dark:border-blue-dark" />
-                        <div class="flex items-top sm:mb-10">
-                            <p
-                                class="mr-4 text-xl sm:text-3xl text-red-500 dark:text-red-dark font-jiho-regular whitespace-nowrap"
-                            >
-                                {{ skill.id }} /
-                            </p>
-                            <h1
-                                class="text-left text-xl md:text-3xl xl:text-4xl font-jiho-medium text-primary-dark dark:text-primary-light"
-                            >
-                                {{ skill.title }}
-                            </h1>
-                        </div>
-                    </div>
+                        {{ skill.title }}
+                    </h1>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </template>
 <script>
 export default {
@@ -90,7 +86,7 @@ export default {
     },
 };
 </script>
-<style lang="css" scoped>
+<style lang="css">
 hr {
     height: 2px;
     color: #404040;

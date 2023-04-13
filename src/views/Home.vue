@@ -1,9 +1,13 @@
 <template>
     <div class="container mx-auto px-4 sm:px-16">
-        <HeroSection id="hero" />
-        <SkillsSection id="skills" />
-        <ExperienceSection id="experience" />
-        <EducationSection id="education" />
+        <section
+            v-for="section in sections"
+            :key="section.id"
+            :id="section.id"
+            class="h-full min-h-screen py-4"
+        >
+            <component :is="section.component"></component>
+        </section>
     </div>
 </template>
 <script>
@@ -18,6 +22,28 @@ export default {
         SkillsSection,
         ExperienceSection,
         EducationSection,
+    },
+    computed: {
+        sections() {
+            return [
+                {
+                    id: "hero",
+                    component: HeroSection,
+                },
+                {
+                    id: "skills",
+                    component: SkillsSection,
+                },
+                {
+                    id: "experience",
+                    component: ExperienceSection,
+                },
+                {
+                    id: "education",
+                    component: EducationSection,
+                },
+            ];
+        },
     },
 };
 </script>
