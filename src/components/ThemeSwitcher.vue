@@ -4,7 +4,7 @@
         <i
             v-else
             data-feather="sun"
-            class="text-gray-200 hover:text-red-dark w-5"
+            class="text-gray-200 hover:text-primary w-5"
         ></i>
     </a>
 </template>

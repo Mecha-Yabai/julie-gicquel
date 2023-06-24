@@ -1,16 +1,14 @@
 <template>
     <div class="container mx-auto">
         <div
-            class="pt-16 pb-8 mt-20 border-t-2 border-primary-light dark:border-secondary-dark"
+            class="pt-16 pb-8 mt-20 border-t-2 border-grey-lighter dark:border-grey-darker"
         >
             <div class="pb-5 flex justify-center">
                 <button
-                    :class="
-                        theme === 'light' ? 'text-primary-dark' : 'text-white'
-                    "
+                    :class="theme === 'light' ? 'text-dark' : 'text-white'"
                     @click="goTop()"
                 >
-                    <div class="text text-primary-dark dark:text-white">
+                    <div class="text text-dark dark:text-white">
                         <span
                             class="font-jiho-regular"
                             :class="{ 'ml-[4px]': $i18n.locale !== 'ja' }"
@@ -27,7 +25,7 @@
                             >{{ $t("footer.back_to_top_3") }}</span
                         >
                     </div>
-                    <div class="clone text-primary-dark dark:text-white">
+                    <div class="clone text-dark dark:text-white">
                         <span
                             class="font-jiho-regular"
                             :class="{ 'ml-[4px]': $i18n.locale !== 'ja' }"
@@ -65,7 +63,7 @@
                 class="flex flex-col justify-center items-center mb-12 sm:mb-20"
             >
                 <p
-                    class="font-jiho-medium sm:text-3xl text-2xl text-primary-dark dark:text-primary-light mb-5"
+                    class="font-jiho-medium sm:text-3xl text-2xl text-dark dark:text-grey-lighter mb-5"
                 >
                     {{ $t("footer.contact_me") }}
                 </p>
@@ -74,7 +72,7 @@
                     <a
                         :href="`mailto:${mail}`"
                         target="__blank"
-                        class="rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-blue-dark shadow-lg border-primary-dark dark:border-blue-dark border-2 hover:bg-primary-dark text-primary-dark dark:text-white dark:hover:bg-blue-dark dark:hover:text-red-dark hover:text-white text-center"
+                        class="rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-secondary shadow-lg border-dark dark:border-secondary border-2 hover:bg-dark text-dark dark:text-white dark:hover:bg-secondary dark:hover:text-primary hover:text-white text-center"
                     >
                         <i data-feather="mail" class="w-5 lg:w-16"></i>
                     </a>

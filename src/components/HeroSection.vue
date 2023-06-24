@@ -7,11 +7,11 @@
         >
             <div class="w-full lg:w-6/12 text-left lg:pr-8">
                 <h1
-                    class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-primary-dark dark:text-primary-light my-4 md:my-8"
+                    class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4 md:my-8"
                 >
                     {{ $t("greetings") }}
                     <span
-                        class="text-red-500 dark:text-red-dark font-jiho-bold"
+                        class="text-red-500 dark:text-primary font-jiho-bold"
                         >{{ $t("name") }}</span
                     >,
                     <br />
@@ -19,12 +19,12 @@
                 </h1>
                 <div class="flex flex-col space-y-4">
                     <p
-                        class="text-justify sm:text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+                        class="text-justify sm:text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
                     >
                         {{ $t("hero_1") }}
                     </p>
                     <p
-                        class="text-justify sm:text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-ternary-light"
+                        class="text-justify sm:text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
                     >
                         {{ $t("hero_2") }}
                     </p>
@@ -35,7 +35,7 @@
                     <a
                         download="Julie-Gicquel-CV.pdf"
                         href="/julie-gicquel/files/Julie-Gicquel-CV.pdf"
-                        class="flex justify-center items-center px-4 w-auto sm:w-52 py-3 rounded-lg bg-red-600 dark:bg-red-dark border-red-600 dark:border-none border-2 text-white duration-500"
+                        class="flex justify-center items-center px-4 w-auto sm:w-52 py-3 rounded-lg bg-red-600 dark:bg-primary hover:bg-red-500 dark:hover:bg-primary-darker border-red-600 hover:border-red-500 dark:border-none border-2 text-white duration-500"
                         aria-label="Télécharger mon CV"
                     >
                         <span
@@ -49,7 +49,7 @@
                     </a>
                     <a
                         :href="`mailto:${mail}`"
-                        class="flex justify-center items-center lg:ml-4 px-4 w-auto sm:w-52 py-3 rounded-lg bg-white dark:bg-blue-dark border-primary-dark dark:border-none border-2 hover:bg-primary-dark text-primary-dark dark:text-white hover:text-white duration-500"
+                        class="flex justify-center items-center lg:ml-4 px-4 w-auto sm:w-52 py-3 rounded-lg bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-none border-2 hover:bg-dark text-dark dark:text-white hover:text-white duration-500"
                     >
                         <span
                             class="text-sm w-fit sm:text-md font-jiho-medium duration-100"
@@ -94,13 +94,13 @@
                     class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
                 >
                     <span
-                        class="relative block m-0 w-12 h-12 bg-primary-dark dark:bg-red-dark rounded-full transition-all ease-[cubic-bezier(0.65, 0, 0.076, 1)] duration-[450ms] circle"
+                        class="relative block m-0 w-12 h-12 bg-dark dark:bg-primary rounded-full transition-all ease-[cubic-bezier(0.65, 0, 0.076, 1)] duration-[450ms] circle"
                         aria-hidden="true"
                     >
                         <span class="icon arrow"></span>
                     </span>
                     <span
-                        class="absolute text-primary-dark dark:text-red-dark font-jiho-regular uppercase text-cente button-text ml-10 leading-relaxed transition-all ease-[cubic-bezier(0.65, 0, 0.076, 1)] duration-[450ms] py-3 inset-0"
+                        class="absolute text-dark dark:text-primary font-jiho-regular uppercase text-cente button-text ml-10 leading-relaxed transition-all ease-[cubic-bezier(0.65, 0, 0.076, 1)] duration-[450ms] py-3 inset-0"
                         >{{ $t("learn_more") }}</span
                     >
                 </button>

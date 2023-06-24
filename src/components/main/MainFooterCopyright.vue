@@ -1,12 +1,12 @@
 <template>
     <div class="flex justify-center items-center text-center mb-4">
         <div
-            class="font-jiho-regular text-lg text-ternary-dark dark:text-ternary-light"
+            class="font-jiho-regular text-lg text-grey-dark dark:text-grey-light"
         >
             <a
                 href="https://github.com/Mecha-Yabai"
                 target="__blank"
-                class="mr-1 font-jiho-medium text-secondary-dark dark:text-secondary-light hover:text-red-500 dark:hover:text-red-dark duration-500"
+                class="mr-1 font-jiho-medium text-grey-darker dark:text-white hover:text-red-500 dark:hover:text-primary duration-500"
             >
                 {{ projectName }}
             </a>
@@ -15,7 +15,7 @@
             <div v-if="$i18n.locale === 'ja'">
                 <a
                     :href="`mailto:${mail}`"
-                    class="font-jiho-medium text-secondary-dark dark:text-secondary-light uppercase hover:text-red-500 dark:hover:text-red-dark duration-500"
+                    class="font-jiho-medium text-grey-darker dark:text-white uppercase hover:text-red-500 dark:hover:text-primary duration-500"
                     >{{ author }}
                 </a>
                 <span>{{ $t("footer.developed_by") }}</span>
@@ -24,7 +24,7 @@
                 <span class="mr-1">{{ $t("footer.developed_by") }}</span>
                 <a
                     :href="`mailto:${mail}`"
-                    class="font-jiho-medium text-secondary-dark dark:text-secondary-light uppercase hover:text-red-500 dark:hover:text-red-dark duration-500"
+                    class="font-jiho-medium text-grey-darker dark:text-white uppercase hover:text-red-500 dark:hover:text-primary duration-500"
                     >{{ author }}.
                 </a>
             </div>

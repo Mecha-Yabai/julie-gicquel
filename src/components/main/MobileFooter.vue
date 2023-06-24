@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="footer fixed md:hidden bottom-0 inset-x-0 px-3 py-3 bg-red-600 dark:bg-primary-dark dark:border-t-[2px] dark:border-blue-dark z-10 max-w-full"
+        class="footer fixed md:hidden bottom-0 inset-x-0 px-3 py-3 bg-red-600 dark:bg-dark dark:border-t-[2px] dark:border-secondary z-10 max-w-full"
         :class="{ 'is-hidden': !showFooter }"
     >
         <div class="flex md:hidden w-full justify-evenly">

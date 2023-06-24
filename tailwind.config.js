@@ -1,33 +1,33 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: [
-    "./src/**/*.vue",
-    "./src/**/*.js",
-    "./src/**/*.jsx",
-    "./src/**/*.html",
-    "./src/**/*.md",
-  ],
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "primary-light": "#F7F8FC",
-        "secondary-light": "#FFFFFF",
-        "ternary-light": "#DBE2E6",
-        "primary-dark": "#030303",
-        "secondary-dark": "#535353",
-        "ternary-dark": "#666666",
-        "red-dark": "#C92A1D",
-        "blue-dark": "#233763",
-        "blue-dark-secondary": "#1f2937",
-      },
-      container: {
-        center: true,
-      },
+    purge: [
+        "./src/**/*.vue",
+        "./src/**/*.js",
+        "./src/**/*.jsx",
+        "./src/**/*.html",
+        "./src/**/*.md",
+    ],
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "grey-lighter": "#F7F8FC",
+                "grey-light": "#DBE2E6",
+                dark: "#030303",
+                "grey-darker": "#535353",
+                "grey-dark": "#666666",
+                primary: "#C92A1D",
+                "primary-darker": "#9c2016",
+                secondary: "#233763",
+                "secondary-darker": "#141f38",
+            },
+            container: {
+                center: true,
+            },
+        },
     },
-  },
-  variants: {
-    extend: { opacity: ["disabled"] },
-  },
+    variants: {
+        extend: { opacity: ["disabled"] },
+    },
 };
