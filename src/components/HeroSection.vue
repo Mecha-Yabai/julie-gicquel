@@ -35,7 +35,7 @@
                     <a
                         download="Julie-Gicquel-CV.pdf"
                         href="/julie-gicquel/files/Julie-Gicquel-CV.pdf"
-                        class="flex justify-center items-center px-4 w-auto sm:w-52 py-3 rounded-lg bg-red-600 dark:bg-primary hover:bg-red-500 dark:hover:bg-primary-darker border-red-600 hover:border-red-500 dark:border-none border-2 text-white duration-500"
+                        class="flex justify-center items-center px-4 w-auto sm:w-52 py-3 rounded-lg bg-red-600 dark:bg-primary hover:bg-red-700 dark:hover:bg-primary-darker border-red-600 hover:border-red-700 dark:border-none border-2 text-white duration-500 dark:hover:ring-2 dark:ring-primary"
                         aria-label="Télécharger mon CV"
                     >
                         <span
@@ -49,7 +49,7 @@
                     </a>
                     <a
                         :href="`mailto:${mail}`"
-                        class="flex justify-center items-center lg:ml-4 px-4 w-auto sm:w-52 py-3 rounded-lg bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-none border-2 hover:bg-dark text-dark dark:text-white hover:text-white duration-500"
+                        class="flex justify-center items-center lg:ml-4 px-4 w-auto sm:w-52 py-3 rounded-lg bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-none border-2 hover:bg-dark text-dark dark:text-white hover:text-white duration-500 dark:hover:ring-2"
                     >
                         <span
                             class="text-sm w-fit sm:text-md font-jiho-medium duration-100"
