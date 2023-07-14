@@ -1,25 +1,28 @@
 <template>
-    <div
-        class="container mx-auto px-4 sm:px-16 block sm:flex sm:gap-10 mt-28 sm:mt-32 md-mt-48"
-    >
-        <div class="w-full sm:w-1/4 mb-7 sm:mb-0">
-            <img
-                src="@/assets/images/JG.png"
-                class="rounded-xl w-72 mx-auto sm:mx-none"
-                alt="Julie Gicquel"
-            />
-        </div>
-
-        <div
-            class="w-full sm:w-3/4 text-left md:flex md:flex-col md:justify-center"
+    <div class="container mx-auto px-4 sm:px-16 mt-28 sm:mt-32 md:mt-38">
+        <h1
+            class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
         >
-            <p
-                v-for="bio in bios"
-                :key="bio.id"
-                class="font-general-regular mb-4 text-grey-dark dark:text-grey-light text-lg"
-            >
-                {{ bio.bio }}
-            </p>
+            {{ $t("about_me_title") }}
+        </h1>
+        <div class="flex flex-col lg:flex-row lg:items-center">
+            <div class="w-full lg:w-1/5 my-5 lg:my-0 lg:mr-6">
+                <img
+                    src="@/assets/images/JG.png"
+                    class="rounded-xl lg:w-72 md:w-56 w-48 mx-auto sm:mx-none"
+                    alt="Julie Gicquel"
+                />
+            </div>
+
+            <div class="lg:w-4/5 lg:ml-6 text-justify space-y-4">
+                <p
+                    v-for="bio in bios"
+                    :key="bio.id"
+                    class="font-general-regular text-grey-dark dark:text-grey-light text-lg"
+                >
+                    {{ bio.bio }}
+                </p>
+            </div>
         </div>
     </div>
 </template>
