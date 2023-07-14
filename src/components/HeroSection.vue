@@ -45,7 +45,7 @@
                             >
                             <i
                                 data-feather="download"
-                                class="ml-2 w-fit sm:w-5 duration-100"
+                                class="ml-2 w-max md:w-5 duration-100"
                             ></i>
                         </a>
                     </div>
@@ -61,7 +61,7 @@
                             </span>
                             <i
                                 data-feather="mail"
-                                class="ml-2 w-4 duration-100"
+                                class="ml-2 w-5 duration-100"
                             ></i>
                         </a>
                     </div>
@@ -91,13 +91,13 @@
                     v-if="theme === 'light'"
                     src="@/assets/images/hero3_LIGHT.png"
                     alt="Developer"
-                    class="w-3/5 md:w-2/4 lg:w-10/12 h-fit"
+                    class="w-full md:w-2/4 lg:w-10/12"
                 />
                 <img
                     v-else
                     src="@/assets/images/hero3_LIGHT_darkmode.png"
                     alt="Developer"
-                    class="w-3/5 md:w-2/4 lg:w-10/12 h-fit"
+                    class="w-full md:w-2/4 lg:w-10/12"
                 />
             </div>
         </div>
