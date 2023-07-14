@@ -49,7 +49,7 @@
                 <div
                     class="flex items-baseline w-full justify-between h-[110px] lg:h-[140px] border-t border-dark dark:border-secondary"
                 >
-                    <div class="my-auto w-[70px] md:w-[100px]">
+                    <div class="hidden md:block my-auto w-[70px] md:w-[100px]">
                         <time
                             class="text-sm font-jiho-regular text-gray-500 dark:text-grey-light"
                             >{{ experience.date }}</time
@@ -66,6 +66,10 @@
                         >
                             {{ experience.company }}
                         </h5>
+                        <time
+                            class="md:hidden text-sm font-jiho-regular text-gray-500 dark:text-grey-light"
+                            >{{ experience.date }}</time
+                        >
                     </div>
                     <div class="my-auto">
                         <button
