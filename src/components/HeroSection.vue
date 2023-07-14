@@ -32,11 +32,11 @@
                 <div
                     class="flex items-center justify-evenly lg:justify-start my-4 sm:my-6 md:my-8"
                 >
-                    <div>
+                    <div class="w-8/12 sm:w-1/2">
                         <a
                             download="Julie-Gicquel-CV.pdf"
                             href="/julie-gicquel/files/Julie-Gicquel-CV.pdf"
-                            class="flex justify-center items-center px-4 w-auto sm:w-52 py-3 rounded-lg bg-red-600 dark:bg-primary hover:bg-red-700 dark:hover:bg-primary-darker border-red-600 dark:border-red-700 hover:border-red-700 border-2 text-white duration-500"
+                            class="flex justify-center items-center px-4 w-full py-3 rounded-lg bg-red-600 dark:bg-primary hover:bg-red-700 dark:hover:bg-primary-darker border-red-600 dark:border-red-700 hover:border-red-700 border-2 text-white duration-500"
                             aria-label="Télécharger mon CV"
                         >
                             <span
@@ -45,17 +45,17 @@
                             >
                             <i
                                 data-feather="download"
-                                class="ml-2 w-max md:w-5 duration-100"
+                                class="ml-2 w-5 duration-100"
                             ></i>
                         </a>
                     </div>
-                    <div class="hidden sm:block">
+                    <div class="hidden sm:block sm:w-1/2 sm:ml-4">
                         <a
                             :href="`mailto:${mail}`"
-                            class="flex justify-center items-center lg:ml-4 px-4 w-auto py-3 rounded-lg bg-white dark:bg-dark dark:border-secondary dark:hover:bg-secondary border-dark border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white duration-500"
+                            class="flex justify-center items-center px-4 w-full py-3 rounded-lg bg-white dark:bg-dark dark:border-secondary dark:hover:bg-secondary border-dark border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white duration-500"
                         >
                             <span
-                                class="text-sm w-fit font-jiho-medium duration-100"
+                                class="text-sm font-jiho-medium duration-100"
                             >
                                 {{ $t("get_in_touch") }}
                             </span>
@@ -76,7 +76,7 @@
                         <SocialButton />
                         <a
                             :href="`mailto:${mail}`"
-                            class="md:hidden rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-dark shadow-lg border-dark dark:border-secondary border-2 hover:bg-dark text-dark dark:text-white dark:hover:bg-secondary dark:hover:text-primary hover:text-white text-center"
+                            class="sm:hidden rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-dark shadow-lg border-dark dark:border-secondary border-2 hover:bg-dark text-dark dark:text-white dark:hover:bg-secondary dark:hover:text-primary hover:text-white text-center"
                         >
                             <i
                                 data-feather="mail"
@@ -91,17 +91,17 @@
                     v-if="theme === 'light'"
                     src="@/assets/images/hero3_LIGHT.png"
                     alt="Developer"
-                    class="w-full md:w-2/4 lg:w-10/12"
+                    class="w-full sm:w-3/4 md:2/4 lg:w-10/12"
                 />
                 <img
                     v-else
                     src="@/assets/images/hero3_LIGHT_darkmode.png"
                     alt="Developer"
-                    class="w-full md:w-2/4 lg:w-10/12"
+                    class="w-full sm:w-3/4 md:2/4 lg:w-10/12"
                 />
             </div>
         </div>
-        <div class="hidden md:flex flex-none items-center justify-center my-4">
+        <div class="hidden lg:flex flex-none items-center justify-center my-4">
             <router-link :to="{ name: 'Home', hash: '#skills' }">
                <button
                     class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
