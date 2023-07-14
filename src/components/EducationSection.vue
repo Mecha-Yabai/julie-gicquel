@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col lg:justify-between lg:flex-row inherit-height">
-        <div class="w-full lg:pr-8 lg:w-6/12 xl:pl-0 xl:w-5/12 flex flex-col">
+        <div class="w-full lg:pr-6 lg:w-6/12 flex flex-col">
             <h1
                 class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
             >
@@ -10,16 +10,21 @@
                 }}</span>
                 {{ $t("education.title_3") }}
             </h1>
-            <div class="space-y-4 lg:space-y-6 xl:space-y-8 my-4">
+            <div class="space-y-4 my-4">
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
                     {{ $t("education.description_1") }}
                 </p>
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
                     {{ $t("education.description_2") }}
+                </p>
+                <p
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
+                >
+                    {{ $t("education.description_3") }}
                 </p>
             </div>
             <div class="hidden h-full lg:flex items-center">
@@ -38,25 +43,25 @@
             </div>
         </div>
         <div
-            class="w-full lg:pt-10 lg:w-7/12 flex flex-col items-baseline h-full justify-center lg:justify-end lg:items-end mt-6 lg:mt-0"
+            class="w-full lg:pt-10 lg:pl-6 lg:w-6/12 flex flex-col items-baseline h-full justify-center lg:justify-end lg:items-end mt-6 lg:mt-0"
         >
             <ol class="relative border-l border-dark dark:border-grey-light">
                 <template v-for="formation in formations" :key="formation.id">
                     <li class="mb-3 lg:mb-4 ml-4">
                         <div
-                            class="absolute w-3 h-3 bg-dark rounded-full mt-1.5 -left-1.5 border border-white dark:border-secondary dark:bg-secondary"
+                            class="absolute w-3 h-3 bg-dark rounded-full mt-1.5 -left-1.5 dark:bg-white"
                         ></div>
                         <time
-                            class="text-sm font-jiho-regular leading-none text-gray-500 dark:text-grey-light"
+                            class="text-sm font-jiho-regular text-gray-500 dark:text-grey-light"
                             >{{ formation.date }}</time
                         >
                         <h3
-                            class="lg:mt-1 text-md xl:text-lg font-jiho-medium text-primay-dark dark:text-white"
+                            class="text-md xl:text-lg font-jiho-medium text-primay-dark dark:text-white"
                         >
                             {{ formation.name }}
                         </h3>
                         <h5
-                            class="lg:mt-1 text-sm font-jiho-regular text-primay-dark dark:text-primary"
+                            class="text-sm font-jiho-regular text-primay-dark dark:text-primary"
                         >
                             {{ formation.school }}
                         </h5>

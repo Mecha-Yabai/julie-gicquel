@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col lg:justify-between lg:flex-row inherit-height">
-        <div class="w-full lg:pr-8 lg:w-6/12 xl:pl-0 xl:w-5/12 flex flex-col">
+        <div class="w-full lg:pr-6 lg:w-6/12 flex flex-col">
             <h1
                 class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
             >
@@ -10,19 +10,19 @@
                 }}</span>
                 {{ $t("experiences.title_3") }}
             </h1>
-            <div class="space-y-4 lg:space-y-6 xl:space-y-8 my-4">
+            <div class="space-y-4 my-4">
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
                     {{ $t("experiences.description_1") }}
                 </p>
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
                     {{ $t("experiences.description_2") }}
                 </p>
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
                     {{ $t("experiences.description_3") }}
                 </p>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div
-            class="w-full flex-1 lg:w-6/12 flex flex-col items-baseline h-full justify-start lg:justify-center lg:self-center mt-6 md:mt-12 lg:mt-0"
+            class="w-full flex-1 lg:pl-6 lg:w-6/12 flex flex-col items-baseline h-full justify-start lg:justify-center lg:self-center mt-6 md:mt-12 lg:mt-0"
         >
             <template v-for="experience in experiences" :key="experience.id">
                 <div
@@ -51,7 +51,7 @@
                 >
                     <div class="my-auto w-[70px] md:w-[100px]">
                         <time
-                            class="text-sm font-jiho-regular leading-none text-gray-500 dark:text-grey-light"
+                            class="text-sm font-jiho-regular text-gray-500 dark:text-grey-light"
                             >{{ experience.date }}</time
                         >
                     </div>
@@ -113,7 +113,7 @@
             <div class="flex-1 overflow-y-auto">
                 <div class="px-6 py-2" v-if="currentExperience.description">
                     <h5
-                        class="mt-2 font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                        class="mt-2 font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                     >
                         {{ currentExperience.description }}
                     </h5>

@@ -3,7 +3,7 @@
         class="flex flex-col lg:flex-row lg:items-center justify-center inherit-height"
     >
         <div
-            class="w-full flex flex-col flex-1 justify-center lg:w-6/12 h-2/3 sm:h-1/2 md:h-2/5 lg:h-fit lg:text-left lg:pr-8"
+            class="w-full flex flex-col flex-1 justify-center lg:w-6/12 h-2/3 sm:h-1/2 md:h-2/5 lg:h-fit lg:text-left lg:pr-6"
         >
             <h1
                 class="h-1/4 md:h-1/3 lg:h-fit my-4 font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter"
@@ -20,20 +20,20 @@
                 >.
             </h1>
             <div
-                class="h-2/4 md:h-2/3 lg:h-fit space-y-4 lg:space-y-6 xl:space-y-8 my-4"
+                class="h-2/4 md:h-2/3 lg:h-fit space-y-4 my-4"
             >
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
                     {{ $t("skills.description_1") }}
                 </p>
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
                     {{ $t("skills.description_2") }}
                 </p>
                 <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
                     {{ $t("skills.description_3") }}
                 </p>
@@ -41,7 +41,7 @@
         </div>
 
         <div
-            class="justify-start w-full lg:w-6/12 h-1/3 sm:h-1/2 md:h-3/5 flex flex-col flex-1"
+            class="justify-start w-full lg:w-6/12 lg:pl-6 h-1/3 sm:h-1/2 md:h-3/5 flex flex-col flex-1"
         >
             <div
                 v-for="(skill, id) in generalSkills"

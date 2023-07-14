@@ -19,12 +19,12 @@
                 </h1>
                 <div class="flex flex-col space-y-4">
                     <p
-                        class="text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                        class="text-center lg:text-justify font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                     >
                         {{ $t("hero_1") }}
                     </p>
                     <p
-                        class="text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                        class="text-center lg:text-justify font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                     >
                         {{ $t("hero_2") }}
                     </p>
