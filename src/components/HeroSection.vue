@@ -76,13 +76,13 @@
             <div class="w-full lg:w-6/12 flex justify-center lg:justify-end">
                 <img
                     v-if="theme === 'light'"
-                    src="@/assets/images/hero1.png"
+                    src="@/assets/images/hero3_LIGHT.png"
                     alt="Developer"
                     class="w-3/5 md:w-2/4 lg:w-10/12 h-fit"
                 />
                 <img
                     v-else
-                    src="@/assets/images/heroJG_v1_BW.png"
+                    src="@/assets/images/hero3_LIGHT_darkmode.png"
                     alt="Developer"
                     class="w-3/5 md:w-2/4 lg:w-10/12 h-fit"
                 />

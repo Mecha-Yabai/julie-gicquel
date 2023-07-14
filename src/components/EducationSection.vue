@@ -25,13 +25,13 @@
             <div class="hidden h-full lg:flex items-center">
                 <img
                     v-if="theme === 'light'"
-                    src="@/assets/images/hero3.png"
+                    src="@/assets/images/hero2_LIGHT.png"
                     alt="Developer"
                     class="lg:w-full"
                 />
                 <img
                     v-else
-                    src="@/assets/images/heroJG_v3_BW.png"
+                    src="@/assets/images/hero2_LIGHT_darkmode.png"
                     alt="Developer"
                     class="lg:w-full"
                 />
