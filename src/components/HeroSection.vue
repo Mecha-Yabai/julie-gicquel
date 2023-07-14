@@ -102,8 +102,8 @@
             </div>
         </div>
         <div class="hidden md:flex flex-none items-center justify-center my-4">
-            <a href="#skills">
-                <button
+            <router-link :to="{ name: 'Home', hash: '#skills' }">
+               <button
                     class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
                 >
                     <span
@@ -117,7 +117,7 @@
                         >{{ $t("learn_more") }}</span
                     >
                 </button>
-            </a>
+            </router-link>
         </div>
     </div>
 </template>

@@ -4,7 +4,7 @@
             v-for="section in sections"
             :key="section.id"
             :id="section.id"
-            class="h-full min-h-screen py-4"
+            class="max-h-full min-h-screen py-4"
         >
             <component :is="section.component"></component>
         </section>
