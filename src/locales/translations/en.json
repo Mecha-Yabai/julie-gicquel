@@ -85,8 +85,9 @@
         "title_1": "Education",
         "title_2": "&",
         "title_3": "training",
-        "description_1": "I obtained a bachelor's degree in a multidisciplinary program to improve my knowledge in economics, law and marketing while strengthening my language skills in english and starting to learn japanese.",
-        "description_2": "Attracted by digital technology, I completed a master's degree in digital communication and, after some professional experiences, I decided to follow a training in web development."
+        "description_1": "I obtained a bachelor's degree in a multidisciplinary program to improve my knowledge in economics, law and marketing.",
+        "description_2": "Also, I strengthened my language skills in english and started to learn japanese.",
+        "description_3": "Attracted by digital technology, I completed a master's degree in digital communication and, after some professional experiences, I decided to follow a training in web development."
     },
     "formations": {
         "sauveteur_name": "First Aid Worker",

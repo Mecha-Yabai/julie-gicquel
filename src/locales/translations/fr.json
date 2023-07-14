@@ -85,10 +85,14 @@
         "title_1": "Éducation",
         "title_2": "&",
         "title_3": "formations",
-        "description_1": "Après mon bac ES, j'ai obtenu une licence dans une filière pluridisciplinaire afin d'accroître mes connaissances en économie, en droit et en marketing tout en renforçant mes compétences linguistiques en anglais et en commençant l'apprentissage du japonais.",
-        "description_2": "Attirée par le numérique, j'ai effectué un master dans la communication digitale et, suite à quelques expériences professionnelles, je me suis formée au développement web."
+        "description_1": "Après mon bac ES, j'ai obtenu une licence dans une filière pluridisciplinaire afin d'accroître mes connaissances en économie, en droit et en marketing.",
+        "description_2": "J'ai également pu renforcer mes compétences linguistiques en anglais et commencer l'apprentissage du japonais.",
+        "description_3": "Attirée par le numérique, j'ai effectué un master dans la communication digitale et, suite à quelques expériences professionnelles, je me suis formée au développement web."
     },
     "formations": {
+        "ui_name": "Formation UI / UX",
+        "ui_school": "OnTrain",
+        "ui_date": "Juillet 2023",
         "sauveteur_name": "Formation Sauveteur Secouriste du Travail",
         "sauveteur_school": "PREVISS",
         "sauveteur_date": "Novembre 2022",
