@@ -19,48 +19,52 @@
                 </h1>
                 <div class="flex flex-col space-y-4">
                     <p
-                        class="text-justify sm:text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                        class="text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
                     >
                         {{ $t("hero_1") }}
                     </p>
                     <p
-                        class="text-justify sm:text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
+                        class="text-center lg:text-justify font-jiho-regular text-lg lg:text-xl leading-none text-gray-500 dark:text-grey-light"
                     >
                         {{ $t("hero_2") }}
                     </p>
                 </div>
                 <div
-                    class="flex flex-col space-y-2 sm:space-y-0 sm:flex-row items-center justify-evenly lg:justify-start my-4 sm:my-6 md:my-8"
+                    class="flex items-center justify-evenly lg:justify-start my-4 sm:my-6 md:my-8"
                 >
-                    <a
-                        download="Julie-Gicquel-CV.pdf"
-                        href="/julie-gicquel/files/Julie-Gicquel-CV.pdf"
-                        class="flex justify-center items-center px-4 w-auto sm:w-52 py-3 rounded-lg bg-red-600 dark:bg-primary hover:bg-red-700 dark:hover:bg-primary-darker border-red-600 hover:border-red-700 dark:border-none border-2 text-white duration-500 dark:hover:ring-2 dark:ring-primary"
-                        aria-label="Télécharger mon CV"
-                    >
-                        <span
-                            class="text-sm sm:text-md font-jiho-medium duration-100"
-                            >{{ $t("download_resume") }}</span
+                    <div>
+                        <a
+                            download="Julie-Gicquel-CV.pdf"
+                            href="/julie-gicquel/files/Julie-Gicquel-CV.pdf"
+                            class="flex justify-center items-center px-4 w-auto sm:w-52 py-3 rounded-lg bg-red-600 dark:bg-primary hover:bg-red-700 dark:hover:bg-primary-darker border-red-600 dark:border-red-700 hover:border-red-700 border-2 text-white duration-500"
+                            aria-label="Télécharger mon CV"
                         >
-                        <i
-                            data-feather="download"
-                            class="ml-2 w-fit sm:w-5 duration-100"
-                        ></i>
-                    </a>
-                    <a
-                        :href="`mailto:${mail}`"
-                        class="flex justify-center items-center lg:ml-4 px-4 w-auto sm:w-52 py-3 rounded-lg bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-none border-2 hover:bg-dark text-dark dark:text-white hover:text-white duration-500 dark:hover:ring-2"
-                    >
-                        <span
-                            class="text-sm w-fit sm:text-md font-jiho-medium duration-100"
+                            <span
+                                class="text-sm sm:text-md font-jiho-medium duration-100"
+                                >{{ $t("download_resume") }}</span
+                            >
+                            <i
+                                data-feather="download"
+                                class="ml-2 w-fit sm:w-5 duration-100"
+                            ></i>
+                        </a>
+                    </div>
+                    <div class="hidden sm:block">
+                        <a
+                            :href="`mailto:${mail}`"
+                            class="flex justify-center items-center lg:ml-4 px-4 w-auto py-3 rounded-lg bg-white dark:bg-dark dark:border-secondary dark:hover:bg-secondary border-dark border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white duration-500"
                         >
-                            {{ $t("get_in_touch") }}
-                        </span>
-                        <i
-                            data-feather="mail"
-                            class="ml-2 w-4 sm:w-5 duration-100"
-                        ></i>
-                    </a>
+                            <span
+                                class="text-sm w-fit font-jiho-medium duration-100"
+                            >
+                                {{ $t("get_in_touch") }}
+                            </span>
+                            <i
+                                data-feather="mail"
+                                class="ml-2 w-4 duration-100"
+                            ></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="flex flex-col space-y-2">
                     <p
@@ -70,6 +74,15 @@
                     </p>
                     <div class="flex justify-center lg:justify-start">
                         <SocialButton />
+                        <a
+                            :href="`mailto:${mail}`"
+                            class="md:hidden rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-dark shadow-lg border-dark dark:border-secondary border-2 hover:bg-dark text-dark dark:text-white dark:hover:bg-secondary dark:hover:text-primary hover:text-white text-center"
+                        >
+                            <i
+                                data-feather="mail"
+                                class="w-5 lg:w-16"
+                            ></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -88,7 +101,7 @@
                 />
             </div>
         </div>
-        <div class="flex flex-none items-center justify-center my-4">
+        <div class="hidden md:flex flex-none items-center justify-center my-4">
             <a href="#skills">
                 <button
                     class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"

@@ -71,12 +71,12 @@
                         <button
                             type="button"
                             @click="openExperienceInfosPanel(experience)"
-                            class="dark:border-white dark:border dark:hover:border-secondary dark:rounded-full dark:hover:bg-secondary"
+                            class="rounded-full border-primary dark:border-white dark:hover:border-secondary hover:bg-primary dark:hover:bg-secondary"
                         >
                             <i
                                 data-feather="chevron-right"
                                 stroke-width="1.5"
-                                class="text-primary dark:text-white"
+                                class="text-primary hover:text-white dark:text-white"
                             ></i>
                         </button>
                     </div>
