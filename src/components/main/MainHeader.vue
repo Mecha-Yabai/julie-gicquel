@@ -23,23 +23,23 @@
 
             <div class="hidden md:flex">
                 <router-link :to="{ name: 'Home', hash: '#experience' }">
-                    <MenuLinks class="mx-4">
+                    <MenuItem class="mx-4">
                         {{ $t("header.experience") }}
-                    </MenuLinks>
+                    </MenuItem>
                 </router-link>
                 <router-link :to="{ name: 'Home', hash: '#education' }">
-                    <MenuLinks class="mx-4">
+                    <MenuItem class="mx-4">
                         {{ $t("header.education") }}
-                    </MenuLinks>
+                    </MenuItem>
                 </router-link>
                 <router-link :to="{ name: 'About' }">
-                    <MenuLinks class="mx-4">
+                    <MenuItem class="mx-4">
                         {{ $t("header.about_me") }}
-                    </MenuLinks></router-link
+                    </MenuItem></router-link
                 >
             </div>
 
-            <div class="hidden md:flex">
+            <div class="flex">
                 <LocaleSwitcher class="mr-4" />
                 <ThemeSwitcher :theme="theme" @themeChanged="updateTheme" />
             </div>
@@ -49,13 +49,13 @@
 <script>
 import ThemeSwitcher from "../ThemeSwitcher.vue";
 import LocaleSwitcher from "../LocaleSwitcher.vue";
-import MenuLinks from "../reusable/MenuLinks.vue";
+import MenuItem from "../reusable/MenuItem.vue";
 
 export default {
     components: {
         ThemeSwitcher,
         LocaleSwitcher,
-        MenuLinks,
+        MenuItem,
     },
     data() {
         return {
