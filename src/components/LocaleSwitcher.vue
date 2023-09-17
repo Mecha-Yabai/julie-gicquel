@@ -1,7 +1,7 @@
 <template>
     <div class="relative text-lg w-12 md:w-18 lg:w-36">
         <button
-            class="flex items-center justify-between px-3 py-2 bg-white dark:bg-secondary-darker dark:text-white w-full border border-grey-light dark:border-none rounded-lg"
+            class="flex items-center justify-between px-3 py-2 bg-white dark:bg-secondary-darker dark:text-white w-full border-2 border-grey-light hover:border-primary dark:border-secondary-darker dark:hover:border-primary rounded-lg"
             @click="isOptionsExpanded = !isOptionsExpanded"
             @blur="isOptionsExpanded = false"
         >

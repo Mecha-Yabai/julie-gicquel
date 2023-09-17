@@ -1,9 +1,11 @@
 <template>
     <nav
-        class="header fixed top-0 inset-x-0 px-4 sm:px-16 py-4 bg-white dark:bg-dark shadow-md z-10 max-w-full block md:flex md:justify-between md:items-center dark:border-b-[2px] dark:border-secondary"
+        class="header fixed w-screen dark:border-b-[2px] dark:border-secondary md:shadow-sm lg:shadow-none"
         :class="{ 'is-hidden': !showHeader }"
     >
-        <div class="flex items-center justify-between">
+        <div
+            class="container flex w-full justify-between items-center p-4 sm:px-16 bg-white dark:bg-dark"
+        >
             <router-link to="/julie-gicquel/"
                 ><img
                     v-if="theme === 'light'"
@@ -19,57 +21,41 @@
                 />
             </router-link>
 
-            <div class="flex">
-                <locale-switcher class="block md:hidden mr-2" />
-                <theme-switcher
-                    :theme="theme"
-                    @themeChanged="updateTheme"
-                    class="block md:hidden bg-grey-light text-red-600 dark:bg-secondary-darker hover:bg-hover-light dark:hover:bg-hover-dark hover:shadow-sm px-2.5 py-2 mr-2 rounded-lg"
-                />
+            <div class="hidden md:flex">
+                <router-link :to="{ name: 'Home', hash: '#experience' }">
+                    <MenuLinks class="mx-4">
+                        {{ $t("header.experience") }}
+                    </MenuLinks>
+                </router-link>
+                <router-link :to="{ name: 'Home', hash: '#education' }">
+                    <MenuLinks class="mx-4">
+                        {{ $t("header.education") }}
+                    </MenuLinks>
+                </router-link>
+                <router-link :to="{ name: 'About' }">
+                    <MenuLinks class="mx-4">
+                        {{ $t("header.about_me") }}
+                    </MenuLinks></router-link
+                >
             </div>
-        </div>
 
-        <div class="hidden md:flex w-full justify-evenly menu">
-            <router-link :to="{ name: 'Home', hash: '#experience' }">
-                <span
-                    class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-primary links"
-                    >{{ $t("header.experience") }}</span
-                >
-            </router-link>
-            <router-link :to="{ name: 'Home', hash: '#education' }">
-                <span
-                    class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-primary links"
-                    >{{ $t("header.education") }}</span
-                >
-            </router-link>
-            <router-link :to="{ name: 'About' }"
-                ><span
-                    class="font-jiho-medium hover:text-red-600 dark:text-white dark:hover:text-primary links"
-                    >{{ $t("header.about_me") }}</span
-                ></router-link
-            >
-        </div>
-
-        <div
-            class="hidden md:flex justify-between items-center flex-col md:flex-row"
-        >
-            <LocaleSwitcher />
-            <ThemeSwitcher
-                :theme="theme"
-                @themeChanged="updateTheme"
-                class="ml-4 bg-grey-light hover:bg-red-600 text-red-600 hover:text-white dark:bg-secondary-darker px-3 py-2 shadow-sm rounded-xl cursor-pointer"
-            />
+            <div class="hidden md:flex">
+                <LocaleSwitcher class="mr-4" />
+                <ThemeSwitcher :theme="theme" @themeChanged="updateTheme" />
+            </div>
         </div>
     </nav>
 </template>
 <script>
-import ThemeSwitcher from "../ThemeSwitcher";
-import LocaleSwitcher from "../LocaleSwitcher";
+import ThemeSwitcher from "../ThemeSwitcher.vue";
+import LocaleSwitcher from "../LocaleSwitcher.vue";
+import MenuLinks from "../reusable/MenuLinks.vue";
 
 export default {
     components: {
         ThemeSwitcher,
         LocaleSwitcher,
+        MenuLinks,
     },
     data() {
         return {
@@ -140,36 +126,5 @@ export default {
 }
 .header.is-hidden {
     transform: translateY(-100%);
-}
-.menu {
-    .links {
-        position: relative;
-        display: block;
-        transition: 0.5s;
-
-        &::after {
-            position: absolute;
-            content: "";
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: theme("colors.red.600");
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.5s;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            &::after {
-                background: theme("colors.primary");
-            }
-        }
-
-        &:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-    }
 }
 </style>
