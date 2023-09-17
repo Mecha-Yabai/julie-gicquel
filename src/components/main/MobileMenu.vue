@@ -5,34 +5,19 @@
     >
         <div class="flex md:hidden w-full justify-evenly">
             <router-link :to="{ name: 'Home', hash: '#experience' }">
-                <div class="flex flex-col items-center">
-                    <i
-                        data-feather="briefcase"
-                        class="w-5 lg:w-16 text-white"
-                    ></i>
-                    <span class="font-jiho-medium text-white">{{
-                        $t("header.experience")
-                    }}</span>
-                </div>
+                <MobileMenuItem :selected-icon="'briefcase'"
+                    >{{ $t("header.experience") }}
+                </MobileMenuItem>
             </router-link>
             <router-link :to="{ name: 'Home', hash: '#education' }">
-                <div class="flex flex-col items-center">
-                    <i
-                        data-feather="book-open"
-                        class="w-5 lg:w-16 text-white"
-                    ></i>
-                    <span class="font-jiho-medium text-white">{{
-                        $t("header.education")
-                    }}</span>
-                </div>
+                <MobileMenuItem :selected-icon="'book-open'"
+                    >{{ $t("header.experience") }}
+                </MobileMenuItem>
             </router-link>
             <router-link :to="{ name: 'About' }">
-                <div class="flex flex-col items-center">
-                    <i data-feather="user" class="w-5 lg:w-16 text-white"></i>
-                    <span class="font-jiho-medium text-white">{{
-                        $t("header.about_me")
-                    }}</span>
-                </div>
+                <MobileMenuItem :selected-icon="'user'"
+                    >{{ $t("header.experience") }}
+                </MobileMenuItem>
             </router-link>
         </div>
     </nav>
@@ -40,7 +25,10 @@
 <script>
 import feather from "feather-icons";
 
+import MobileMenuItem from "../reusable/MobileMenuItem.vue";
+
 export default {
+    components: { MobileMenuItem },
     data() {
         return {
             theme: "",

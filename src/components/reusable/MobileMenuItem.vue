@@ -1,8 +1,18 @@
 <template>
-    <div>
-        <!-- TODO -->
+    <div class="flex flex-col items-center text-white">
+        <i :data-feather="selectedIcon" class="w-5 lg:w-16"></i>
+        <span class="font-jiho-medium">
+            <slot></slot>
+        </span>
     </div>
 </template>
 <script>
-export default {};
+export default {
+    props: {
+        selectedIcon: {
+            type: String,
+            required: true,
+        },
+    },
+};
 </script>

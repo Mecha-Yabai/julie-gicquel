@@ -33,37 +33,25 @@
                     class="flex items-center justify-evenly lg:justify-start my-4 sm:my-6 md:my-8"
                 >
                     <div class="w-8/12 sm:w-1/2">
-                        <a
-                            download="Julie-Gicquel-CV.pdf"
-                            href="/julie-gicquel/files/Julie-Gicquel-CV.pdf"
-                            class="flex justify-center items-center px-4 w-full py-3 rounded-lg bg-red-600 dark:bg-primary hover:bg-red-700 dark:hover:bg-primary-darker border-red-600 dark:border-red-700 hover:border-red-700 border-2 text-white duration-500"
-                            aria-label="Télécharger mon CV"
+                        <CTAButton
+                            :selectedIcon="'download'"
+                            :link="'/julie-gicquel/files/Julie-Gicquel-CV.pdf'"
+                            :download="'Julie-Gicquel-CV.pdf'"
+                            label="'CV'"
+                            class="bg-red-600 dark:bg-primary hover:bg-red-700 dark:hover:bg-primary-darker text-white"
                         >
-                            <span
-                                class="text-sm sm:text-md font-jiho-medium duration-100"
-                                >{{ $t("download_resume") }}</span
-                            >
-                            <i
-                                data-feather="download"
-                                class="ml-2 w-5 duration-100"
-                            ></i>
-                        </a>
+                            {{ $t("download_resume") }}
+                        </CTAButton>
                     </div>
                     <div class="hidden sm:block sm:w-1/2 sm:ml-4">
-                        <a
-                            :href="`mailto:${mail}`"
-                            class="flex justify-center items-center px-4 w-full py-3 rounded-lg bg-white dark:bg-dark dark:border-secondary dark:hover:bg-secondary border-dark border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white duration-500"
+                        <CTAButton
+                            :selectedIcon="'mail'"
+                            :link="`mailto:${mail}`"
+                            label="'Contact'"
+                            class="bg-white dark:bg-secondary border-dark dark:border-secondary border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white"
                         >
-                            <span
-                                class="text-sm font-jiho-medium duration-100"
-                            >
-                                {{ $t("get_in_touch") }}
-                            </span>
-                            <i
-                                data-feather="mail"
-                                class="ml-2 w-5 duration-100"
-                            ></i>
-                        </a>
+                            {{ $t("get_in_touch") }}
+                        </CTAButton>
                     </div>
                 </div>
                 <div class="flex flex-col space-y-2">
@@ -78,10 +66,7 @@
                             :href="`mailto:${mail}`"
                             class="sm:hidden rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-dark shadow-lg border-dark dark:border-secondary border-2 hover:bg-dark text-dark dark:text-white dark:hover:bg-secondary dark:hover:text-primary hover:text-white text-center"
                         >
-                            <i
-                                data-feather="mail"
-                                class="w-5 lg:w-16"
-                            ></i>
+                            <i data-feather="mail" class="w-5 lg:w-16"></i>
                         </a>
                     </div>
                 </div>
@@ -103,7 +88,7 @@
         </div>
         <div class="hidden lg:flex flex-none items-center justify-center my-4">
             <router-link :to="{ name: 'Home', hash: '#skills' }">
-               <button
+                <button
                     class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
                 >
                     <span
@@ -123,10 +108,12 @@
 </template>
 <script>
 import feather from "feather-icons";
+
 import SocialButton from "./reusable/SocialButton.vue";
+import CTAButton from "./reusable/CTAButton.vue";
 
 export default {
-    components: { SocialButton },
+    components: { SocialButton, CTAButton },
     data() {
         return {
             theme: "",
