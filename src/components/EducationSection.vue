@@ -61,7 +61,7 @@
                             {{ formation.name }}
                         </h3>
                         <h5
-                            class="text-sm font-jiho-regular text-primay-dark dark:text-primary"
+                            class="text-sm font-jiho-regular text-primary"
                         >
                             {{ formation.school }}
                         </h5>

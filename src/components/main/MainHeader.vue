@@ -2,6 +2,7 @@
     <nav
         class="header fixed top-0 w-screen dark:border-b-[2px] dark:border-secondary md:shadow-sm lg:shadow-none"
         :class="{ 'is-hidden': !showHeader }"
+        ref="myHeader"
     >
         <div
             class="container flex w-full justify-between items-center p-4 sm:px-16 bg-white dark:bg-dark"
@@ -59,31 +60,7 @@ export default {
     },
     data() {
         return {
-            isOpen: false,
             theme: "",
-            modal: false,
-            categories: [
-                {
-                    id: 1,
-                    value: "web",
-                    name: "Web Application",
-                },
-                {
-                    id: 2,
-                    value: "mobile",
-                    name: "Mobile Application",
-                },
-                {
-                    id: 3,
-                    value: "ui-ux",
-                    name: "UI/UX Design",
-                },
-                {
-                    id: 4,
-                    value: "branding",
-                    name: "Branding & Anim",
-                },
-            ],
             showHeader: true,
             lastScrollPosition: 0,
             scrollOffset: 40,

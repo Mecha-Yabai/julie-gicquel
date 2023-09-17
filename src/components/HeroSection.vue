@@ -86,7 +86,7 @@
                 />
             </div>
         </div>
-        <div class="hidden lg:flex flex-none items-center justify-center my-4">
+        <div class="hidden lg:flex flex-none items-center justify-center mb-12">
             <router-link :to="{ name: 'Home', hash: '#skills' }">
                 <button
                     class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
@@ -118,7 +118,6 @@ export default {
         return {
             theme: "",
             mail: "julie.gcql@gmail.com",
-            addMarginOnTop: false,
         };
     },
     created() {
@@ -126,9 +125,6 @@ export default {
     },
     mounted() {
         feather.replace();
-        if (window.pageYOffset < 0) {
-            this.addMarginOnTop = true;
-        }
     },
     updated() {
         feather.replace();

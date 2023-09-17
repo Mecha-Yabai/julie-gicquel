@@ -61,9 +61,7 @@
                         >
                             {{ experience.name }}
                         </h3>
-                        <h5
-                            class="mt-2 text-sm font-jiho-regular text-primay-dark dark:text-primary"
-                        >
+                        <h5 class="mt-2 text-sm font-jiho-regular text-primary">
                             {{ experience.company }}
                         </h5>
                         <time
@@ -75,12 +73,11 @@
                         <button
                             type="button"
                             @click="openExperienceInfosPanel(experience)"
-                            class="rounded-full border-primary dark:border-white dark:hover:border-secondary hover:bg-primary dark:hover:bg-secondary"
+                            class="rounded-full p-2 text-dark hover:text-white dark:text-white border-primary dark:border-white dark:hover:border-secondary hover:bg-primary dark:hover:bg-secondary"
                         >
                             <i
                                 data-feather="chevron-right"
                                 stroke-width="1.5"
-                                class="text-primary hover:text-white dark:text-white"
                             ></i>
                         </button>
                     </div>
@@ -103,21 +100,21 @@
                 class="flex tems-center justify-center px-4 py-6 border-b dark:border-secondary"
             >
                 <h3
-                    class="flex-1 text-md lg:text-lg font-jiho-medium text-primay-dark dark:text-primary"
+                    class="flex-1 text-md lg:text-lg font-jiho-medium text-primary"
                 >
                     {{ currentExperience.name }}
                 </h3>
                 <button
                     @click="closeExperienceInfosPanel()"
-                    class="flex-none text-primay-dark ml-2"
+                    class="flex-none text-primary ml-2"
                 >
-                    <i data-feather="x" class="text-primary"></i>
+                    <i data-feather="x"></i>
                 </button>
             </div>
-            <div class="flex-1 overflow-y-auto">
+            <div class="flex-1 overflow-y-auto pt-2 pb-6">
                 <div class="px-6 py-2" v-if="currentExperience.description">
                     <h5
-                        class="mt-2 font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
+                        class="mt-2 font-jiho-regular text-md text-gray-500 dark:text-grey-light"
                     >
                         {{ currentExperience.description }}
                     </h5>
@@ -165,7 +162,6 @@ export default {
     data() {
         return {
             theme: "",
-            modal: false,
             currentExperience: {},
             isExperienceInfosPanelOpen: false,
         };
