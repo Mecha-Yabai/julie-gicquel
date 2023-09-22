@@ -48,7 +48,7 @@
                             :selectedIcon="'mail'"
                             :link="`mailto:${mail}`"
                             label="'Contact'"
-                            class="bg-white dark:bg-secondary border-dark dark:border-secondary border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white"
+                            class="bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white"
                         >
                             {{ $t("get_in_touch") }}
                         </CTAButton>
@@ -64,7 +64,7 @@
                         <SocialButton />
                         <a
                             :href="`mailto:${mail}`"
-                            class="rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-secondary border-dark dark:border-secondary border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white text-center"
+                            class="inline-flex sm:hidden rounded-full h-11 w-11 sm:h-12 sm:w-12 items-center justify-center mx-2 bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white text-center"
                         >
                             <i data-feather="mail" class="w-5 lg:w-16"></i>
                         </a>
