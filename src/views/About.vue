@@ -8,7 +8,7 @@
         <div class="flex flex-col lg:flex-row lg:items-center">
             <div class="w-full lg:w-1/5 my-5 lg:my-0 lg:mr-6">
                 <img
-                    src="@/assets/images/JG.png"
+                    src="@/assets/images/JG.jpg"
                     class="rounded-xl lg:w-72 md:w-56 w-48 mx-auto sm:mx-none"
                     alt="Julie Gicquel"
                 />
