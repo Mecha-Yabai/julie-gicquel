@@ -73,10 +73,10 @@
                         <button
                             type="button"
                             @click="openExperienceInfosPanel(experience)"
-                            class="rounded-full p-2 text-dark hover:text-white dark:text-white border-primary dark:border-white dark:hover:border-secondary hover:bg-primary dark:hover:bg-secondary"
+                            class="rounded-full p-2 text-dark hover:text-primary dark:text-white dark:hover:text-primary"
                         >
                             <i
-                                data-feather="chevron-right"
+                                data-feather="plus-circle"
                                 stroke-width="1.5"
                             ></i>
                         </button>
