@@ -109,6 +109,8 @@
 <script>
 import feather from "feather-icons";
 
+import { mail } from '../data/socials'
+
 import SocialButton from "./reusable/SocialButton.vue";
 import CTAButton from "./reusable/CTAButton.vue";
 
@@ -117,7 +119,7 @@ export default {
     data() {
         return {
             theme: "",
-            mail: "julie.gcql@gmail.com",
+            mail,
         };
     },
     created() {

@@ -1,4 +1,4 @@
-const socials = [
+export const socials = [
     {
         id: 1,
         name: "Linkedin",
@@ -13,4 +13,4 @@ const socials = [
     },
 ];
 
-export default socials;
+export const mail = "julie.gcql@gmail.com";

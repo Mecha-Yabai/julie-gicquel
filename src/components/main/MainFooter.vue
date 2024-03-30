@@ -84,6 +84,8 @@
     </div>
 </template>
 <script>
+import { mail } from "../../data/socials";
+
 import SocialButton from "../reusable/SocialButton.vue";
 import MainFooterCopyright from "./MainFooterCopyright.vue";
 
@@ -91,7 +93,7 @@ export default {
     components: { MainFooterCopyright, SocialButton },
     data() {
         return {
-            mail: "julie.gcql@gmail.com",
+            mail,
         };
     },
     created() {

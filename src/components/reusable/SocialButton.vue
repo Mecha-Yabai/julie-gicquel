@@ -11,7 +11,7 @@
 </template>
 <script>
 import feather from "feather-icons";
-import socials from "../../data/socials";
+import { socials } from "../../data/socials";
 
 export default {
     data() {
