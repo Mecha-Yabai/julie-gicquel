@@ -1,14 +1,13 @@
 <template>
-    <div class="container mx-auto px-4 sm:px-16">
-        <section
-            v-for="section in sections"
-            :key="section.id"
-            :id="section.id"
-            class="max-h-full min-h-screen py-4"
-        >
-            <component :is="section.component"></component>
-        </section>
-    </div>
+    <section
+        v-for="section in sections"
+        :key="section.id"
+        :id="section.id"
+        class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
+        :class="{ 'pt-0': section.id === 'hero' }"
+    >
+        <component :is="section.component"></component>
+    </section>
 </template>
 <script>
 import HeroSection from "@/components/HeroSection.vue";

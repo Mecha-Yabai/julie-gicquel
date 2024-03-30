@@ -3,7 +3,7 @@
         class="flex flex-col inherit-height pt-[72.66px] md:pt-[78px] lg:justify-between"
     >
         <div
-            class="flex flex-1 flex-col-reverse lg:flex-row justify-evenly lg:items-center"
+            class="flex flex-1 flex-col-reverse lg:flex-row justify-center lg:items-center"
         >
             <div class="w-full lg:w-6/12 text-left lg:pr-8">
                 <h1
@@ -76,17 +76,19 @@
                     v-if="theme === 'light'"
                     src="@/assets/images/hero3_LIGHT.png"
                     alt="Developer"
-                    class="w-full sm:w-3/4 md:2/4 lg:w-10/12"
+                    class="w-11/12 sm:w-7/12 lg:w-10/12"
                 />
                 <img
                     v-else
                     src="@/assets/images/hero3_LIGHT_darkmode.png"
                     alt="Developer"
-                    class="w-full sm:w-3/4 md:2/4 lg:w-10/12"
+                    class="w-11/12 sm:w-7/12 lg:w-10/12"
                 />
             </div>
         </div>
-        <div class="hidden lg:flex flex-none items-center justify-center mb-12">
+        <div
+            class="hidden lg:flex lg:flex-1 flex-none items-center justify-center"
+        >
             <router-link :to="{ name: 'Home', hash: '#skills' }">
                 <button
                     class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
@@ -109,7 +111,7 @@
 <script>
 import feather from "feather-icons";
 
-import { mail } from '../data/socials'
+import { mail } from "../data/socials";
 
 import SocialButton from "./reusable/SocialButton.vue";
 import CTAButton from "./reusable/CTAButton.vue";
