@@ -5,6 +5,10 @@ import About from "../views/About.vue";
 const routes = [
     {
         path: "/",
+        redirect: { name: "Home" },
+    },
+    {
+        path: "/julie-gicquel/",
         name: "Home",
         component: Home,
     },

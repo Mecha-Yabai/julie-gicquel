@@ -64,7 +64,7 @@ export default {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
                             router.replace({
-                                path: "/",
+                                path: "/julie-gicquel/",
                                 hash: `#${entry.target.id}`,
                             });
                         }

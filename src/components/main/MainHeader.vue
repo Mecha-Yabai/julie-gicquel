@@ -7,7 +7,7 @@
         <div
             class="container flex w-full justify-between items-center p-4 sm:px-16 bg-white dark:bg-dark"
         >
-            <router-link to="/"
+            <router-link to="/julie-gicquel/"
                 ><img
                     v-if="theme === 'light'"
                     src="@/assets/images/logo-dark.svg"
