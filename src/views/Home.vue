@@ -1,48 +1,95 @@
 <template>
     <section
-        v-for="section in sections"
-        :key="section.id"
-        :id="section.id"
-        class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
-        :class="{ 'pt-0': section.id === 'hero' }"
+        class="max-h-full min-h-screen p-4 pt-0 container mx-auto sm:px-16"
+        ref="hero"
+        id="hero"
     >
-        <component :is="section.component"></component>
+        <Hero />
+    </section>
+    <section
+        class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
+        ref="skills"
+        id="skills"
+    >
+        <Skills />
+    </section>
+    <section
+        class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
+        ref="experience"
+        id="experience"
+    >
+        <Experience />
+    </section>
+    <section
+        class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
+        ref="education"
+        id="education"
+    >
+        <Education />
     </section>
 </template>
 <script>
-import HeroSection from "@/components/HeroSection.vue";
-import SkillsSection from "@/components/SkillsSection.vue";
-import ExperienceSection from "@/components/ExperienceSection.vue";
-import EducationSection from "@/components/EducationSection.vue";
+import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
+import Hero from "@/components/HeroSection.vue";
+import Skills from "@/components/SkillsSection.vue";
+import Experience from "@/components/ExperienceSection.vue";
+import Education from "@/components/EducationSection.vue";
 
 export default {
     components: {
-        HeroSection,
-        SkillsSection,
-        ExperienceSection,
-        EducationSection,
+        Hero,
+        Skills,
+        Experience,
+        Education,
     },
-    computed: {
-        sections() {
-            return [
-                {
-                    id: "hero",
-                    component: HeroSection,
+
+    setup() {
+        const hero = ref(null);
+        const skills = ref(null);
+        const experience = ref(null);
+        const education = ref(null);
+        const router = useRouter();
+
+        const sections = [
+            { id: "hero", ref: hero },
+            { id: "skills", ref: skills },
+            { id: "experience", ref: experience },
+            { id: "education", ref: education },
+        ];
+
+        onMounted(() => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            router.replace({
+                                path: "/",
+                                hash: `#${entry.target.id}`,
+                            });
+                        }
+                    });
                 },
                 {
-                    id: "skills",
-                    component: SkillsSection,
-                },
-                {
-                    id: "experience",
-                    component: ExperienceSection,
-                },
-                {
-                    id: "education",
-                    component: EducationSection,
-                },
-            ];
-        },
+                    root: null,
+                    rootMargin: "0px",
+                    threshold: 0.1,
+                }
+            );
+
+            sections.forEach((section) => {
+                if (section.ref.value) {
+                    observer.observe(section.ref.value);
+                }
+            });
+        });
+
+        return {
+            hero,
+            skills,
+            experience,
+            education,
+        };
     },
 };
 </script>

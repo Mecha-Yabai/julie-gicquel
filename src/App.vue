@@ -1,11 +1,7 @@
 <template>
-    <div :class="mainTheme">
+    <div id="app" :class="mainTheme">
         <MainHeader />
-        <router-view v-slot="{ Component }">
-            <transition name="fade" mode="out-in">
-                <component :is="Component" :theme="mainTheme" />
-            </transition>
-        </router-view>
+        <router-view />
         <MainFooter />
         <MobileMenu />
     </div>

@@ -7,7 +7,7 @@
         <div
             class="container flex w-full justify-between items-center p-4 sm:px-16 bg-white dark:bg-dark"
         >
-            <router-link to="/julie-gicquel/"
+            <router-link to="/"
                 ><img
                     v-if="theme === 'light'"
                     src="@/assets/images/logo-dark.svg"
@@ -23,17 +23,22 @@
             </router-link>
 
             <div class="hidden md:flex">
-                <router-link :to="{ name: 'Home', hash: '#experience' }">
+                <router-link :to="{ path: '/', hash: '#skills' }">
+                    <MenuItem class="mx-4">
+                        {{ $t("header.skills") }}
+                    </MenuItem>
+                </router-link>
+                <router-link :to="{ path: '/', hash: '#experience' }">
                     <MenuItem class="mx-4">
                         {{ $t("header.experience") }}
                     </MenuItem>
                 </router-link>
-                <router-link :to="{ name: 'Home', hash: '#education' }">
+                <router-link :to="{ path: '/', hash: '#education' }">
                     <MenuItem class="mx-4">
                         {{ $t("header.education") }}
                     </MenuItem>
                 </router-link>
-                <router-link :to="{ name: 'About' }">
+                <router-link to="/about">
                     <MenuItem class="mx-4">
                         {{ $t("header.about_me") }}
                     </MenuItem></router-link

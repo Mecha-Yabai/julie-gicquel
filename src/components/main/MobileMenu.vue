@@ -4,21 +4,21 @@
         :class="{ 'is-hidden': !showFooter }"
     >
         <div class="flex md:hidden w-full justify-evenly">
-            <router-link :to="{ name: 'Home', hash: '#experience' }">
-                <MobileMenuItem :selected-icon="'briefcase'"
-                    >{{ $t("header.experience") }}
+            <router-link :to="{ path: '/', hash: '#experience' }">
+                <MobileMenuItem :selected-icon="'briefcase'">
+                    {{ $t("header.experience") }}
                 </MobileMenuItem>
             </router-link>
-            <router-link :to="{ name: 'Home', hash: '#education' }">
-                <MobileMenuItem :selected-icon="'book-open'"
-                    >{{ $t("header.experience") }}
+            <router-link :to="{ path: '/', hash: '#education' }">
+                <MobileMenuItem :selected-icon="'book-open'">
+                    {{ $t("header.education") }}
                 </MobileMenuItem>
             </router-link>
             <router-link :to="{ name: 'About' }">
-                <MobileMenuItem :selected-icon="'user'"
-                    >{{ $t("header.experience") }}
-                </MobileMenuItem>
-            </router-link>
+                <MobileMenuItem :selected-icon="'user'">
+                    {{ $t("header.about_me") }}
+                </MobileMenuItem></router-link
+            >
         </div>
     </nav>
 </template>
