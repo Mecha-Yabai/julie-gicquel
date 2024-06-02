@@ -2,13 +2,14 @@
     "greetings": "Hey ! Je suis",
     "name": "Julie",
     "web_developer": "développeuse full stack",
-    "hero_1": "Créative et force de proposition, j'ai plus de trois ans d'expérience dans le développement web (Vue.JS & Laravel) et le design UI/UX ainsi qu'une double compétence dans le web marketing. 👩🏻‍💻",
+    "hero_1": "Créative et force de proposition, j'ai plus de cinq ans d'expérience dans le développement web (Vue.JS & Laravel) et le design UI/UX ainsi qu'une double compétence dans le web marketing. 👩🏻‍💻",
     "hero_2": "Mon but ? Offrir la meilleure expérience utilisateur en maquettant et développant des interfaces intuitives et performantes avec un design adapté, respectant l’identité de la marque. 🎯",
     "download_resume": "Télécharger mon CV",
     "get_in_touch": "Me contacter",
     "follow_me": "Retrouvez-moi sur",
     "learn_more": "En savoir plus",
     "header": {
+        "skills": "Compétences",
         "experience": "Expériences",
         "education": "Formations",
         "about_me": "À propos"
@@ -18,10 +19,10 @@
         "title_2": "profil",
         "title_3": "Triple",
         "title_4": "compétences",
-        "description_1": "J’ai commencé ma carrière dans le web marketing et le community management, ce qui m'a permis de mettre à profit ma créativité et d'apprendre comment réaliser des stratégies d’acquisition et fidélisation efficaces.",
+        "description_1": "J’ai commencé ma carrière dans le web marketing et le community management, ce qui m'a permis de mettre à profit ma créativité et d'apprendre comment réaliser des stratégies d’acquisition et de fidélisation efficaces.",
         "description_2": "J'ai décidé de me réorienter dans le développement web pour acquérir la technique nécessaire pour concevoir de façon plus concrète les idées qui abondent dans ma tête.",
         "description_3": "Curieuse et riche de mes diverses compétences professionnelles, je suis une développeuse front-end avec une appétence particulière pour l'UI/UX et toujours avide de progresser dans le back-end. J'aime créer des maquettes et développer des sites attractifs, performants et intuitifs.",
-        "web_development": "Développement Full-Stack",
+        "web_development": "Développement Front-End",
         "ui_ux_design": "UI/UX Design",
         "web_marketing": "Web marketing & Communication digitale"
     },
