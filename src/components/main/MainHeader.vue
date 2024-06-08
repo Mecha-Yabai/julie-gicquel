@@ -23,24 +23,24 @@
             </router-link>
 
             <div class="hidden md:flex">
-                <router-link :to="{ path: '/', hash: '#skills' }">
+                <router-link :to="{ path: '/julie-gicquel/', hash: '#skills' }">
                     <MenuItem class="mx-4">
-                        {{ $t("header.skills") }}
+                        {{ $t('header.skills') }}
                     </MenuItem>
                 </router-link>
-                <router-link :to="{ path: '/', hash: '#experience' }">
+                <router-link :to="{ path: '/julie-gicquel/', hash: '#experience' }">
                     <MenuItem class="mx-4">
-                        {{ $t("header.experience") }}
+                        {{ $t('header.experience') }}
                     </MenuItem>
                 </router-link>
-                <router-link :to="{ path: '/', hash: '#education' }">
+                <router-link :to="{ path: '/julie-gicquel/', hash: '#education' }">
                     <MenuItem class="mx-4">
-                        {{ $t("header.education") }}
+                        {{ $t('header.education') }}
                     </MenuItem>
                 </router-link>
                 <router-link to="/about">
                     <MenuItem class="mx-4">
-                        {{ $t("header.about_me") }}
+                        {{ $t('header.about_me') }}
                     </MenuItem></router-link
                 >
             </div>

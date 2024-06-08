@@ -17,11 +17,6 @@ const routes = [
         name: "About",
         component: About,
     },
-    {
-        path: "/:sectionId",
-        name: "Section",
-        component: Home,
-    },
 ];
 
 const router = createRouter({

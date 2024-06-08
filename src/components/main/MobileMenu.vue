@@ -4,17 +4,17 @@
         :class="{ 'is-hidden': !showFooter }"
     >
         <div class="flex md:hidden w-full justify-evenly">
-            <router-link :to="{ path: '/', hash: '#experience' }">
+            <router-link :to="{ path: '/julie-gicquel/', hash: '#experience' }">
                 <MobileMenuItem :selected-icon="'briefcase'">
                     {{ $t("header.experience") }}
                 </MobileMenuItem>
             </router-link>
-            <router-link :to="{ path: '/', hash: '#education' }">
+            <router-link :to="{ path: '/julie-gicquel/', hash: '#education' }">
                 <MobileMenuItem :selected-icon="'book-open'">
                     {{ $t("header.education") }}
                 </MobileMenuItem>
             </router-link>
-            <router-link :to="{ name: 'About' }">
+            <router-link to="/about">
                 <MobileMenuItem :selected-icon="'user'">
                     {{ $t("header.about_me") }}
                 </MobileMenuItem></router-link

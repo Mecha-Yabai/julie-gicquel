@@ -1,36 +1,30 @@
 <template>
     <section
         class="max-h-full min-h-screen p-4 pt-0 container mx-auto sm:px-16"
-        ref="hero"
         id="hero"
     >
         <Hero />
     </section>
     <section
         class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
-        ref="skills"
         id="skills"
     >
         <Skills />
     </section>
     <section
         class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
-        ref="experience"
         id="experience"
     >
         <Experience />
     </section>
     <section
         class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
-        ref="education"
         id="education"
     >
         <Education />
     </section>
 </template>
 <script>
-import { onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
 import Hero from "@/components/HeroSection.vue";
 import Skills from "@/components/SkillsSection.vue";
 import Experience from "@/components/ExperienceSection.vue";
@@ -44,52 +38,39 @@ export default {
         Education,
     },
 
-    setup() {
-        const hero = ref(null);
-        const skills = ref(null);
-        const experience = ref(null);
-        const education = ref(null);
-        const router = useRouter();
+    mounted() {
+        this.observeSections();
+    },
 
-        const sections = [
-            { id: "hero", ref: hero },
-            { id: "skills", ref: skills },
-            { id: "experience", ref: experience },
-            { id: "education", ref: education },
-        ];
+    methods: {
+        observeSections() {
+            const sections = document.querySelectorAll("section[id]");
+            const options = {
+                root: null, // viewport
+                rootMargin: "0px",
+                threshold: 0.5, // Observer au moins 50% visible
+            };
 
-        onMounted(() => {
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            router.replace({
-                                path: "/julie-gicquel/",
-                                hash: `#${entry.target.id}`,
-                            });
-                        }
-                    });
-                },
-                {
-                    root: null,
-                    rootMargin: "0px",
-                    threshold: 0.1,
-                }
-            );
+            const callback = (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        this.updateUrlHash(`#${id}`);
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(callback, options);
 
             sections.forEach((section) => {
-                if (section.ref.value) {
-                    observer.observe(section.ref.value);
-                }
+                observer.observe(section);
             });
-        });
-
-        return {
-            hero,
-            skills,
-            experience,
-            education,
-        };
+        },
+        updateUrlHash(hash) {
+            if (window.location.hash !== hash) {
+                history.replaceState(null, null, hash);
+            }
+        },
     },
 };
 </script>
