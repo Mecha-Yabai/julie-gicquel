@@ -12,32 +12,6 @@ body {
 
 /* Fonts */
 @font-face {
-  font-family: "Jiho-ExtraLight";
-  src: url("../fonts/Jiho-ExtraLight.otf") format("opentype"),
-    url("../fonts/Jiho-ExtraLight.ttf") format("truetype");
-  font-weight: 200;
-  font-display: swap;
-  font-style: normal;
-}
-
-.font-jiho-extralight {
-  font-family: "Jiho-ExtraLight";
-}
-
-@font-face {
-  font-family: "Jiho-ExtraLightItalic";
-  src: url("../fonts/Jiho-ExtraLightItalic.otf") format("opentype"),
-    url("../fonts/Jiho-ExtraLightItalic.ttf") format("truetype");
-  font-weight: 200;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-jiho-extralight-italic {
-  font-family: "Jiho-ExtraLightItalic";
-}
-
-@font-face {
   font-family: "Jiho-Light";
   src: url("../fonts/Jiho-Light.otf") format("opentype"),
     url("../fonts/Jiho-Light.ttf") format("truetype");
@@ -48,19 +22,6 @@ body {
 
 .font-jiho-light {
   font-family: "Jiho-Light";
-}
-
-@font-face {
-  font-family: "Jiho-LightItalic";
-  src: url("../fonts/Jiho-LightItalic.otf") format("opentype"),
-    url("../fonts/Jiho-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-jiho-light-italic {
-  font-family: "Jiho-LightItalic";
 }
 
 @font-face {
@@ -77,19 +38,6 @@ body {
 }
 
 @font-face {
-  font-family: "Jiho-Italic";
-  src: url("../fonts/Jiho-Italic.otf") format("opentype"),
-    url("../fonts/Jiho-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-jiho-italic {
-  font-family: "Jiho-Italic";
-}
-
-@font-face {
   font-family: "Jiho-Medium";
   src: url("../fonts/Jiho-Medium.otf") format("opentype"),
     url("../fonts/Jiho-Medium.ttf") format("truetype");
@@ -103,45 +51,6 @@ body {
 }
 
 @font-face {
-  font-family: "Jiho-MediumItalic";
-  src: url("../fonts/Jiho-MediumItalic.otf") format("opentype"),
-    url("../fonts/Jiho-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-jiho-medium-italic {
-  font-family: "Jiho-MediumItalic";
-}
-
-@font-face {
-  font-family: "Jiho-Black";
-  src: url("../fonts/Jiho-Black.otf") format("opentype"),
-    url("../fonts/Jiho-Black.ttf") format("truetype");
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
-
-.font-jiho-black {
-  font-family: "Jiho-Black";
-}
-
-@font-face {
-  font-family: "Jiho-BlackItalic";
-  src: url("../fonts/Jiho-BlackItalic.otf") format("opentype"),
-    url("../fonts/Jiho-BlackItalic.ttf") format("truetype");
-  font-weight: 600;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-jiho-black-italic {
-  font-family: "Jiho-BlackItalic";
-}
-
-@font-face {
   font-family: "Jiho-Bold";
   src: url("../fonts/Jiho-Bold.otf") format("opentype"),
     url("../fonts/Jiho-Bold.ttf") format("truetype");
@@ -152,67 +61,4 @@ body {
 
 .font-jiho-bold {
   font-family: "Jiho-Bold";
-}
-
-@font-face {
-  font-family: "Jiho-BoldItalic";
-  src: url("../fonts/Jiho-BoldItalic.otf") format("opentype"),
-    url("../fonts/Jiho-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-jiho-bold-italic {
-  font-family: "Jiho-BoldItalic";
-}
-
-@font-face {
-  font-family: "Jiho-ExtraBold";
-  src: url("../fonts/Jiho-ExtraBold.otf") format("opentype"),
-    url("../fonts/Jiho-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-display: swap;
-}
-
-.font-jiho-extra-bold {
-  font-family: "Jiho-ExtraBold";
-}
-
-@font-face {
-  font-family: "Jiho-ExtraBoldItalic";
-  src: url("../fonts/Jiho-ExtraBoldItalic.otf") format("opentype"),
-    url("../fonts/Jiho-ExtraBoldItalic.ttf") format("truetype");
-  font-weight: 800;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-jiho-extra-bold-italic {
-  font-family: "Jiho-ExtraBoldItalic";
-}
-
-@font-face {
-  font-family: "Jiho-Heavy";
-  src: url("../fonts/Jiho-Heavy.otf") format("opentype"),
-    url("../fonts/Jiho-Heavy.ttf") format("truetype");
-  font-weight: 900;
-  font-display: swap;
-}
-
-.font-jiho-heavy {
-  font-family: "Jiho-Heavy";
-}
-
-@font-face {
-  font-family: "Jiho-HeavyItalic";
-  src: url("../fonts/Jiho-HeavyItalic.otf") format("opentype"),
-    url("../fonts/Jiho-HeavyItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-display: swap;
-  font-style: italic;
-}
-
-.font-jiho-heavy-italic {
-  font-family: "Jiho-HeavyItalic";
 }
