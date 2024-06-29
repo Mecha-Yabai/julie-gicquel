@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="header fixed top-0 w-screen dark:border-b-[2px] dark:border-secondary md:shadow-sm lg:shadow-none"
+        class="header fixed z-10 top-0 w-screen dark:border-b-[2px] dark:border-secondary md:shadow-sm lg:shadow-none"
         :class="{ 'is-hidden': !showHeader }"
         ref="myHeader"
     >
