@@ -12,19 +12,11 @@
             </h1>
             <div class="space-y-4 my-4">
                 <p
+                    v-for="paragraph in experiencesParagraphs"
+                    :key="paragraph.id"
                     class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
-                    {{ $t("experiences.description_1") }}
-                </p>
-                <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
-                >
-                    {{ $t("experiences.description_2") }}
-                </p>
-                <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
-                >
-                    {{ $t("experiences.description_3") }}
+                    {{ $t(paragraph.text) }}
                 </p>
             </div>
             <div class="hidden h-full lg:flex items-center">
@@ -187,6 +179,13 @@ export default {
                 company: this.$t(experiences.company),
                 date: this.$t(experiences.date),
             }));
+        },
+        experiencesParagraphs() {
+            return [
+                { id: 1, text: "experiences.description_1" },
+                { id: 2, text: "experiences.description_2" },
+                { id: 3, text: "experiences.description_3" },
+            ];
         },
     },
     methods: {

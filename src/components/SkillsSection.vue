@@ -19,23 +19,13 @@
                 }}</span
                 >.
             </h1>
-            <div
-                class="h-2/4 md:h-2/3 lg:h-fit space-y-4 my-4"
-            >
+            <div class="h-2/4 md:h-2/3 lg:h-fit space-y-4 my-4">
                 <p
+                    v-for="paragraph in skillsParagraphs"
+                    :key="paragraph.id"
                     class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
-                    {{ $t("skills.description_1") }}
-                </p>
-                <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
-                >
-                    {{ $t("skills.description_2") }}
-                </p>
-                <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
-                >
-                    {{ $t("skills.description_3") }}
+                    {{ $t(paragraph.text) }}
                 </p>
             </div>
         </div>
@@ -44,8 +34,8 @@
             class="justify-start w-full lg:w-6/12 lg:pl-6 h-1/3 sm:h-1/2 md:h-3/5 flex flex-col flex-1"
         >
             <div
-                v-for="(skill, id) in generalSkills"
-                :key="id"
+                v-for="skill in skillsTitles"
+                :key="skill.id"
                 class="h-24 md:h-32 lg:h-40"
             >
                 <hr class="dark:border-secondary" />
@@ -58,7 +48,7 @@
                     <h1
                         class="text-left text-xl sm:text-2xl lg:text-3xl font-jiho-medium text-dark dark:text-grey-lighter"
                     >
-                        {{ skill.title }}
+                        {{ $t(skill.title) }}
                     </h1>
                 </div>
             </div>
@@ -76,11 +66,18 @@ export default {
         this.theme = localStorage.getItem("theme") || "light";
     },
     computed: {
-        generalSkills() {
+        skillsTitles() {
             return [
-                { id: 1, title: this.$t("skills.web_development") },
-                { id: 2, title: this.$t("skills.ui_ux_design") },
-                { id: 3, title: this.$t("skills.web_marketing") },
+                { id: 1, title: "skills.web_development" },
+                { id: 2, title: "skills.ui_ux_design" },
+                { id: 3, title: "skills.web_marketing" },
+            ];
+        },
+        skillsParagraphs() {
+            return [
+                { id: 1, text: "skills.description_1" },
+                { id: 2, text: "skills.description_2" },
+                { id: 3, text: "skills.description_3" },
             ];
         },
     },

@@ -20,7 +20,7 @@
                     :key="bio.id"
                     class="font-general-regular text-grey-dark dark:text-grey-light text-lg"
                 >
-                    {{ bio.bio }}
+                    {{ $t(bio.text) }}
                 </p>
             </div>
         </div>
@@ -33,23 +33,23 @@ export default {
             return [
                 {
                     id: 1,
-                    bio: this.$t("about_me_1"),
+                    text: "about_me_1",
                 },
                 {
                     id: 2,
-                    bio: this.$t("about_me_2"),
+                    text: "about_me_2",
                 },
                 {
                     id: 3,
-                    bio: this.$t("about_me_3"),
+                    text: "about_me_3",
                 },
                 {
                     id: 4,
-                    bio: this.$t("about_me_4"),
+                    text: "about_me_4",
                 },
                 {
                     id: 5,
-                    bio: this.$t("about_me_5"),
+                    text: "about_me_5",
                 },
             ];
         },

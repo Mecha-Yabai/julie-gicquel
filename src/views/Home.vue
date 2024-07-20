@@ -1,27 +1,12 @@
 <template>
     <section
-        class="max-h-full min-h-screen p-4 pt-0 container mx-auto sm:px-16"
-        id="hero"
-    >
-        <Hero />
-    </section>
-    <section
+        v-for="section in sections"
+        :key="section.name"
         class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
-        id="skills"
+        :class="{ 'pt-0': section.name === 'hero' }"
+        :id="section.name"
     >
-        <Skills />
-    </section>
-    <section
-        class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
-        id="experience"
-    >
-        <Experience />
-    </section>
-    <section
-        class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
-        id="education"
-    >
-        <Education />
+        <component :is="section.component" />
     </section>
 </template>
 <script>
@@ -31,15 +16,31 @@ import Experience from "@/components/ExperienceSection.vue";
 import Education from "@/components/EducationSection.vue";
 
 export default {
-    components: {
-        Hero,
-        Skills,
-        Experience,
-        Education,
-    },
-
     mounted() {
         this.observeSections();
+    },
+
+    computed: {
+        sections() {
+            return [
+                {
+                    name: "hero",
+                    component: Hero,
+                },
+                {
+                    name: "skills",
+                    component: Skills,
+                },
+                {
+                    name: "experience",
+                    component: Experience,
+                },
+                {
+                    name: "education",
+                    component: Education,
+                },
+            ];
+        },
     },
 
     methods: {

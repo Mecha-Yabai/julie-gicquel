@@ -19,14 +19,11 @@
                 </h1>
                 <div class="flex flex-col space-y-4">
                     <p
+                        v-for="paragraph in heroParagraphs"
+                        :key="paragraph.id"
                         class="text-center lg:text-justify font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                     >
-                        {{ $t("hero_1") }}
-                    </p>
-                    <p
-                        class="text-center lg:text-justify font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
-                    >
-                        {{ $t("hero_2") }}
+                        {{ $t(paragraph.text) }}
                     </p>
                 </div>
                 <div
@@ -123,6 +120,14 @@ export default {
             theme: "",
             mail,
         };
+    },
+    computed: {
+        heroParagraphs() {
+            return [
+                { id: 1, text: "hero_1" },
+                { id: 2, text: "hero_2" },
+            ];
+        },
     },
     created() {
         this.theme = localStorage.getItem("theme") || "light";

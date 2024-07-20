@@ -12,19 +12,11 @@
             </h1>
             <div class="space-y-4 my-4">
                 <p
+                    v-for="paragraph in formationsParagraphs"
+                    :key="paragraph.id"
                     class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
                 >
-                    {{ $t("education.description_1") }}
-                </p>
-                <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
-                >
-                    {{ $t("education.description_2") }}
-                </p>
-                <p
-                    class="text-center lg:text-left font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
-                >
-                    {{ $t("education.description_3") }}
+                    {{ $t(paragraph.text) }}
                 </p>
             </div>
             <div class="hidden h-full lg:flex items-center">
@@ -91,6 +83,13 @@ export default {
                 school: this.$t(formations.school),
                 date: this.$t(formations.date),
             }));
+        },
+        formationsParagraphs() {
+            return [
+                { id: 1, text: "education.description_1" },
+                { id: 2, text: "education.description_2" },
+                { id: 3, text: "education.description_3" },
+            ];
         },
     },
 };
