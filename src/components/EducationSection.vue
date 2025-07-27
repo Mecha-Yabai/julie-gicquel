@@ -34,13 +34,13 @@
         />
       </div>
     </div>
-    <div class="relative w-full lg:w-6/12 mx-auto" ref="timelineContainer">
+    <div class="relative w-full lg:w-6/12 mx-auto">
       <div
-        class="absolute bg-grey-light line-vertical"
+        class="absolute bg-grey-light dark:bg-secondary line-vertical"
         :style="{ '--line-height': lineHeight + 'px' }"
       ></div>
 
-      <div class="mt-12 lg:mt-24" ref="itemsWrapper">
+      <div class="mt-12 lg:mt-24" ref="formationsWrapper">
         <div
           v-for="(formation, index) in formations"
           :key="formation.id"
@@ -50,25 +50,27 @@
           ]"
         >
           <div class="w-32 pr-4 flex justify-start items-center">
-            <div
-              class="bg-red-100 text-primary text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap"
+            <time
+              class="bg-red-100 text-primary dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
             >
               {{ formation.date }}
-            </div>
+            </time>
           </div>
 
           <div class="w-6 flex items-center justify-center relative">
-            <div class="w-3 h-3 bg-red-600 rounded-full"></div>
+            <div
+              class="w-3 h-3 bg-primary dark:bg-primary-darker rounded-full"
+            ></div>
           </div>
 
           <div class="flex-1 pl-4">
             <h3
-              class="text-md xl:text-lg font-jiho-medium text-primay-dark dark:text-white break-words"
+              class="text-md lg:text-lg font-jiho-medium text-dark dark:text-white break-words"
             >
               {{ formation.name }}
             </h3>
             <p
-              class="text-sm font-jiho-regular text-grey-dark dark:text-white mt-1 break-words"
+              class="text-sm font-jiho-regular text-grey-darker dark:text-grey-light mt-1 break-words"
             >
               {{ formation.school }}
             </p>
@@ -93,7 +95,7 @@
     },
     mounted() {
       this.$nextTick(() => {
-        const wrapper = this.$refs.itemsWrapper;
+        const wrapper = this.$refs.formationsWrapper;
         if (wrapper) {
           this.lineHeight = wrapper.offsetHeight;
         }

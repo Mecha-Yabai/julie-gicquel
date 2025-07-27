@@ -39,25 +39,27 @@
     >
       <template v-for="experience in experiences" :key="experience.id">
         <div
-          class="flex items-baseline w-full justify-between h-[110px] lg:h-[140px] border-t border-dark dark:border-secondary"
+          class="flex items-baseline w-full justify-between h-max border-t border-dark dark:border-secondary"
         >
-          <div class="hidden md:block my-auto w-[70px] md:w-[100px]">
+          <div class="hidden md:block my-auto w-[70px] md:w-[120px]">
             <time
-              class="text-sm font-jiho-regular text-gray-500 dark:text-grey-light"
+              class="bg-red-100 text-primary dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
               >{{ experience.date }}</time
             >
           </div>
-          <div class="my-auto flex-1 pr-4">
+          <div class="py-4 md:py-6 lg:py-8 flex-1 pr-4">
             <h3
               class="text-md lg:text-lg font-jiho-medium text-dark dark:text-white"
             >
               {{ experience.name }}
             </h3>
-            <h5 class="mt-2 text-sm font-jiho-regular text-primary">
+            <h5
+              class="mt-1 md:mt-2 mb-1 md:mb-0 text-sm font-jiho-regular text-grey-darker dark:text-grey-light"
+            >
               {{ experience.company }}
             </h5>
             <time
-              class="md:hidden text-sm font-jiho-regular text-gray-500 dark:text-grey-light"
+              class="md:hidden my-2 bg-red-100 text-primary dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
               >{{ experience.date }}</time
             >
           </div>
@@ -65,7 +67,7 @@
             <button
               type="button"
               @click="openExperienceInfosPanel(experience)"
-              class="rounded-full p-2 text-dark hover:text-primary dark:text-white dark:hover:text-primary"
+              class="rounded-full p-2 text-dark hover:text-primary dark:text-primary dark:hover:text-primary-darker"
             >
               <i data-feather="plus-circle" stroke-width="1.5"></i>
             </button>
