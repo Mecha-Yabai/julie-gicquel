@@ -4,8 +4,7 @@
   "web_developer": "développeuse front-end",
   "and": "&",
   "designer_ux": "designeuse UI/UX",
-  "hero_1": "Créative et force de proposition, je suis développeuse web spécialisée en Front-End avec plus de six ans d'expérience en Vue.js, ainsi qu'une double compétence en design UX/UI. 👩🏻‍💻",
-  "hero_2": "Mon objectif est d'offrir la meilleure expérience utilisateur possible en créant des interfaces web intuitives, performantes et esthétiques qui respectent l'identité et les valeurs de la marque. 🎯",
+  "hero": "Créative et force de proposition, je suis développeuse web spécialisée en Front-End avec plus de six ans d'expérience en Vue.js, ainsi qu'une double compétence en design UX/UI.",
   "download_resume": "Télécharger mon CV",
   "get_in_touch": "Me contacter",
   "follow_me": "Retrouvez-moi sur",
@@ -34,7 +33,7 @@
     "title_3": "expériences",
     "description_1": "Développeuse web spécialisée dans le design UI/UX, j'ai auparavant travaillé dans le community management.",
     "description_2": "De nature spontanée et polyvalente, j'ai à coeur de mettre à profit mes diverses compétences.",
-    "description_3": "J'aime challenger l'existant et imaginer le futur. 🚀",
+    "description_3": "Mon objectif est d'offrir la meilleure expérience utilisateur possible en créant des interfaces web intuitives, performantes et esthétiques qui respectent l'identité et les valeurs de la marque. 🎯",
     "duties": "Missions :",
     "stack": "Stack :"
   },

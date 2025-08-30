@@ -4,8 +4,7 @@
   "web_developer": "Front-End Developer",
   "and": "&",
   "designer_ux": "UI/UX Designer",
-  "hero_1": "Creative and proactive, I’m a web developer specialized in Front-End with over six years of experience in Vue.js, and I also bring a strong background in UI/UX design. 👩🏻‍💻",
-  "hero_2": "My goal is to deliver the best user experience possible by creating intuitive, high-performing, and visually appealing web interfaces that reflect the brand’s identity and values. 🎯",
+  "hero": "Creative and proactive, I’m a web developer specialized in Front-End with over six years of experience in Vue.js, and I also bring a strong background in UI/UX design.",
   "download_resume": "Download My Resume",
   "get_in_touch": "Get in Touch",
   "follow_me": "Find me on",
@@ -34,7 +33,7 @@
     "title_3": "Experience",
     "description_1": "I’m a web developer specializing in UI/UX design, with a background in community management.",
     "description_2": "Versatile and spontaneous by nature, I strive to make the most of my wide range of skills.",
-    "description_3": "I love challenging the status quo and imagining what’s next. 🚀",
+    "description_3": "My goal is to deliver the best user experience possible by creating intuitive, high-performing, and visually appealing web interfaces that reflect the brand’s identity and values. 🎯",
     "duties": "Main tasks:",
     "stack": "Tech stack:"
   },

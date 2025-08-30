@@ -7,7 +7,7 @@
     >
       <div class="w-full lg:w-6/12 text-left lg:pr-8">
         <h1
-          class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4 md:my-8"
+          class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter"
         >
           {{ $t("greetings") }}
           <span class="text-red-500 dark:text-primary font-jiho-bold">{{
@@ -18,17 +18,15 @@
           <span class="text-red-500 dark:text-primary">{{ $t("and") }}</span>
           {{ $t("designer_ux") }}
         </h1>
-        <div class="flex flex-col space-y-4">
+        <div class="flex flex-col my-2 md:my-4">
           <p
-            v-for="paragraph in heroParagraphs"
-            :key="paragraph.id"
             class="text-center lg:text-justify font-jiho-regular text-lg lg:text-xl text-gray-500 dark:text-grey-light"
           >
-            {{ $t(paragraph.text) }}
+            {{ $t("hero") }}
           </p>
         </div>
         <div
-          class="flex items-center justify-evenly lg:justify-start my-4 sm:my-6 md:my-8"
+          class="flex items-center justify-evenly lg:justify-start mb-4 sm:mb-6 md:mb-8"
         >
           <div class="w-8/12 sm:w-1/2">
             <CTAButton
@@ -84,7 +82,7 @@
         />
       </div>
     </div>
-    <div class="hidden lg:flex lg:flex-1 flex-none items-center justify-center">
+    <div class="hidden lg:flex flex-none items-end justify-center my-5">
       <router-link :to="{ name: 'Home', hash: '#skills' }">
         <button
           class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
@@ -119,14 +117,6 @@
         theme: "",
         mail,
       };
-    },
-    computed: {
-      heroParagraphs() {
-        return [
-          { id: 1, text: "hero_1" },
-          { id: 2, text: "hero_2" },
-        ];
-      },
     },
     created() {
       this.theme = localStorage.getItem("theme") || "light";
