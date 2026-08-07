@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col lg:justify-between lg:flex-row inherit-height">
     <div class="w-full lg:pr-6 lg:w-6/12 flex flex-col">
-      <h1
+      <h2
         class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
       >
         {{ $t("education.title_1") }}
@@ -9,7 +9,7 @@
           $t("education.title_2")
         }}</span>
         {{ $t("education.title_3") }}
-      </h1>
+      </h2>
       <div class="space-y-4 my-4">
         <p
           v-for="paragraph in formationsParagraphs"
@@ -57,7 +57,7 @@
         >
           <div class="w-32 pr-4 flex justify-start items-center">
             <time
-              class="bg-red-100 text-primary dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
+              class="bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
             >
               {{ formation.date }}
             </time>

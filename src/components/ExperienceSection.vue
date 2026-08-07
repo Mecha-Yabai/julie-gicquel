@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col lg:justify-between lg:flex-row inherit-height">
     <div class="w-full lg:pr-6 lg:w-6/12 flex flex-col">
-      <h1
+      <h2
         class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
       >
         {{ $t("experiences.title_1") }}
@@ -9,7 +9,7 @@
           $t("experiences.title_2")
         }}</span>
         {{ $t("experiences.title_3") }}
-      </h1>
+      </h2>
       <div class="space-y-4 my-4">
         <p
           v-for="paragraph in experiencesParagraphs"
@@ -49,7 +49,7 @@
         >
           <div class="hidden md:block my-auto w-[70px] md:w-[120px]">
             <time
-              class="bg-red-100 text-primary dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
+              class="bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
               >{{ experience.date }}</time
             >
           </div>
@@ -59,13 +59,13 @@
             >
               {{ experience.name }}
             </h3>
-            <h5
+            <p
               class="mt-1 md:mt-2 mb-1 md:mb-0 text-sm font-jiho-regular text-grey-darker dark:text-grey-light"
             >
               {{ experience.company }}
-            </h5>
+            </p>
             <time
-              class="md:hidden my-2 bg-red-100 text-primary dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
+              class="md:hidden my-2 bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
               >{{ experience.date }}</time
             >
           </div>
@@ -121,11 +121,11 @@
       </div>
       <div class="flex-1 overflow-y-auto pt-2 pb-6">
         <div class="px-6 py-2" v-if="currentExperience.description">
-          <h5
+          <p
             class="mt-2 font-jiho-regular text-md text-gray-500 dark:text-grey-light"
           >
             {{ currentExperience.description }}
-          </h5>
+          </p>
         </div>
         <div
           v-if="currentExperience.duties"
