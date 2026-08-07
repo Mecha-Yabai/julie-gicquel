@@ -1,8 +1,22 @@
-@tailwind base;
+@import 'tailwindcss';
 
-@tailwind components;
+@custom-variant dark (&:is(.dark *));
 
-@tailwind utilities;
+@utility container {
+  margin-inline: auto;
+}
+
+@theme {
+  --color-grey-lighter: #f7f8fc;
+  --color-grey-light: #dbe2e6;
+  --color-dark: #030303;
+  --color-grey-darker: #535353;
+  --color-grey-dark: #666666;
+  --color-primary: #dc1510;
+  --color-primary-darker: #9c2016;
+  --color-secondary: #233763;
+  --color-secondary-darker: #141f38;
+}
 
 body {
   font-family: "Jiho-Regular";
@@ -13,7 +27,6 @@ body {
   @apply bg-dark;
 }
 
-/* Fonts */
 @font-face {
   font-family: "Jiho-Light";
   src: url("../fonts/Jiho-Light.woff2") format("woff2");

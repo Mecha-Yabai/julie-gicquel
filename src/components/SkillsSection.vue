@@ -38,7 +38,7 @@
                 :key="skill.id"
                 class="h-24 md:h-32 lg:h-40"
             >
-                <hr class="dark:border-secondary" />
+                <hr class="border-gray-200 dark:border-secondary" />
                 <div class="flex min-h-full items-center">
                     <p
                         class="mr-4 text-xl sm:text-2xl lg:text-3xl text-red-500 dark:text-primary font-jiho-regular whitespace-nowrap"

@@ -35,12 +35,12 @@
         >
             <ul
                 v-show="isOptionsExpanded"
-                class="absolute left-0 right-0 mb-4 bg-white dark:bg-secondary-darker dark:border dark:border-secondary divide-y rounded-lg shadow-lg overflow-hidden"
+                class="absolute left-0 right-0 mb-4 bg-white dark:bg-secondary-darker dark:border dark:border-secondary divide-y divide-gray-200 dark:divide-secondary rounded-lg shadow-lg overflow-hidden"
             >
                 <li
                     v-for="locale in locales"
                     :key="locale.id"
-                    class="px-3 py-3 transition-colors duration-300 hover:bg-gray-200 hover:dark:bg-dark cursor-pointer"
+                    class="px-3 py-3 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-dark cursor-pointer"
                     @mousedown.prevent="setOption(locale)"
                 >
                     <div

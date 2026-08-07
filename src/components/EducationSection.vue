@@ -71,12 +71,12 @@
 
           <div class="flex-1 pl-4">
             <h3
-              class="text-md lg:text-lg font-jiho-medium text-dark dark:text-white break-words"
+              class="text-md lg:text-lg font-jiho-medium text-dark dark:text-white wrap-break-word"
             >
               {{ formation.name }}
             </h3>
             <p
-              class="text-sm font-jiho-regular text-grey-darker dark:text-grey-light mt-1 break-words"
+              class="text-sm font-jiho-regular text-grey-darker dark:text-grey-light mt-1 wrap-break-word"
             >
               {{ formation.school }}
             </p>
