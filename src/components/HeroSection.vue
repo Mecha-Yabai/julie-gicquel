@@ -31,9 +31,8 @@
           <div class="w-8/12 sm:w-1/2">
             <CTAButton
               :selectedIcon="'download'"
-              :link="'/julie-gicquel/files/Julie-Gicquel-CV.pdf'"
+              :link="resumeUrl"
               :download="'Julie-Gicquel-CV.pdf'"
-              label="'CV'"
               class="bg-red-600 dark:bg-primary hover:bg-red-700 dark:hover:bg-primary-darker text-white"
             >
               {{ $t("download_resume") }}
@@ -43,7 +42,6 @@
             <CTAButton
               :selectedIcon="'mail'"
               :link="`mailto:${mail}`"
-              label="'Contact'"
               class="bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white"
             >
               {{ $t("get_in_touch") }}
@@ -69,7 +67,7 @@
       </div>
       <div class="w-full lg:w-6/12 flex justify-center lg:justify-end">
         <img
-          v-if="theme === 'light'"
+          v-if="!isDark"
           src="@/assets/images/hero3_LIGHT.png"
           alt="Developer"
           class="w-11/12 sm:w-7/12 lg:w-10/12"
@@ -109,17 +107,19 @@
 
   import SocialButton from "./reusable/SocialButton.vue";
   import CTAButton from "./reusable/CTAButton.vue";
+  import { useTheme } from "@/composables/useTheme";
 
   export default {
     components: { SocialButton, CTAButton },
+    setup() {
+      const { isDark } = useTheme();
+      return { isDark };
+    },
     data() {
       return {
-        theme: "",
         mail,
+        resumeUrl: `${process.env.BASE_URL}files/Julie-Gicquel-CV.pdf`,
       };
-    },
-    created() {
-      this.theme = localStorage.getItem("theme") || "light";
     },
     mounted() {
       feather.replace();

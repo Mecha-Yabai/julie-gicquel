@@ -5,7 +5,7 @@
         >
             <div class="pb-5 flex justify-center">
                 <button
-                    :class="theme === 'light' ? 'text-dark' : 'text-white'"
+                    :class="isDark ? 'text-white' : 'text-dark'"
                     @click="goTop()"
                 >
                     <div class="text text-dark dark:text-white">
@@ -48,7 +48,7 @@
                         class="h-6 w-6"
                         fill="none"
                         viewBox="0 0 24 24"
-                        :stroke="theme === 'light' ? '#030303' : 'white'"
+                        :stroke="isDark ? 'white' : '#030303'"
                         stroke-width="2"
                     >
                         <path
@@ -87,16 +87,18 @@ import { mail } from "../../data/socials";
 
 import SocialButton from "../reusable/SocialButton.vue";
 import MainFooterCopyright from "./MainFooterCopyright.vue";
+import { useTheme } from "@/composables/useTheme";
 
 export default {
     components: { MainFooterCopyright, SocialButton },
+    setup() {
+        const { isDark } = useTheme();
+        return { isDark };
+    },
     data() {
         return {
             mail,
         };
-    },
-    created() {
-        this.theme = localStorage.getItem("theme") || "light";
     },
     methods: {
         goTop: function () {

@@ -1,5 +1,5 @@
 <template>
-    <div id="app" :class="mainTheme">
+    <div id="app">
         <MainHeader />
         <router-view />
         <MainFooter />
@@ -19,11 +19,6 @@ export default {
         MainHeader,
         MainFooter,
         MobileMenu,
-    },
-    data: () => {
-        return {
-            mainTheme: localStorage.getItem("theme"),
-        };
     },
     mounted() {
         feather.replace();

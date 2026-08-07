@@ -21,7 +21,7 @@
       </div>
       <div class="hidden h-full lg:flex items-center">
         <img
-          v-if="theme === 'light'"
+          v-if="!isDark"
           src="@/assets/images/hero1_LIGHT.png"
           alt="Developer"
           class="lg:w-full"
@@ -141,17 +141,18 @@
 </template>
 <script>
   import { getExperiences } from "../data/experiences";
+  import { useTheme } from "@/composables/useTheme";
 
   export default {
+    setup() {
+      const { isDark } = useTheme();
+      return { isDark };
+    },
     data() {
       return {
-        theme: "",
         currentExperience: {},
         isExperienceInfosPanelOpen: false,
       };
-    },
-    created() {
-      this.theme = localStorage.getItem("theme") || "light";
     },
     watch: {
       isExperienceInfosPanelOpen: function () {

@@ -57,14 +57,6 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-            theme: "",
-        };
-    },
-    created() {
-        this.theme = localStorage.getItem("theme") || "light";
-    },
     computed: {
         skillsTitles() {
             return [

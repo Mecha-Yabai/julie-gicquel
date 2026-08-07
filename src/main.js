@@ -13,15 +13,3 @@ const i18n = createI18n({
 });
 
 createApp(App).use(i18n).use(router).mount("#app");
-
-const mainTheme = localStorage.getItem("theme");
-
-// Check what is the active theme and change theme when user clicks on the theme button in header.
-if (
-    mainTheme === "dark" &&
-    document.querySelector("body").classList.contains("main-theme")
-) {
-    document.querySelector("body").classList.add("bg-dark");
-} else {
-    document.querySelector("body").classList.add("bg-white");
-}

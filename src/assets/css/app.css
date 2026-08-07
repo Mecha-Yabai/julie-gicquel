@@ -6,6 +6,11 @@
 
 body {
   font-family: "Jiho-Regular";
+  @apply bg-white;
+}
+
+.dark body {
+  @apply bg-dark;
 }
 
 /* Theme Colors */

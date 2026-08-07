@@ -21,7 +21,7 @@
       </div>
       <div class="hidden h-full lg:flex items-center">
         <img
-          v-if="theme === 'light'"
+          v-if="!isDark"
           src="@/assets/images/hero2_LIGHT.png"
           alt="Developer"
           class="lg:w-full"
@@ -82,16 +82,17 @@
 </template>
 <script>
   import { getFormations } from "../data/formations";
+  import { useTheme } from "@/composables/useTheme";
 
   export default {
+    setup() {
+      const { isDark } = useTheme();
+      return { isDark };
+    },
     data() {
       return {
         lineHeight: 0,
-        theme: "",
       };
-    },
-    created() {
-      this.theme = localStorage.getItem("theme") || "light";
     },
     mounted() {
       this.$nextTick(() => {
