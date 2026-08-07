@@ -14,14 +14,21 @@ import Hero from "@/components/HeroSection.vue";
 import Skills from "@/components/SkillsSection.vue";
 import Experience from "@/components/ExperienceSection.vue";
 import Education from "@/components/EducationSection.vue";
+import { useActiveSection } from "@/composables/useActiveSection";
 
 export default {
+    setup() {
+        const { setActiveSection } = useActiveSection();
+        return { setActiveSection };
+    },
+
     mounted() {
         this.observeSections();
     },
 
     beforeUnmount() {
         this.observer?.disconnect();
+        this.setActiveSection("hero");
     },
 
     computed: {
@@ -60,6 +67,7 @@ export default {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const id = entry.target.id;
+                        this.setActiveSection(id);
                         this.updateUrlHash(`#${id}`);
                     }
                 });

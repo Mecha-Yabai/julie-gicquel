@@ -14,7 +14,8 @@
     "skills": "Compétences",
     "experience": "Expériences",
     "education": "Formations",
-    "about_me": "À propos"
+    "about_me": "À propos",
+    "main_navigation": "Navigation principale"
   },
   "skills": {
     "title_1": "Un",
