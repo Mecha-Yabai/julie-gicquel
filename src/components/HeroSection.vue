@@ -117,7 +117,7 @@
     data() {
       return {
         mail,
-        resumeUrl: `${process.env.BASE_URL}files/Julie-Gicquel-CV.pdf`,
+        resumeUrl: `${import.meta.env.BASE_URL}files/Julie-Gicquel-CV.pdf`,
       };
     },
   };
