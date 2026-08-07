@@ -13,13 +13,10 @@ body {
   @apply bg-dark;
 }
 
-/* Theme Colors */
-
 /* Fonts */
 @font-face {
   font-family: "Jiho-Light";
-  src: url("../fonts/Jiho-Light.otf") format("opentype"),
-    url("../fonts/Jiho-Light.ttf") format("truetype");
+  src: url("../fonts/Jiho-Light.woff2") format("woff2");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
@@ -31,8 +28,7 @@ body {
 
 @font-face {
   font-family: "Jiho-Regular";
-  src: url("../fonts/Jiho-Regular.otf") format("opentype"),
-    url("../fonts/Jiho-Regular.ttf") format("truetype");
+  src: url("../fonts/Jiho-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -44,8 +40,7 @@ body {
 
 @font-face {
   font-family: "Jiho-Medium";
-  src: url("../fonts/Jiho-Medium.otf") format("opentype"),
-    url("../fonts/Jiho-Medium.ttf") format("truetype");
+  src: url("../fonts/Jiho-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
@@ -57,8 +52,7 @@ body {
 
 @font-face {
   font-family: "Jiho-Bold";
-  src: url("../fonts/Jiho-Bold.otf") format("opentype"),
-    url("../fonts/Jiho-Bold.ttf") format("truetype");
+  src: url("../fonts/Jiho-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
