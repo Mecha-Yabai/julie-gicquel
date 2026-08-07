@@ -3,7 +3,8 @@
     <div class="font-jiho-regular text-lg text-grey-dark dark:text-grey-light">
       <a
         href="https://github.com/Meccha-Yabai"
-        target="__blank"
+        target="_blank"
+        rel="noopener noreferrer"
         class="mr-1 font-jiho-medium text-grey-darker dark:text-white hover:text-red-500 dark:hover:text-primary duration-500"
       >
         {{ projectName }}

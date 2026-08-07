@@ -88,13 +88,13 @@
           class="relative inline-block cursor-pointer outline-none border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
         >
           <span
-            class="relative block m-0 w-12 h-12 bg-dark dark:bg-primary rounded-full transition-all ease-[cubic-bezier(0.65, 0, 0.076, 1)] duration-[450ms] circle"
+            class="relative block m-0 w-12 h-12 bg-dark dark:bg-primary rounded-full transition-all ease-[cubic-bezier(0.65,0,0.076,1)] duration-[450ms] circle"
             aria-hidden="true"
           >
             <span class="icon arrow"></span>
           </span>
           <span
-            class="absolute text-dark dark:text-primary font-jiho-regular uppercase text-cente button-text ml-10 leading-relaxed transition-all ease-[cubic-bezier(0.65, 0, 0.076, 1)] duration-[450ms] py-3 inset-0"
+            class="absolute text-dark dark:text-primary font-jiho-regular uppercase text-cente button-text ml-10 leading-relaxed transition-all ease-[cubic-bezier(0.65,0,0.076,1)] duration-[450ms] py-3 inset-0"
             >{{ $t("learn_more") }}</span
           >
         </button>
