@@ -5,7 +5,7 @@
         <div
             class="w-full flex flex-col flex-1 justify-center lg:w-6/12 h-2/3 sm:h-1/2 md:h-2/5 lg:h-fit lg:text-left lg:pr-6"
         >
-            <h1
+            <h2
                 class="h-1/4 md:h-1/3 lg:h-fit my-4 font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter"
             >
                 {{ $t("skills.title_1") }}
@@ -18,7 +18,7 @@
                     $t("skills.title_4")
                 }}</span
                 >.
-            </h1>
+            </h2>
             <div class="h-2/4 md:h-2/3 lg:h-fit space-y-4 my-4">
                 <p
                     v-for="paragraph in skillsParagraphs"
@@ -45,11 +45,11 @@
                     >
                         {{ skill.id }} /
                     </p>
-                    <h1
+                    <h3
                         class="text-left text-xl sm:text-2xl lg:text-3xl font-jiho-medium text-dark dark:text-grey-lighter"
                     >
                         {{ $t(skill.title) }}
-                    </h1>
+                    </h3>
                 </div>
             </div>
         </div>

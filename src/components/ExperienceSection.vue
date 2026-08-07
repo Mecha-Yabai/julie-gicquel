@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col lg:justify-between lg:flex-row inherit-height">
     <div class="w-full lg:pr-6 lg:w-6/12 flex flex-col">
-      <h1
+      <h2
         class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
       >
         {{ $t("experiences.title_1") }}
@@ -9,7 +9,7 @@
           $t("experiences.title_2")
         }}</span>
         {{ $t("experiences.title_3") }}
-      </h1>
+      </h2>
       <div class="space-y-4 my-4">
         <p
           v-for="paragraph in experiencesParagraphs"
@@ -49,7 +49,7 @@
         >
           <div class="hidden md:block my-auto w-[70px] md:w-[120px]">
             <time
-              class="bg-red-100 text-primary dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
+              class="bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
               >{{ experience.date }}</time
             >
           </div>
@@ -59,13 +59,13 @@
             >
               {{ experience.name }}
             </h3>
-            <h5
+            <p
               class="mt-1 md:mt-2 mb-1 md:mb-0 text-sm font-jiho-regular text-grey-darker dark:text-grey-light"
             >
               {{ experience.company }}
-            </h5>
+            </p>
             <time
-              class="md:hidden my-2 bg-red-100 text-primary dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
+              class="md:hidden my-2 bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
               >{{ experience.date }}</time
             >
           </div>
@@ -73,7 +73,7 @@
             <TooltipWrapper :label="$t('experiences.see_details')">
               <button
                 type="button"
-                @click="openExperienceInfosPanel(experience)"
+                @click="openExperienceInfosPanel(experience, $event)"
                 :aria-label="
                   $t('experiences.see_details_of', { name: experience.name })
                 "
@@ -90,24 +90,30 @@
   </div>
   <transition
     name="panel-fade"
-    ref="experienceInfosPanel"
     tabindex="-1"
     @keydown.escape="closeExperienceInfosPanel()"
+    @keydown.tab="trapFocus"
   >
     <div
+      ref="experienceInfosPanel"
       v-show="isExperienceInfosPanelOpen"
       class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-white dark:bg-dark shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-hidden flex flex-col h-screen dark:border-l-2 dark:border-secondary"
       role="dialog"
       aria-modal="true"
+      :aria-label="currentExperience.name"
     >
       <div
         class="flex tems-center justify-center px-4 py-6 border-b dark:border-secondary"
       >
-        <h3 class="flex-1 text-md lg:text-lg font-jiho-medium text-primary">
+        <h3
+          v-if="currentExperience.name"
+          class="flex-1 text-md lg:text-lg font-jiho-medium text-primary"
+        >
           {{ currentExperience.name }}
         </h3>
         <button
           @click="closeExperienceInfosPanel()"
+          :aria-label="$t('experiences.close_details')"
           class="flex-none text-primary ml-2"
         >
           <FeatherIcon name="x" />
@@ -115,11 +121,11 @@
       </div>
       <div class="flex-1 overflow-y-auto pt-2 pb-6">
         <div class="px-6 py-2" v-if="currentExperience.description">
-          <h5
+          <p
             class="mt-2 font-jiho-regular text-md text-gray-500 dark:text-grey-light"
           >
             {{ currentExperience.description }}
-          </h5>
+          </p>
         </div>
         <div
           v-if="currentExperience.duties"
@@ -197,10 +203,45 @@
       },
     },
     methods: {
+      panelFocusables() {
+        const panel = this.$refs.experienceInfosPanel;
+        if (!panel) {
+          return [];
+        }
+        return [
+          ...panel.querySelectorAll(
+            'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+          ),
+        ].filter((el) => el.offsetParent !== null);
+      },
+      trapFocus(event) {
+        const focusables = this.panelFocusables();
+        if (!focusables.length) {
+          event.preventDefault();
+          return;
+        }
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        const active = document.activeElement;
+
+        if (event.shiftKey && (active === first || !focusables.includes(active))) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && active === last) {
+          event.preventDefault();
+          first.focus();
+        } else if (!focusables.includes(active)) {
+          event.preventDefault();
+          first.focus();
+        }
+      },
       closeExperienceInfosPanel() {
         this.isExperienceInfosPanelOpen = false;
+        this.lastTrigger?.focus();
+        this.lastTrigger = null;
       },
-      openExperienceInfosPanel(experience) {
+      openExperienceInfosPanel(experience, event) {
+        this.lastTrigger = event?.currentTarget ?? null;
         this.currentExperience = {
           ...experience,
           description: experience.description
@@ -209,7 +250,7 @@
         };
         this.isExperienceInfosPanelOpen = true;
         this.$nextTick(() => {
-          this.$refs.experienceInfosPanel.focus();
+          this.$refs.experienceInfosPanel?.focus();
         });
       },
     },

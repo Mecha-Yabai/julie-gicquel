@@ -90,21 +90,20 @@
       </div>
     </div>
     <div class="hidden lg:flex flex-none items-end justify-center my-5">
-      <router-link :to="{ name: 'Home', hash: '#skills' }">
-        <button
-          class="relative inline-block cursor-pointer outline-hidden border-none align-middle no-underline bg-transparent p-0 w-48 h-auto learn-more-button"
+      <router-link
+        :to="{ name: 'Home', hash: '#skills' }"
+        class="relative inline-block cursor-pointer align-middle no-underline w-48 h-auto rounded-lg learn-more-button focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dark dark:focus-visible:outline-primary"
+      >
+        <span
+          class="relative block m-0 w-12 h-12 bg-dark dark:bg-primary rounded-full transition-all ease-[cubic-bezier(0.65,0,0.076,1)] duration-450 circle"
+          aria-hidden="true"
         >
-          <span
-            class="relative block m-0 w-12 h-12 bg-dark dark:bg-primary rounded-full transition-all ease-[cubic-bezier(0.65,0,0.076,1)] duration-450 circle"
-            aria-hidden="true"
-          >
-            <span class="icon arrow"></span>
-          </span>
-          <span
-            class="absolute text-dark dark:text-primary font-jiho-regular uppercase text-cente button-text ml-10 leading-relaxed transition-all ease-[cubic-bezier(0.65,0,0.076,1)] duration-450 py-3 inset-0"
-            >{{ $t("learn_more") }}</span
-          >
-        </button>
+          <span class="icon arrow"></span>
+        </span>
+        <span
+          class="absolute text-dark dark:text-red-500 font-jiho-regular uppercase text-center button-text ml-10 leading-relaxed transition-all ease-[cubic-bezier(0.65,0,0.076,1)] duration-450 py-3 inset-0"
+          >{{ $t("learn_more") }}</span
+        >
       </router-link>
     </div>
   </div>
@@ -133,7 +132,7 @@
   };
 </script>
 <style lang="css">
-  button.learn-more-button .circle .icon {
+  .learn-more-button .circle .icon {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
@@ -142,7 +141,7 @@
     background: #fff;
   }
 
-  button.learn-more-button .circle .icon.arrow {
+  .learn-more-button .circle .icon.arrow {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     left: 0.625rem;
     width: 1.125rem;
@@ -150,7 +149,7 @@
     background: none;
   }
 
-  button.learn-more-button .circle .icon.arrow::before {
+  .learn-more-button .circle .icon.arrow::before {
     position: absolute;
     content: "";
     top: -0.29rem;
@@ -162,16 +161,19 @@
     transform: rotate(45deg);
   }
 
-  button:hover .circle {
+  .learn-more-button:hover .circle,
+  .learn-more-button:focus-visible .circle {
     width: 100%;
   }
 
-  button:hover .circle .icon.arrow {
+  .learn-more-button:hover .circle .icon.arrow,
+  .learn-more-button:focus-visible .circle .icon.arrow {
     background: #fff;
     transform: translate(1rem, 0);
   }
 
-  button:hover .button-text {
+  .learn-more-button:hover .button-text,
+  .learn-more-button:focus-visible .button-text {
     color: #fff;
   }
 </style>

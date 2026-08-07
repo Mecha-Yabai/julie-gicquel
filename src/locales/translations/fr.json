@@ -11,6 +11,7 @@
   "learn_more": "En savoir plus",
   "theme_switcher": "Changer de thème",
   "social_profile": "Mon profil {name}",
+  "skip_to_content": "Aller au contenu",
   "header": {
     "skills": "Compétences",
     "experience": "Expériences",
@@ -40,7 +41,8 @@
     "duties": "Missions :",
     "stack": "Stack :",
     "see_details": "Voir le détail",
-    "see_details_of": "Voir le détail : {name}"
+    "see_details_of": "Voir le détail : {name}",
+    "close_details": "Fermer le détail"
   },
   "jobs": {
     "kizeo_name": "Développeuse Front-End & designer UI/UX",
