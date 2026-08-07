@@ -10,6 +10,7 @@
   "follow_me": "フォローはこちら",
   "learn_more": "詳しく見る",
   "theme_switcher": "テーマを切り替える",
+  "social_profile": "{name}のプロフィール",
   "header": {
     "skills": "スキル",
     "experience": "経験",
@@ -37,7 +38,9 @@
     "description_2": "多才で柔軟な性格を活かし、幅広いスキルを最大限に発揮しています。",
     "description_3": "ブランドの個性や価値観を反映しながら、直感的で高性能かつ魅力的なWebインターフェースを提供し、最高のユーザー体験を実現することを目指しています。🎯",
     "duties": "主な業務内容：",
-    "stack": "使用技術："
+    "stack": "使用技術：",
+    "see_details": "詳細を見る",
+    "see_details_of": "詳細を見る：{name}"
   },
   "jobs": {
     "kizeo_name": "フロントエンド開発者＆UI/UXデザイナー",

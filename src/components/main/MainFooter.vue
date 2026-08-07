@@ -69,12 +69,15 @@
                 </p>
                 <ul class="flex gap-4 sm:gap-8">
                     <SocialButton />
-                    <a
-                        :href="`mailto:${mail}`"
-                        class="rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white text-center"
-                    >
-                        <FeatherIcon name="mail" class="w-5 lg:w-16" />
-                    </a>
+                    <TooltipWrapper :label="$t('get_in_touch')">
+                        <a
+                            :href="`mailto:${mail}`"
+                            :aria-label="$t('get_in_touch')"
+                            class="rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white text-center"
+                        >
+                            <FeatherIcon name="mail" class="w-5 lg:w-16" />
+                        </a>
+                    </TooltipWrapper>
                 </ul>
             </div>
 
@@ -88,10 +91,11 @@ import { mail } from "../../data/socials";
 import SocialButton from "../reusable/SocialButton.vue";
 import MainFooterCopyright from "./MainFooterCopyright.vue";
 import FeatherIcon from "../reusable/FeatherIcon.vue";
+import TooltipWrapper from "../reusable/TooltipWrapper.vue";
 import { useTheme } from "@/composables/useTheme";
 
 export default {
-    components: { MainFooterCopyright, SocialButton, FeatherIcon },
+    components: { MainFooterCopyright, SocialButton, FeatherIcon, TooltipWrapper },
     setup() {
         const { isDark } = useTheme();
         return { isDark };

@@ -56,12 +56,15 @@
           </p>
           <div class="flex justify-center lg:justify-start">
             <SocialButton />
-            <a
-              :href="`mailto:${mail}`"
-              class="inline-flex sm:hidden rounded-full h-11 w-11 sm:h-12 sm:w-12 items-center justify-center mx-2 bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white text-center"
-            >
-              <FeatherIcon name="mail" class="w-5 lg:w-16" />
-            </a>
+            <TooltipWrapper :label="$t('get_in_touch')" class="sm:hidden">
+              <a
+                :href="`mailto:${mail}`"
+                :aria-label="$t('get_in_touch')"
+                class="inline-flex rounded-full h-11 w-11 items-center justify-center mx-2 bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white text-center"
+              >
+                <FeatherIcon name="mail" class="w-5 lg:w-16" />
+              </a>
+            </TooltipWrapper>
           </div>
         </div>
       </div>
@@ -112,10 +115,11 @@
   import SocialButton from "./reusable/SocialButton.vue";
   import CTAButton from "./reusable/CTAButton.vue";
   import FeatherIcon from "./reusable/FeatherIcon.vue";
+  import TooltipWrapper from "./reusable/TooltipWrapper.vue";
   import { useTheme } from "@/composables/useTheme";
 
   export default {
-    components: { SocialButton, CTAButton, FeatherIcon },
+    components: { SocialButton, CTAButton, FeatherIcon, TooltipWrapper },
     setup() {
       const { isDark } = useTheme();
       return { isDark };
