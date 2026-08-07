@@ -8,36 +8,32 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
-.menu {
-    .links {
-        position: relative;
-        display: block;
-        transition: 0.5s;
+<style scoped>
+.menu .links {
+    position: relative;
+    display: block;
+    transition: 0.5s;
+}
 
-        &::after {
-            position: absolute;
-            content: "";
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: theme("colors.red.600");
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.5s;
-        }
+.menu .links::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--color-red-600);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
 
-        @media (prefers-color-scheme: dark) {
-            &::after {
-                background: theme("colors.primary");
-            }
-        }
+.dark .menu .links::after {
+    background: var(--color-primary);
+}
 
-        &:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-    }
+.menu .links:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 </style>

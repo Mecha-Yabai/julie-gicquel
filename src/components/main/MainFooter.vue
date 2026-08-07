@@ -111,7 +111,7 @@ export default {
     },
 };
 </script>
-<style lang="scss" scoped>
+<style scoped>
 button {
     width: 140px;
     height: 56px;
