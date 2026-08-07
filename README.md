@@ -1,9 +1,10 @@
 # Welcome to my online resume
 
+Vue 3 + Vite + Tailwind CSS.
+
 ## Requirements
 
-Node 20 (see `.nvmrc`). The working range is currently `>=20.19 <23`: below that
-`eslint-plugin-vue` fails to install, above it Vue CLI does.
+Node 24 (see `.nvmrc`).
 
 ```
 nvm use
@@ -14,17 +15,22 @@ nvm use
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Starts the dev server
 ```
-yarn serve
+yarn dev
 ```
 
-### Compiles and minifies for production
+### Builds for production
 ```
 yarn build
 ```
 
-### Lints and fixes files
+### Serves the production build locally
+```
+yarn preview
+```
+
+### Lints
 ```
 yarn lint
 ```
@@ -39,5 +45,7 @@ repository's own token.
 You can also trigger a deploy without pushing, from the Actions tab
 ("Deploy to GitHub Pages" > Run workflow).
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Configuration
+Build config lives in `vite.config.js`. The production `base` is
+`/julie-gicquel/`, matching the GitHub Pages project path; everything in the app
+resolves against `import.meta.env.BASE_URL` rather than hardcoding it.
