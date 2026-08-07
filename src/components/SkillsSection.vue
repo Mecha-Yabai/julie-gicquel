@@ -39,11 +39,11 @@
             class="justify-start w-full lg:w-6/12 lg:pl-6 h-1/3 sm:h-1/2 md:h-3/5 flex flex-col flex-1"
         >
             <div
-                v-for="skill in skillsTitles"
+                v-for="(skill, index) in skillsTitles"
                 :key="skill.id"
                 class="h-24 md:h-32 lg:h-40"
             >
-                <hr class="vague" aria-hidden="true" />
+                <hr v-if="index > 0" class="separateur" aria-hidden="true" />
                 <div class="flex min-h-full items-center">
                     <p
                         class="mr-4 text-xl sm:text-2xl lg:text-3xl text-red-500 dark:text-primary font-jiho-regular whitespace-nowrap"

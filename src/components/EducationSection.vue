@@ -47,12 +47,7 @@
       </div>
     </div>
     <div class="relative w-full lg:w-6/12 mx-auto">
-      <div
-        class="absolute bg-grey-light dark:bg-secondary line-vertical"
-        :style="{ '--line-height': lineHeight + 'px' }"
-      ></div>
-
-      <div class="mt-12 lg:mt-24" ref="formationsWrapper">
+      <div class="mt-12 lg:mt-24">
         <div
           v-for="(formation, index) in formations"
           :key="formation.id"
@@ -69,9 +64,15 @@
             </time>
           </div>
 
-          <div class="w-6 flex items-center justify-center relative">
+          <div
+            class="w-6 self-stretch pt-2 flex items-start justify-center relative jalon"
+            :class="{
+              'jalon--debut': index === 0,
+              'jalon--fin': index === formations.length - 1,
+            }"
+          >
             <div
-              class="w-3 h-3 bg-primary dark:bg-primary-darker rounded-full"
+              class="relative w-3 h-3 bg-primary dark:bg-primary-darker rounded-full"
             ></div>
           </div>
 
@@ -101,19 +102,6 @@
       const { isDark } = useTheme();
       return { isDark };
     },
-    data() {
-      return {
-        lineHeight: 0,
-      };
-    },
-    mounted() {
-      this.$nextTick(() => {
-        const wrapper = this.$refs.formationsWrapper;
-        if (wrapper) {
-          this.lineHeight = wrapper.offsetHeight;
-        }
-      });
-    },
     computed: {
       formations() {
         return getFormations().map((formations) => ({
@@ -133,18 +121,3 @@
     },
   };
 </script>
-
-<style style="css" scoped>
-  .line-vertical {
-    left: calc(8rem + 0.75rem);
-    width: 1px;
-    top: 3rem;
-    height: var(--line-height);
-  }
-
-  @media (min-width: 1024px) {
-    .line-vertical {
-      top: 6rem;
-    }
-  }
-</style>
