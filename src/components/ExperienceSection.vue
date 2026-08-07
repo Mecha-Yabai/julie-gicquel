@@ -2,13 +2,19 @@
   <div class="flex flex-col lg:justify-between lg:flex-row inherit-height">
     <div class="w-full lg:pr-6 lg:w-6/12 flex flex-col">
       <h2
-        class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
+        v-revele
+        class="trame decale font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
       >
-        {{ $t("experiences.title_1") }}
-        <span class="text-red-500 dark:text-primary">{{
-          $t("experiences.title_2")
-        }}</span>
-        {{ $t("experiences.title_3") }}
+        <span class="sceau-place" aria-hidden="true"
+          ><span class="sceau">経</span></span
+        >
+        <span class="devoile"
+          >{{ $t("experiences.title_1") }}{{ $t("ws")
+          }}<span class="text-red-500 dark:text-primary">{{
+            $t("experiences.title_2")
+          }}</span
+          >{{ $t("ws") }}{{ $t("experiences.title_3") }}</span
+        >
       </h2>
       <div class="space-y-4 my-4">
         <p
@@ -43,17 +49,22 @@
     <div
       class="w-full flex-1 lg:pl-6 lg:w-6/12 grid grid-cols-[1fr_max-content] md:grid-cols-[max-content_1fr_max-content] h-full justify-start lg:justify-center lg:self-center mt-6 md:mt-12 lg:mt-0"
     >
-      <template v-for="experience in experiences" :key="experience.id">
+      <template
+        v-for="(experience, index) in experiences"
+        :key="experience.id"
+      >
         <div
-          class="hidden md:flex items-center pr-4 border-t border-dark dark:border-secondary"
+          class="hidden md:flex items-center pr-4 "
+          :class="index > 0 && 'border-t border-dark dark:border-secondary'"
         >
           <time
-            class="bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
+            class="tampon bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
             >{{ experience.date }}</time
           >
         </div>
         <div
-          class="py-4 md:py-6 lg:py-8 pr-4 border-t border-dark dark:border-secondary"
+          class="py-4 md:py-6 lg:py-8 pr-4 "
+          :class="index > 0 && 'border-t border-dark dark:border-secondary'"
         >
           <h3
             class="text-md lg:text-lg font-jiho-medium text-dark dark:text-white"
@@ -71,7 +82,8 @@
           >
         </div>
         <div
-          class="flex items-center justify-end border-t border-dark dark:border-secondary"
+          class="flex items-center justify-end "
+          :class="index > 0 && 'border-t border-dark dark:border-secondary'"
         >
           <TooltipWrapper :label="$t('experiences.see_details')">
             <button

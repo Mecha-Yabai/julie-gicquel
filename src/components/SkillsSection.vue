@@ -6,18 +6,23 @@
             class="w-full flex flex-col flex-1 justify-center lg:w-6/12 h-2/3 sm:h-1/2 md:h-2/5 lg:h-fit lg:text-left lg:pr-6"
         >
             <h2
-                class="h-1/4 md:h-1/3 lg:h-fit my-4 font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter"
+                v-revele
+                class="trame decale h-1/4 md:h-1/3 lg:h-fit my-4 font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter"
             >
-                {{ $t("skills.title_1") }}
-                <span class="text-red-500 dark:text-primary">{{
-                    $t("skills.title_2")
-                }}</span
-                >,<br />
-                {{ $t("skills.title_3") }}
-                <span class="text-red-500 dark:text-primary">{{
-                    $t("skills.title_4")
-                }}</span
-                >.
+                <span class="sceau-place" aria-hidden="true"
+                    ><span class="sceau">技</span></span
+                >
+                <span class="devoile"
+                    >{{ $t("skills.title_1") }}{{ $t("ws")
+                    }}<span class="text-red-500 dark:text-primary">{{
+                        $t("skills.title_2")
+                    }}</span
+                    >,<br />{{ $t("skills.title_3") }}{{ $t("ws")
+                    }}<span class="text-red-500 dark:text-primary">{{
+                        $t("skills.title_4")
+                    }}</span
+                    >.</span
+                >
             </h2>
             <div class="h-2/4 md:h-2/3 lg:h-fit space-y-4 my-4">
                 <p
@@ -34,11 +39,11 @@
             class="justify-start w-full lg:w-6/12 lg:pl-6 h-1/3 sm:h-1/2 md:h-3/5 flex flex-col flex-1"
         >
             <div
-                v-for="skill in skillsTitles"
+                v-for="(skill, index) in skillsTitles"
                 :key="skill.id"
                 class="h-24 md:h-32 lg:h-40"
             >
-                <hr class="border-gray-200 dark:border-secondary" />
+                <hr v-if="index > 0" class="separateur" aria-hidden="true" />
                 <div class="flex min-h-full items-center">
                     <p
                         class="mr-4 text-xl sm:text-2xl lg:text-3xl text-red-500 dark:text-primary font-jiho-regular whitespace-nowrap"

@@ -2,13 +2,19 @@
   <div class="flex flex-col lg:justify-between lg:flex-row inherit-height">
     <div class="w-full lg:pr-6 lg:w-6/12 flex flex-col">
       <h2
-        class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
+        v-revele
+        class="trame decale font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
       >
-        {{ $t("education.title_1") }}
-        <span class="text-red-500 dark:text-primary">{{
-          $t("education.title_2")
-        }}</span>
-        {{ $t("education.title_3") }}
+        <span class="sceau-place" aria-hidden="true"
+          ><span class="sceau">学</span></span
+        >
+        <span class="devoile"
+          >{{ $t("education.title_1") }}{{ $t("ws")
+          }}<span class="text-red-500 dark:text-primary">{{
+            $t("education.title_2")
+          }}</span
+          >{{ $t("ws") }}{{ $t("education.title_3") }}</span
+        >
       </h2>
       <div class="space-y-4 my-4">
         <p
@@ -41,12 +47,7 @@
       </div>
     </div>
     <div class="relative w-full lg:w-6/12 mx-auto">
-      <div
-        class="absolute bg-grey-light dark:bg-secondary line-vertical"
-        :style="{ '--line-height': lineHeight + 'px' }"
-      ></div>
-
-      <div class="mt-12 lg:mt-24" ref="formationsWrapper">
+      <div class="mt-12 lg:mt-24">
         <div
           v-for="(formation, index) in formations"
           :key="formation.id"
@@ -57,15 +58,21 @@
         >
           <div class="w-32 pr-4 flex justify-start items-center">
             <time
-              class="bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
+              class="tampon bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
             >
               {{ formation.date }}
             </time>
           </div>
 
-          <div class="w-6 flex items-center justify-center relative">
+          <div
+            class="w-6 self-stretch pt-2 flex items-start justify-center relative jalon"
+            :class="{
+              'jalon--debut': index === 0,
+              'jalon--fin': index === formations.length - 1,
+            }"
+          >
             <div
-              class="w-3 h-3 bg-primary dark:bg-primary-darker rounded-full"
+              class="relative w-3 h-3 bg-primary dark:bg-primary-darker rounded-full"
             ></div>
           </div>
 
@@ -95,19 +102,6 @@
       const { isDark } = useTheme();
       return { isDark };
     },
-    data() {
-      return {
-        lineHeight: 0,
-      };
-    },
-    mounted() {
-      this.$nextTick(() => {
-        const wrapper = this.$refs.formationsWrapper;
-        if (wrapper) {
-          this.lineHeight = wrapper.offsetHeight;
-        }
-      });
-    },
     computed: {
       formations() {
         return getFormations().map((formations) => ({
@@ -127,18 +121,3 @@
     },
   };
 </script>
-
-<style style="css" scoped>
-  .line-vertical {
-    left: calc(8rem + 0.75rem);
-    width: 1px;
-    top: 3rem;
-    height: var(--line-height);
-  }
-
-  @media (min-width: 1024px) {
-    .line-vertical {
-      top: 6rem;
-    }
-  }
-</style>

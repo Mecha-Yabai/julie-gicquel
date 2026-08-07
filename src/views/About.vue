@@ -1,9 +1,13 @@
 <template>
     <div class="container mx-auto px-4 sm:px-16 mt-28 sm:mt-32 md:mt-38">
         <h1
-            class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
+            v-revele
+            class="trame decale font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter my-4"
         >
-            {{ $t("about_me_title") }}
+            <span class="sceau-place" aria-hidden="true"
+                ><span class="sceau">私</span></span
+            >
+            <span class="devoile">{{ $t("about_me_title") }}</span>
         </h1>
         <div class="flex flex-col lg:flex-row lg:items-center">
             <div class="w-full lg:w-1/5 my-5 lg:my-0 lg:mr-6">

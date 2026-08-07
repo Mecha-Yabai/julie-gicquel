@@ -60,7 +60,7 @@
                 </button>
             </div>
             <div
-                class="flex flex-col justify-center items-center mb-12 sm:mb-20"
+                class="encadre flex flex-col justify-center items-center mb-12 sm:mb-20"
             >
                 <p
                     class="font-jiho-medium sm:text-3xl text-2xl text-dark dark:text-grey-lighter mb-5"
