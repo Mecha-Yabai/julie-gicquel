@@ -68,14 +68,20 @@
       <div class="w-full lg:w-6/12 flex justify-center lg:justify-end">
         <img
           v-if="!isDark"
-          src="@/assets/images/hero3_LIGHT.png"
+          src="@/assets/images/hero3_LIGHT.webp"
           alt="Developer"
+          width="695"
+          height="695"
+          fetchpriority="high"
           class="w-11/12 sm:w-7/12 lg:w-10/12"
         />
         <img
           v-else
-          src="@/assets/images/hero3_LIGHT_darkmode.png"
+          src="@/assets/images/hero3_LIGHT_darkmode.webp"
           alt="Developer"
+          width="695"
+          height="695"
+          fetchpriority="high"
           class="w-11/12 sm:w-7/12 lg:w-10/12"
         />
       </div>

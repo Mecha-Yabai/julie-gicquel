@@ -22,14 +22,20 @@
       <div class="hidden h-full lg:flex items-center">
         <img
           v-if="!isDark"
-          src="@/assets/images/hero1_LIGHT.png"
+          src="@/assets/images/hero1_LIGHT.webp"
           alt="Developer"
+          width="695"
+          height="500"
+          loading="lazy"
           class="lg:w-full"
         />
         <img
           v-else
-          src="@/assets/images/hero1_LIGHT_darkmode.png"
+          src="@/assets/images/hero1_LIGHT_darkmode.webp"
           alt="Developer"
+          width="695"
+          height="500"
+          loading="lazy"
           class="lg:w-full"
         />
       </div>
