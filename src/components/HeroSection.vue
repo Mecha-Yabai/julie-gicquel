@@ -72,7 +72,7 @@
         <img
           v-if="!isDark"
           src="@/assets/images/hero3_LIGHT.webp"
-          alt="Developer"
+          :alt="$t('alt_hero')"
           width="695"
           height="695"
           fetchpriority="high"
@@ -81,7 +81,7 @@
         <img
           v-else
           src="@/assets/images/hero3_LIGHT_darkmode.webp"
-          alt="Developer"
+          :alt="$t('alt_hero')"
           width="695"
           height="695"
           fetchpriority="high"

@@ -2,7 +2,7 @@
     <section
         v-for="section in sections"
         :key="section.name"
-        class="max-h-full min-h-screen p-4 container mx-auto sm:px-16"
+        class="max-h-full min-h-screen p-4 container mx-auto sm:px-16 scroll-mt-24 md:scroll-mt-28"
         :class="{ 'pt-0': section.name === 'hero' }"
         :id="section.name"
     >

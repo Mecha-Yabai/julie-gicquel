@@ -15,6 +15,11 @@ const routes = [
     },
 ];
 
+function headerOffset() {
+    const header = document.querySelector(".header");
+    return (header ? header.offsetHeight : 78) + 24;
+}
+
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes,
@@ -22,6 +27,7 @@ const router = createRouter({
         if (to.hash) {
             return {
                 el: to.hash,
+                top: headerOffset(),
                 behavior: "smooth",
             };
         } else if (savedPosition) {

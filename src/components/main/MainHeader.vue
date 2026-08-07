@@ -73,6 +73,7 @@
         showHeader: true,
         lastScrollPosition: 0,
         scrollOffset: 40,
+        idleDelay: 200,
       };
     },
     mounted() {
@@ -81,9 +82,15 @@
     },
     beforeUnmount() {
       window.removeEventListener("scroll", this.onScroll);
+      clearTimeout(this.idleTimer);
     },
     methods: {
       onScroll() {
+        clearTimeout(this.idleTimer);
+        this.idleTimer = setTimeout(() => {
+          this.showHeader = true;
+        }, this.idleDelay);
+
         if (window.pageYOffset < 0) {
           return;
         }

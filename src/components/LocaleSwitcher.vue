@@ -4,11 +4,14 @@
             class="flex items-center justify-between px-3 py-2 bg-white dark:bg-secondary-darker dark:text-white w-full border-2 border-grey-light hover:border-primary dark:border-secondary-darker dark:hover:border-primary-darker rounded-lg"
             @click="isOptionsExpanded = !isOptionsExpanded"
             @blur="isOptionsExpanded = false"
+            :aria-label="$t('locale_switcher', { name: selectedLocale.name })"
+            :aria-expanded="isOptionsExpanded"
         >
             <span class="hidden lg:block">{{ selectedLocale.name }}</span>
             <img
                 class="lg:hidden lg:w-auto lg:h-5 my-1"
                 :src="selectedLocale.flag"
+                alt=""
             />
             <svg
                 fill="none"

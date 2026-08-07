@@ -23,7 +23,7 @@
         <img
           v-if="!isDark"
           src="@/assets/images/hero1_LIGHT.webp"
-          alt="Developer"
+          :alt="$t('alt_experiences')"
           width="695"
           height="500"
           loading="lazy"
@@ -32,7 +32,7 @@
         <img
           v-else
           src="@/assets/images/hero1_LIGHT_darkmode.webp"
-          alt="Developer"
+          :alt="$t('alt_experiences')"
           width="695"
           height="500"
           loading="lazy"
@@ -41,49 +41,51 @@
       </div>
     </div>
     <div
-      class="w-full flex-1 lg:pl-6 lg:w-6/12 flex flex-col items-baseline h-full justify-start lg:justify-center lg:self-center mt-6 md:mt-12 lg:mt-0"
+      class="w-full flex-1 lg:pl-6 lg:w-6/12 grid grid-cols-[1fr_max-content] md:grid-cols-[max-content_1fr_max-content] h-full justify-start lg:justify-center lg:self-center mt-6 md:mt-12 lg:mt-0"
     >
       <template v-for="experience in experiences" :key="experience.id">
         <div
-          class="flex items-baseline w-full justify-between h-max border-t border-dark dark:border-secondary"
+          class="hidden md:flex items-center pr-4 border-t border-dark dark:border-secondary"
         >
-          <div class="hidden md:block my-auto w-[70px] md:w-[120px]">
-            <time
-              class="bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
-              >{{ experience.date }}</time
+          <time
+            class="bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
+            >{{ experience.date }}</time
+          >
+        </div>
+        <div
+          class="py-4 md:py-6 lg:py-8 pr-4 border-t border-dark dark:border-secondary"
+        >
+          <h3
+            class="text-md lg:text-lg font-jiho-medium text-dark dark:text-white"
+          >
+            {{ experience.name }}
+          </h3>
+          <p
+            class="mt-1 md:mt-2 mb-1 md:mb-0 text-sm font-jiho-regular text-grey-darker dark:text-grey-light"
+          >
+            {{ experience.company }}
+          </p>
+          <time
+            class="md:hidden my-2 inline-block bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
+            >{{ experience.date }}</time
+          >
+        </div>
+        <div
+          class="flex items-center justify-end border-t border-dark dark:border-secondary"
+        >
+          <TooltipWrapper :label="$t('experiences.see_details')">
+            <button
+              type="button"
+              @click="openExperienceInfosPanel(experience, $event)"
+              :aria-label="
+                $t('experiences.see_details_of', { name: experience.name })
+              "
+              aria-haspopup="dialog"
+              class="rounded-full p-2 text-dark hover:text-primary dark:text-primary dark:hover:text-primary-darker"
             >
-          </div>
-          <div class="py-4 md:py-6 lg:py-8 flex-1 pr-4">
-            <h3
-              class="text-md lg:text-lg font-jiho-medium text-dark dark:text-white"
-            >
-              {{ experience.name }}
-            </h3>
-            <p
-              class="mt-1 md:mt-2 mb-1 md:mb-0 text-sm font-jiho-regular text-grey-darker dark:text-grey-light"
-            >
-              {{ experience.company }}
-            </p>
-            <time
-              class="md:hidden my-2 bg-red-100 text-primary-darker dark:bg-secondary-darker dark:text-white text-sm font-jiho-regular px-3 py-1 rounded-full whitespace-nowrap"
-              >{{ experience.date }}</time
-            >
-          </div>
-          <div class="my-auto">
-            <TooltipWrapper :label="$t('experiences.see_details')">
-              <button
-                type="button"
-                @click="openExperienceInfosPanel(experience, $event)"
-                :aria-label="
-                  $t('experiences.see_details_of', { name: experience.name })
-                "
-                aria-haspopup="dialog"
-                class="rounded-full p-2 text-dark hover:text-primary dark:text-primary dark:hover:text-primary-darker"
-              >
-                <FeatherIcon name="plus-circle" stroke-width="1.5" />
-              </button>
-            </TooltipWrapper>
-          </div>
+              <FeatherIcon name="plus-circle" stroke-width="1.5" />
+            </button>
+          </TooltipWrapper>
         </div>
       </template>
     </div>
