@@ -5,7 +5,7 @@
         >
             <div class="pb-5 flex justify-center">
                 <button
-                    :class="theme === 'light' ? 'text-dark' : 'text-white'"
+                    :class="isDark ? 'text-white' : 'text-dark'"
                     @click="goTop()"
                 >
                     <div class="text text-dark dark:text-white">
@@ -48,7 +48,7 @@
                         class="h-6 w-6"
                         fill="none"
                         viewBox="0 0 24 24"
-                        :stroke="theme === 'light' ? '#030303' : 'white'"
+                        :stroke="isDark ? 'white' : '#030303'"
                         stroke-width="2"
                     >
                         <path
@@ -73,7 +73,7 @@
                         :href="`mailto:${mail}`"
                         class="rounded-full h-11 w-11 sm:h-12 sm:w-12 inline-flex items-center justify-center mx-2 bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white text-center"
                     >
-                        <i data-feather="mail" class="w-5 lg:w-16"></i>
+                        <FeatherIcon name="mail" class="w-5 lg:w-16" />
                     </a>
                 </ul>
             </div>
@@ -87,16 +87,19 @@ import { mail } from "../../data/socials";
 
 import SocialButton from "../reusable/SocialButton.vue";
 import MainFooterCopyright from "./MainFooterCopyright.vue";
+import FeatherIcon from "../reusable/FeatherIcon.vue";
+import { useTheme } from "@/composables/useTheme";
 
 export default {
-    components: { MainFooterCopyright, SocialButton },
+    components: { MainFooterCopyright, SocialButton, FeatherIcon },
+    setup() {
+        const { isDark } = useTheme();
+        return { isDark };
+    },
     data() {
         return {
             mail,
         };
-    },
-    created() {
-        this.theme = localStorage.getItem("theme") || "light";
     },
     methods: {
         goTop: function () {

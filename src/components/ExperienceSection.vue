@@ -21,7 +21,7 @@
       </div>
       <div class="hidden h-full lg:flex items-center">
         <img
-          v-if="theme === 'light'"
+          v-if="!isDark"
           src="@/assets/images/hero1_LIGHT.png"
           alt="Developer"
           class="lg:w-full"
@@ -69,7 +69,7 @@
               @click="openExperienceInfosPanel(experience)"
               class="rounded-full p-2 text-dark hover:text-primary dark:text-primary dark:hover:text-primary-darker"
             >
-              <i data-feather="plus-circle" stroke-width="1.5"></i>
+              <FeatherIcon name="plus-circle" stroke-width="1.5" />
             </button>
           </div>
         </div>
@@ -98,7 +98,7 @@
           @click="closeExperienceInfosPanel()"
           class="flex-none text-primary ml-2"
         >
-          <i data-feather="x"></i>
+          <FeatherIcon name="x" />
         </button>
       </div>
       <div class="flex-1 overflow-y-auto pt-2 pb-6">
@@ -141,17 +141,20 @@
 </template>
 <script>
   import { getExperiences } from "../data/experiences";
+  import FeatherIcon from "./reusable/FeatherIcon.vue";
+  import { useTheme } from "@/composables/useTheme";
 
   export default {
+    components: { FeatherIcon },
+    setup() {
+      const { isDark } = useTheme();
+      return { isDark };
+    },
     data() {
       return {
-        theme: "",
         currentExperience: {},
         isExperienceInfosPanelOpen: false,
       };
-    },
-    created() {
-      this.theme = localStorage.getItem("theme") || "light";
     },
     watch: {
       isExperienceInfosPanelOpen: function () {

@@ -5,10 +5,6 @@ import About from "../views/About.vue";
 const routes = [
     {
         path: "/",
-        redirect: { name: "Home" },
-    },
-    {
-        path: "/julie-gicquel/",
         name: "Home",
         component: Home,
     },
@@ -20,7 +16,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(process.env.BASE_URL),
     routes,
     scrollBehavior(to, from, savedPosition) {
         if (to.hash) {

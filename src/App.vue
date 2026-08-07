@@ -1,5 +1,5 @@
 <template>
-    <div id="app" :class="mainTheme">
+    <div id="app">
         <MainHeader />
         <router-view />
         <MainFooter />
@@ -11,7 +11,6 @@
 import MainHeader from "./components/main/MainHeader.vue";
 import MainFooter from "./components/main/MainFooter.vue";
 import MobileMenu from "./components/main/MobileMenu.vue";
-import feather from "feather-icons";
 
 export default {
     name: "App",
@@ -19,17 +18,6 @@ export default {
         MainHeader,
         MainFooter,
         MobileMenu,
-    },
-    data: () => {
-        return {
-            mainTheme: localStorage.getItem("theme"),
-        };
-    },
-    mounted() {
-        feather.replace();
-    },
-    updated() {
-        feather.replace();
     },
 };
 </script>

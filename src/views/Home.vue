@@ -20,6 +20,10 @@ export default {
         this.observeSections();
     },
 
+    beforeUnmount() {
+        this.observer?.disconnect();
+    },
+
     computed: {
         sections() {
             return [
@@ -61,10 +65,10 @@ export default {
                 });
             };
 
-            const observer = new IntersectionObserver(callback, options);
+            this.observer = new IntersectionObserver(callback, options);
 
             sections.forEach((section) => {
-                observer.observe(section);
+                this.observer.observe(section);
             });
         },
         updateUrlHash(hash) {

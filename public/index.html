@@ -11,6 +11,18 @@
       content="Personal website of Julie Gicquel, full-stack developer, UI/UX designer and former web-marketer."
     />
 
+    <script type="text/javascript">
+      (function () {
+        try {
+          if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {
+          return;
+        }
+      })();
+    </script>
+
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages

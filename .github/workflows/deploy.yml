@@ -5,13 +5,11 @@ on:
     branches: [master]
   workflow_dispatch:
 
-# GITHUB_TOKEN permissions needed to publish to Pages. Nothing else is granted.
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Let a running deploy finish rather than cancelling it half-published.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -24,7 +22,6 @@ jobs:
 
       - uses: actions/setup-node@v7
         with:
-          # Reads .nvmrc, so CI and local stay on the same Node by construction.
           node-version-file: .nvmrc
           cache: yarn
 
