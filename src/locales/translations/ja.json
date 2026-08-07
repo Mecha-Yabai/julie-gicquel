@@ -10,8 +10,12 @@
   "follow_me": "フォローはこちら",
   "learn_more": "詳しく見る",
   "theme_switcher": "テーマを切り替える",
+  "locale_switcher": "言語：{name}",
   "social_profile": "{name}のプロフィール",
   "skip_to_content": "コンテンツへ移動",
+  "alt_hero": "「Open to work!」と書かれたボードを持つジュリー",
+  "alt_experiences": "2台のモニターに向かって作業するジュリーの後ろ姿",
+  "alt_education": "キーボードに手を置いて微笑むジュリー",
   "header": {
     "skills": "スキル",
     "experience": "経験",
@@ -47,7 +51,7 @@
   "jobs": {
     "kizeo_name": "フロントエンド開発者＆UI/UXデザイナー",
     "kizeo_company": "Kizeo（キゼオ）",
-    "kizeo_date": "2019年～2025年",
+    "kizeo_date": "2019年～現在",
     "kizeo_description": "Kizeoは2011年設立のフランス発国際ソフトウェア企業です。",
     "kizeo_duties_1": "• Vue.jsおよびLaravelを用いたKizeoフォームとKizeo Corpのフロントエンド開発",
     "kizeo_duties_2": "• Kizeo製品（Kizeo Forms、Kizeo Corp、Tempo）のUI/UX評価と改善",

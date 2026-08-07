@@ -10,8 +10,12 @@
   "follow_me": "Find me on",
   "learn_more": "Learn More",
   "theme_switcher": "Switch theme",
+  "locale_switcher": "Language: {name}",
   "social_profile": "My {name} profile",
   "skip_to_content": "Skip to content",
+  "alt_hero": "Julie holding a sign reading “Open to work!”",
+  "alt_experiences": "Julie seen from behind, at her desk in front of two screens of code",
+  "alt_education": "Julie smiling, hands on her keyboard",
   "header": {
     "skills": "Skills",
     "experience": "Experience",
@@ -47,7 +51,7 @@
   "jobs": {
     "kizeo_name": "Front-End Developer & UI/UX Designer",
     "kizeo_company": "Kizeo",
-    "kizeo_date": "2019 - 2025",
+    "kizeo_date": "2019 - present",
     "kizeo_description": "Kizeo is an international French software company founded in 2011.",
     "kizeo_duties_1": "• Front-end development of Kizeo websites (Kizeo Forms & Kizeo Corp) using Vue.js and Laravel",
     "kizeo_duties_2": "• Evaluate and enhance the existing UI/UX design of Kizeo solutions (Kizeo Forms, Kizeo Corp & Tempo by Kizeo)",
