@@ -90,7 +90,7 @@
   >
     <div
       v-show="isExperienceInfosPanelOpen"
-      class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-white dark:bg-dark shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-none flex flex-col h-screen dark:border-l-2 dark:border-secondary"
+      class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-white dark:bg-dark shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-hidden flex flex-col h-screen dark:border-l-2 dark:border-secondary"
       role="dialog"
       aria-modal="true"
     >
@@ -208,7 +208,7 @@
     },
   };
 </script>
-<style lang="scss" scoped>
+<style scoped>
   .panel-fade-enter-active {
     transition-duration: 500ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
