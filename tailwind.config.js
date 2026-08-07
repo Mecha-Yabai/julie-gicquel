@@ -27,12 +27,4 @@ module.exports = {
             },
         },
     },
-    variants: {
-        extend: { opacity: ["disabled"] },
-    },
-    safelist: [
-        {
-            pattern: /./,
-        },
-    ],
 };
