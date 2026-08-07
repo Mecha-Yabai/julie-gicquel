@@ -7,11 +7,14 @@
         <span class="text-sm sm:text-md font-jiho-medium duration-100">
             <slot></slot>
         </span>
-        <i :data-feather="selectedIcon" class="ml-2 w-5 duration-100"></i>
+        <FeatherIcon :name="selectedIcon" class="ml-2 w-5 duration-100" />
     </a>
 </template>
 <script>
+import FeatherIcon from "./FeatherIcon.vue";
+
 export default {
+    components: { FeatherIcon },
     props: {
         selectedIcon: {
             type: String,

@@ -23,8 +23,6 @@
     </nav>
 </template>
 <script>
-import feather from "feather-icons";
-
 import MobileMenuItem from "../reusable/MobileMenuItem.vue";
 
 export default {
@@ -37,7 +35,6 @@ export default {
         };
     },
     mounted() {
-        feather.replace();
         this.lastScrollPosition = window.pageYOffset;
         window.addEventListener("scroll", this.onScroll);
     },

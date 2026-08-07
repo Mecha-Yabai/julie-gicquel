@@ -11,7 +11,6 @@
 import MainHeader from "./components/main/MainHeader.vue";
 import MainFooter from "./components/main/MainFooter.vue";
 import MobileMenu from "./components/main/MobileMenu.vue";
-import feather from "feather-icons";
 
 export default {
     name: "App",
@@ -19,12 +18,6 @@ export default {
         MainHeader,
         MainFooter,
         MobileMenu,
-    },
-    mounted() {
-        feather.replace();
-    },
-    updated() {
-        feather.replace();
     },
 };
 </script>
