@@ -3,7 +3,6 @@
         :download="download"
         :href="link"
         class="flex justify-center items-center px-4 w-full py-3 rounded-lg duration-500"
-        :aria-label="CV"
     >
         <span class="text-sm sm:text-md font-jiho-medium duration-100">
             <slot></slot>
@@ -23,10 +22,6 @@ export default {
             required: true,
         },
         download: {
-            type: String,
-            required: false,
-        },
-        label: {
             type: String,
             required: false,
         },
