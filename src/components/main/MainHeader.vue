@@ -7,33 +7,33 @@
     <div
       class="flex w-full justify-between items-center p-4 lg:px-16 bg-white dark:bg-dark"
     >
-      <router-link to="/julie-gicquel/"
+      <router-link to="/"
         ><img
-          v-if="theme === 'light'"
+          v-if="!isDark"
           src="@/assets/images/logo-dark.svg"
           class="w-36"
-          alt="Dark Logo"
+          alt="Julie Gicquel"
         />
         <img
           v-else
           src="@/assets/images/logo-light.svg"
           class="w-36"
-          alt="Light Logo"
+          alt="Julie Gicquel"
         />
       </router-link>
 
       <div class="hidden md:flex">
-        <router-link :to="{ path: '/julie-gicquel/', hash: '#skills' }">
+        <router-link :to="{ path: '/', hash: '#skills' }">
           <MenuItem class="mx-4">
             {{ $t("header.skills") }}
           </MenuItem>
         </router-link>
-        <router-link :to="{ path: '/julie-gicquel/', hash: '#experience' }">
+        <router-link :to="{ path: '/', hash: '#experience' }">
           <MenuItem class="mx-4">
             {{ $t("header.experience") }}
           </MenuItem>
         </router-link>
-        <router-link :to="{ path: '/julie-gicquel/', hash: '#education' }">
+        <router-link :to="{ path: '/', hash: '#education' }">
           <MenuItem class="mx-4">
             {{ $t("header.education") }}
           </MenuItem>
@@ -47,7 +47,7 @@
 
       <div class="flex">
         <LocaleSwitcher class="mr-4" />
-        <ThemeSwitcher :theme="theme" @themeChanged="updateTheme" />
+        <ThemeSwitcher />
       </div>
     </div>
   </nav>
@@ -56,6 +56,7 @@
   import ThemeSwitcher from "../ThemeSwitcher.vue";
   import LocaleSwitcher from "../LocaleSwitcher.vue";
   import MenuItem from "../reusable/MenuItem.vue";
+  import { useTheme } from "@/composables/useTheme";
 
   export default {
     components: {
@@ -63,16 +64,16 @@
       LocaleSwitcher,
       MenuItem,
     },
+    setup() {
+      const { isDark } = useTheme();
+      return { isDark };
+    },
     data() {
       return {
-        theme: "",
         showHeader: true,
         lastScrollPosition: 0,
         scrollOffset: 40,
       };
-    },
-    created() {
-      this.theme = localStorage.getItem("theme") || "light";
     },
     mounted() {
       this.lastScrollPosition = window.pageYOffset;
@@ -82,9 +83,6 @@
       window.removeEventListener("scroll", this.onScroll);
     },
     methods: {
-      updateTheme(theme) {
-        this.theme = theme;
-      },
       onScroll() {
         if (window.pageYOffset < 0) {
           return;

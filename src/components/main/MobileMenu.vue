@@ -4,12 +4,12 @@
         :class="{ 'is-hidden': !showFooter }"
     >
         <div class="flex md:hidden w-full justify-evenly">
-            <router-link :to="{ path: '/julie-gicquel/', hash: '#experience' }">
+            <router-link :to="{ path: '/', hash: '#experience' }">
                 <MobileMenuItem :selected-icon="'briefcase'">
                     {{ $t("header.experience") }}
                 </MobileMenuItem>
             </router-link>
-            <router-link :to="{ path: '/julie-gicquel/', hash: '#education' }">
+            <router-link :to="{ path: '/', hash: '#education' }">
                 <MobileMenuItem :selected-icon="'book-open'">
                     {{ $t("header.education") }}
                 </MobileMenuItem>
@@ -31,14 +31,10 @@ export default {
     components: { MobileMenuItem },
     data() {
         return {
-            theme: "",
             showFooter: true,
             lastScrollPosition: 0,
             scrollOffset: 40,
         };
-    },
-    created() {
-        this.theme = localStorage.getItem("theme") || "light";
     },
     mounted() {
         feather.replace();
@@ -49,9 +45,6 @@ export default {
         window.removeEventListener("scroll", this.onScroll);
     },
     methods: {
-        updateTheme(theme) {
-            this.theme = theme;
-        },
         onScroll() {
             if (window.pageYOffset < 0) {
                 return;
