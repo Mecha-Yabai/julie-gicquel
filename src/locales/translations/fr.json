@@ -40,7 +40,8 @@
     "duties": "Missions :",
     "stack": "Stack :",
     "see_details": "Voir le détail",
-    "see_details_of": "Voir le détail : {name}"
+    "see_details_of": "Voir le détail : {name}",
+    "close_details": "Fermer le détail"
   },
   "jobs": {
     "kizeo_name": "Développeuse Front-End & designer UI/UX",

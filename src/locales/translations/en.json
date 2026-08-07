@@ -40,7 +40,8 @@
     "duties": "Main tasks:",
     "stack": "Tech stack:",
     "see_details": "See details",
-    "see_details_of": "See details: {name}"
+    "see_details_of": "See details: {name}",
+    "close_details": "Close details"
   },
   "jobs": {
     "kizeo_name": "Front-End Developer & UI/UX Designer",

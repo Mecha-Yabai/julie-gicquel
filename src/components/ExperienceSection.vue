@@ -73,7 +73,7 @@
             <TooltipWrapper :label="$t('experiences.see_details')">
               <button
                 type="button"
-                @click="openExperienceInfosPanel(experience)"
+                @click="openExperienceInfosPanel(experience, $event)"
                 :aria-label="
                   $t('experiences.see_details_of', { name: experience.name })
                 "
@@ -90,24 +90,30 @@
   </div>
   <transition
     name="panel-fade"
-    ref="experienceInfosPanel"
     tabindex="-1"
     @keydown.escape="closeExperienceInfosPanel()"
+    @keydown.tab="trapFocus"
   >
     <div
+      ref="experienceInfosPanel"
       v-show="isExperienceInfosPanelOpen"
       class="fixed inset-y-0 right-0 z-20 w-full max-w-xs bg-white dark:bg-dark shadow-xl dark:bg-darker dark:text-light sm:max-w-md focus:outline-hidden flex flex-col h-screen dark:border-l-2 dark:border-secondary"
       role="dialog"
       aria-modal="true"
+      :aria-label="currentExperience.name"
     >
       <div
         class="flex tems-center justify-center px-4 py-6 border-b dark:border-secondary"
       >
-        <h3 class="flex-1 text-md lg:text-lg font-jiho-medium text-primary">
+        <h3
+          v-if="currentExperience.name"
+          class="flex-1 text-md lg:text-lg font-jiho-medium text-primary"
+        >
           {{ currentExperience.name }}
         </h3>
         <button
           @click="closeExperienceInfosPanel()"
+          :aria-label="$t('experiences.close_details')"
           class="flex-none text-primary ml-2"
         >
           <FeatherIcon name="x" />
@@ -197,10 +203,45 @@
       },
     },
     methods: {
+      panelFocusables() {
+        const panel = this.$refs.experienceInfosPanel;
+        if (!panel) {
+          return [];
+        }
+        return [
+          ...panel.querySelectorAll(
+            'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+          ),
+        ].filter((el) => el.offsetParent !== null);
+      },
+      trapFocus(event) {
+        const focusables = this.panelFocusables();
+        if (!focusables.length) {
+          event.preventDefault();
+          return;
+        }
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        const active = document.activeElement;
+
+        if (event.shiftKey && (active === first || !focusables.includes(active))) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && active === last) {
+          event.preventDefault();
+          first.focus();
+        } else if (!focusables.includes(active)) {
+          event.preventDefault();
+          first.focus();
+        }
+      },
       closeExperienceInfosPanel() {
         this.isExperienceInfosPanelOpen = false;
+        this.lastTrigger?.focus();
+        this.lastTrigger = null;
       },
-      openExperienceInfosPanel(experience) {
+      openExperienceInfosPanel(experience, event) {
+        this.lastTrigger = event?.currentTarget ?? null;
         this.currentExperience = {
           ...experience,
           description: experience.description
@@ -209,7 +250,7 @@
         };
         this.isExperienceInfosPanelOpen = true;
         this.$nextTick(() => {
-          this.$refs.experienceInfosPanel.focus();
+          this.$refs.experienceInfosPanel?.focus();
         });
       },
     },
