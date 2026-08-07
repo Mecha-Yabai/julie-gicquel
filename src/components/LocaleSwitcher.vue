@@ -65,6 +65,16 @@
 import { watch } from "vue";
 import { useI18n } from "vue-i18n";
 
+import franceFlag from "@/assets/images/france.svg";
+import ukFlag from "@/assets/images/uk.svg";
+import japonFlag from "@/assets/images/japon.svg";
+
+const locales = [
+    { id: "fr", name: "Français", flag: franceFlag },
+    { id: "en", name: "English", flag: ukFlag },
+    { id: "ja", name: "日本語", flag: japonFlag },
+];
+
 export default {
     setup() {
         const { t, locale } = useI18n();
@@ -81,65 +91,20 @@ export default {
     data() {
         return {
             isOptionsExpanded: false,
-            locales: [
-                {
-                    id: "fr",
-                    name: "Français",
-                    flag: require("@/assets/images/france.svg"),
-                },
-                {
-                    id: "en",
-                    name: "English",
-                    flag: require("@/assets/images/uk.svg"),
-                },
-                {
-                    id: "ja",
-                    name: "日本語",
-                    flag: require("@/assets/images/japon.svg"),
-                },
-            ],
+            locales,
         };
     },
     methods: {
         setOption(locale) {
             this.$i18n.locale = locale.id;
-            this.selectedLocale = locale.name;
             this.isOptionsExpanded = false;
         },
     },
     computed: {
-        selectedLocale: {
-            get() {
-                let lang = {};
-                const locale = this.$i18n.locale;
-                switch (locale) {
-                    case "fr":
-                        lang = {
-                            name: "Français",
-                            flag: require("@/assets/images/france.svg"),
-                        };
-                        break;
-                    case "en":
-                        lang = {
-                            name: "English",
-                            flag: require("@/assets/images/uk.svg"),
-                        };
-                        break;
-                    case "ja":
-                        lang = {
-                            name: "日本語",
-                            flag: require("@/assets/images/japon.svg"),
-                        };
-                        break;
-
-                    default:
-                        break;
-                }
-                return lang;
-            },
-            set(value) {
-                return value;
-            },
+        selectedLocale() {
+            return (
+                locales.find((l) => l.id === this.$i18n.locale) ?? locales[0]
+            );
         },
     },
 };
