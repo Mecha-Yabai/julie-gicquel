@@ -70,13 +70,19 @@
             >
           </div>
           <div class="my-auto">
-            <button
-              type="button"
-              @click="openExperienceInfosPanel(experience)"
-              class="rounded-full p-2 text-dark hover:text-primary dark:text-primary dark:hover:text-primary-darker"
-            >
-              <FeatherIcon name="plus-circle" stroke-width="1.5" />
-            </button>
+            <TooltipWrapper :label="$t('experiences.see_details')">
+              <button
+                type="button"
+                @click="openExperienceInfosPanel(experience)"
+                :aria-label="
+                  $t('experiences.see_details_of', { name: experience.name })
+                "
+                aria-haspopup="dialog"
+                class="rounded-full p-2 text-dark hover:text-primary dark:text-primary dark:hover:text-primary-darker"
+              >
+                <FeatherIcon name="plus-circle" stroke-width="1.5" />
+              </button>
+            </TooltipWrapper>
           </div>
         </div>
       </template>
@@ -148,10 +154,11 @@
 <script>
   import { getExperiences } from "../data/experiences";
   import FeatherIcon from "./reusable/FeatherIcon.vue";
+  import TooltipWrapper from "./reusable/TooltipWrapper.vue";
   import { useTheme } from "@/composables/useTheme";
 
   export default {
-    components: { FeatherIcon },
+    components: { FeatherIcon, TooltipWrapper },
     setup() {
       const { isDark } = useTheme();
       return { isDark };

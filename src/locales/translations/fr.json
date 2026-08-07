@@ -10,6 +10,7 @@
   "follow_me": "Retrouvez-moi sur",
   "learn_more": "En savoir plus",
   "theme_switcher": "Changer de thème",
+  "social_profile": "Mon profil {name}",
   "header": {
     "skills": "Compétences",
     "experience": "Expériences",
@@ -37,7 +38,9 @@
     "description_2": "De nature spontanée et polyvalente, j'ai à coeur de mettre à profit mes diverses compétences.",
     "description_3": "Mon objectif est d'offrir la meilleure expérience utilisateur possible en créant des interfaces web intuitives, performantes et esthétiques qui respectent l'identité et les valeurs de la marque. 🎯",
     "duties": "Missions :",
-    "stack": "Stack :"
+    "stack": "Stack :",
+    "see_details": "Voir le détail",
+    "see_details_of": "Voir le détail : {name}"
   },
   "jobs": {
     "kizeo_name": "Développeuse Front-End & designer UI/UX",

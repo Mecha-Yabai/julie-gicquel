@@ -10,6 +10,7 @@
   "follow_me": "Find me on",
   "learn_more": "Learn More",
   "theme_switcher": "Switch theme",
+  "social_profile": "My {name} profile",
   "header": {
     "skills": "Skills",
     "experience": "Experience",
@@ -37,7 +38,9 @@
     "description_2": "Versatile and spontaneous by nature, I strive to make the most of my wide range of skills.",
     "description_3": "My goal is to deliver the best user experience possible by creating intuitive, high-performing, and visually appealing web interfaces that reflect the brand’s identity and values. 🎯",
     "duties": "Main tasks:",
-    "stack": "Tech stack:"
+    "stack": "Tech stack:",
+    "see_details": "See details",
+    "see_details_of": "See details: {name}"
   },
   "jobs": {
     "kizeo_name": "Front-End Developer & UI/UX Designer",
