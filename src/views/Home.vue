@@ -1,11 +1,17 @@
 <template>
     <section
-        v-for="section in sections"
+        v-for="(section, index) in sections"
         :key="section.name"
-        class="max-h-full min-h-screen p-4 container mx-auto sm:px-16 scroll-mt-24 md:scroll-mt-28"
+        class="relative max-h-full min-h-screen p-4 container mx-auto sm:px-16 scroll-mt-24 md:scroll-mt-28"
         :class="{ 'pt-0': section.name === 'hero' }"
         :id="section.name"
     >
+        <span
+            v-if="section.name !== 'hero'"
+            class="rang hidden lg:block absolute left-0 top-1/3"
+            aria-hidden="true"
+            >{{ String(index).padStart(2, "0") }}</span
+        >
         <component :is="section.component" />
     </section>
 </template>

@@ -7,12 +7,20 @@
     >
       <div class="w-full lg:w-6/12 text-left lg:pr-8">
         <h1
-          class="font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter"
+          v-revele
+          class="concentre font-jiho-medium lg:text-5xl sm:text-4xl text-3xl text-center lg:text-left text-dark dark:text-grey-lighter"
         >
           {{ $t("greetings") }}
-          <span class="text-red-500 dark:text-primary font-jiho-bold">{{
-            $t("name")
-          }}</span>
+          <span class="dechire">
+            <span class="dechire__s" aria-hidden="true">{{ $t("name") }}</span>
+            <span class="dechire__s" aria-hidden="true">{{ $t("name") }}</span>
+            <span class="dechire__s" aria-hidden="true">{{ $t("name") }}</span>
+            <span class="encre"
+              ><span class="text-dark dark:text-grey-lighter font-jiho-bold">{{
+                $t("name")
+              }}</span></span
+            >
+          </span>
           <br />
           {{ $t("web_developer") }}
           <span class="text-red-500 dark:text-primary">{{ $t("and") }}</span>
@@ -26,9 +34,9 @@
           </p>
         </div>
         <div
-          class="flex items-center justify-evenly lg:justify-start mb-4 sm:mb-6 md:mb-8"
+          class="flex items-center justify-center lg:justify-start mb-4 sm:mb-6 md:mb-8"
         >
-          <div class="w-8/12 sm:w-1/2">
+          <div class="w-10/12 sm:w-8/12 md:w-7/12 lg:w-1/2">
             <CTAButton
               :selectedIcon="'download'"
               :link="resumeUrl"
@@ -36,15 +44,6 @@
               class="bg-red-600 dark:bg-primary hover:bg-red-700 dark:hover:bg-primary-darker text-white"
             >
               {{ $t("download_resume") }}
-            </CTAButton>
-          </div>
-          <div class="hidden sm:block sm:w-1/2 sm:ml-4">
-            <CTAButton
-              :selectedIcon="'mail'"
-              :link="`mailto:${mail}`"
-              class="bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white"
-            >
-              {{ $t("get_in_touch") }}
             </CTAButton>
           </div>
         </div>
@@ -56,11 +55,11 @@
           </p>
           <div class="flex justify-center lg:justify-start">
             <SocialButton />
-            <TooltipWrapper :label="$t('get_in_touch')" class="sm:hidden">
+            <TooltipWrapper :label="$t('get_in_touch')">
               <a
                 :href="`mailto:${mail}`"
                 :aria-label="$t('get_in_touch')"
-                class="inline-flex rounded-full h-11 w-11 items-center justify-center mx-2 bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white text-center"
+                class="inline-flex rounded-full h-11 w-11 sm:h-12 sm:w-12 items-center justify-center mx-2 bg-white dark:bg-secondary dark:hover:bg-secondary-darker border-dark dark:border-secondary dark:hover:border-secondary-darker border-2 hover:bg-dark text-dark dark:text-white dark:hover:text-primary hover:text-white text-center"
               >
                 <FeatherIcon name="mail" class="w-5 lg:w-16" />
               </a>
