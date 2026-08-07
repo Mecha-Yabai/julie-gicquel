@@ -23,7 +23,7 @@
         <img
           v-if="!isDark"
           src="@/assets/images/hero2_LIGHT.webp"
-          alt="Developer"
+          :alt="$t('alt_education')"
           width="695"
           height="695"
           loading="lazy"
@@ -32,7 +32,7 @@
         <img
           v-else
           src="@/assets/images/hero2_LIGHT_darkmode.webp"
-          alt="Developer"
+          :alt="$t('alt_education')"
           width="695"
           height="695"
           loading="lazy"
